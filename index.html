@@ -2,45 +2,6 @@
 <html lang="ar">
 <head>
 <style>
-  .lightbox-img {
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .lightbox-overlay {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .lightbox-overlay img {
-    max-width: 90%;
-    max-height: 80%;
-    border: 4px solid gold;
-    border-radius: 12px;
-  }
-
-  .close-btn {
-    color: white;
-    background: crimson;
-    border: none;
-    padding: 8px 16px;
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-  }
-</style>
-	
-<style>
   #backToTop {
     position: fixed;
     bottom: 16px;
@@ -278,15 +239,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- الصورة التي تضغط عليها -->
-<img src="1.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
 
-<!-- نافذة التكبير -->
-<div id="lightbox" class="lightbox-overlay">
-  <img id="lightbox-img" src="">
-  <button class="close-btn" onclick="closeLightbox()">إغلاق</button>
-</div>
-	
   <img src="1.jpg" alt="صورة العميد شاكر" width="240">
   <img src="2.jpg" alt="صورة العميد شاكر" width="240">
   <img src="3.jpg" alt="صورة العميد شاكر" width="300">
@@ -356,15 +309,6 @@
 <img src="78.jpg" alt="صورة العميد شاكر" width="300">
 <img src="15.jpg" alt="صورة العميد شاكر" width="300" class="gold-frame">
 
-<!-- الصورة التي تضغط عليها -->
-<img src="1.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-
-<!-- نافذة التكبير -->
-<div id="lightbox" class="lightbox-overlay">
-  <img id="lightbox-img" src="">
-  <button class="close-btn" onclick="closeLightbox()">إغلاق</button>
-</div>	
-	
 <button id="backToTop" onclick="scrollToTop()">↑</button>
 <script>
   window.onscroll = function() {
@@ -374,16 +318,6 @@
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-<script>
-  function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").style.display = "flex";
-  }
-
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
   }
 </script>
 	
