@@ -2,6 +2,33 @@
 <html lang="ar">
 <head>
 <style>
+  .lightbox-img {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .lightbox-overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid gold;
+    border-radius: 12px;
+  }
+</style>
+	
+<style>
   #backToTop {
     position: fixed;
     bottom: 16px;
@@ -239,7 +266,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- الصورة المصغرة -->
+<img src="1.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
 
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+	
   <img src="1.jpg" alt="صورة العميد شاكر" width="240">
   <img src="2.jpg" alt="صورة العميد شاكر" width="240">
   <img src="3.jpg" alt="صورة العميد شاكر" width="300">
@@ -309,6 +344,17 @@
 <img src="78.jpg" alt="صورة العميد شاكر" width="300">
 <img src="15.jpg" alt="صورة العميد شاكر" width="300" class="gold-frame">
 
+<script>
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+	
 <button id="backToTop" onclick="scrollToTop()">↑</button>
 <script>
   window.onscroll = function() {
