@@ -230,13 +230,13 @@
 <section>
     <h2>شهادات الزملاء</h2>
     <ul>
- <li> شخصية عسكرية بارزة، عُرف خلال خدمته بانضباطه، حكمته، شجاعته، وحنكته القيادية</li>
-<li>ترك اثراً طيباً في كل المواقع التي شغلها، وكان محل احترام وتقدير لدى الجميع</li>
+        <li> شخصية عسكرية بارزة، عُرف خلال خدمته بانضباطه، حكمته، شجاعته، وحنكته القيادية</li>
+		<li>ترك اثراً طيباً في كل المواقع التي شغلها، وكان محل احترام وتقدير لدى الجميع</li>
 		
-<li>ــــــــــــــ</li
-  <li>والد كل من أحمد والضابط الجمركي حسن والدكتور زيد وليث والمهندسة الاء ونجم الدين والقبطان كمال والدكتوره آيه والدكتور محمد نور ومحمود خير وتسنيم </li>
+		<li>ــــــــــــــ</li
+		  <li>والد كل من أحمد والضابط الجمركي حسن والدكتور زيد وليث والمهندسة الاء ونجم الدين والقبطان كمال والدكتوره آيه والدكتور محمد نور ومحمود خير وتسنيم </li>
 		
-  <li>ـــــ</li>
+		  <li>ـــــ</li>
 		  
 		  
     </ul>
@@ -266,22 +266,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<img src="1.jpg" class="lightbox-img" width="300">
-<img src="2.jpg" class="lightbox-img" width="300">
-<img src="3.jpg" class="lightbox-img" width="300">
-<!-- أكمل باقي الصور بنفس الطريقة -->
-
-	
-<div id="lightbox" class="lightbox-overlay" style="display:none;">
-  <img id="lightbox-img" src="" alt="">
-  <div>
-    <button onclick="prevImage()">السابق</button>
-    <button onclick="closeLightbox()">إغلاق</button>
-    <button onclick="nextImage()">التالي</button>
-  </div>
-</div>
-
-	
 <!-- الصورة المصغرة -->
 <img src="1.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
 
@@ -772,32 +756,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
-	<script>
-  const images = [...document.querySelectorAll('.lightbox-img')].map(img => img.src);
-  let currentIndex = 0;
-
-  document.querySelectorAll('.lightbox-img').forEach(img => {
-    img.addEventListener('click', function () {
-      currentIndex = images.indexOf(this.src);
-      document.getElementById("lightbox-img").src = this.src;
-      document.getElementById("lightbox").style.display = "flex";
-    });
-  });
-
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    document.getElementById("lightbox-img").src = images[currentIndex];
-  }
-
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    document.getElementById("lightbox-img").src = images[currentIndex];
-  }
-	</script>
+	
 </body>
 </html>
 
