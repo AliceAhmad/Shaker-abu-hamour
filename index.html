@@ -278,7 +278,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- الصورة التي تضغط عليها -->
+<img src="1.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
 
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay">
+  <img id="lightbox-img" src="">
+  <button class="close-btn" onclick="closeLightbox()">إغلاق</button>
+</div>
+	
   <img src="1.jpg" alt="صورة العميد شاكر" width="240">
   <img src="2.jpg" alt="صورة العميد شاكر" width="240">
   <img src="3.jpg" alt="صورة العميد شاكر" width="300">
