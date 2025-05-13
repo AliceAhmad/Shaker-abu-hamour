@@ -255,6 +255,22 @@
   <title>السيرة الذاتية</title>
 </head>
 <body>
+	<!-- معرض الصور -->
+<div class="gallery">
+  <img src="img/photo1.jpg" alt="صورة 1" onclick="openLightbox(0)">
+  <img src="img/photo2.jpg" alt="صورة 2" onclick="openLightbox(1)">
+  <img src="img/photo3.jpg" alt="صورة 3" onclick="openLightbox(2)">
+</div>
+
+<!-- نافذة عرض الصور المنبثقة -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-image" id="lightboxImage" src="" alt="صورة مكبرة">
+  <div class="navigation">
+    <button class="nav-button" onclick="prevImage()">&#8592; السابق</button>
+    <button class="nav-button" onclick="nextImage()">التالي &#8594;</button>
+  </div>
+</div>
   <h1>صور من الارشيف</h1>
  <h2>العميد الركن المتقاعد شاكر احمد ابو حمور</h2>
 <!DOCTYPE html>
@@ -264,6 +280,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>معرض صور العميد شاكر</title>
 	<style>
+	/* نافذة الصورة المنبثقة */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  text-align: center;
+  padding-top: 60px;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 70vh;
+  margin-bottom: 20px;
+}
+
+/* زر الإغلاق */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* أزرار التنقل */
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #ffffff22;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-button:hover {
+  background: #ffffff55;
+}	
   .lightbox-img {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
@@ -746,6 +813,36 @@
 
 
 <script>
+<script>
+  const images = [
+    "img/photo1.jpg",
+    "img/photo2.jpg",
+    "img/photo3.jpg"
+  ];
+
+  let currentImageIndex = 0;
+
+  function openLightbox(index) {
+    currentImageIndex = index;
+    document.getElementById("lightboxImage").src = images[index];
+    document.getElementById("lightbox").style.display = "block";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    document.getElementById("lightboxImage").src = images[currentImageIndex];
+  }
+
+  function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    document.getElementById("lightboxImage").src = images[currentImageIndex];
+  }
+</script>
+	
   function openLightbox(src) {
     document.getElementById("lightbox-img").src = src;
     document.getElementById("lightbox").style.display = "flex";
