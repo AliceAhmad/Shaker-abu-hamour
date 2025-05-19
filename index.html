@@ -830,6 +830,42 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
+
+<script>
+  const images = Array.from(document.querySelectorAll('.gallery img'));
+  let currentIndex = 0;
+
+  function showImage(index) {
+    const lightboxImg = document.querySelector('.lightbox img');
+    if (index >= 0 && index < images.length) {
+      lightboxImg.src = images[index].src;
+      currentIndex = index;
+    }
+  }
+
+  document.querySelector('.next').addEventListener('click', () => {
+    if (currentIndex < images.length - 1) {
+      showImage(currentIndex + 1);
+    }
+  });
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    if (currentIndex > 0) {
+      showImage(currentIndex - 1);
+    }
+  });
+
+  // عند فتح الصورة
+  images.forEach((img, i) => {
+    img.addEventListener('click', () => {
+      currentIndex = i;
+      showImage(i);
+      document.querySelector('.lightbox').style.display = 'block';
+    });
+  });
+</script>
+
+
 	
 </body>
 </html>
