@@ -27,7 +27,65 @@
     border: 4px solid gold;
     border-radius: 12px;
   }
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: orange;
+}
+
+	
+
+	
 </style>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-prev">&#10094;</span>
+  <img id="lightbox-img" src="" alt="عرض الصورة">
+  <span class="lightbox-next">&#10095;</span>
+</div>
+
+
 	
 <style>
   #backToTop {
@@ -875,6 +933,52 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
+
+<script>
+  const images = Array.from(document.querySelectorAll('.lightbox-img'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const nextBtn = document.querySelector('.lightbox-next');
+  const prevBtn = document.querySelector('.lightbox-prev');
+
+  let currentIndex = 0;
+
+  // فتح الصورة عند الضغط
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      showImage();
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  // عرض الصورة حسب الفهرس
+  function showImage() {
+    lightboxImg.src = images[currentIndex].src;
+  }
+
+  // زر التالي
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage();
+  });
+
+  // زر السابق
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+  });
+
+  // إغلاق عند الضغط خارج الصورة
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+
+
 	
 </body>
 </html>
