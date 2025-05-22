@@ -946,8 +946,11 @@
 
   // عرض الصورة حسب الفهرس
   function showImage() {
-    lightboxImg.src = images[currentIndex].src;
-  }
+  const img = images[currentIndex];
+  lightboxImg.src = img.src;
+  const caption = img.nextElementSibling?.textContent || '';
+  document.getElementById('lightbox-caption').textContent = caption;
+}
 
   // زر التالي
   nextBtn.addEventListener('click', () => {
