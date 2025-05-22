@@ -7,6 +7,8 @@
     cursor: pointer;
     transition: 0.3s;
   }
+<p id="lightbox-caption" style="color: white; font-size: 18px; text-align: center; margin-top: 10px;"></p>
+	
 
   .lightbox-overlay {
     display: none;
@@ -931,10 +933,10 @@
 
 <script>
   function openLightbox(img) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxCaption = document.getElementById("lightbox-caption");
-
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox-caption').textContent = img.dataset.captionLightbox || '';
+  document.getElementById('lightbox').style.display = 'flex';
+}
     lightboxImg.src = img.src;
     lightboxCaption.textContent = img.dataset.caption || "";
     lightbox.style.display = "flex";
