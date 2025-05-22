@@ -78,12 +78,23 @@
 </style>
 
 
-<div id="lightbox" class="lightbox-overlay" style="display: none;">
-  <span class="lightbox-close" onclick="closeLightbox()">×</span>
-  <span class="lightbox-prev" onclick="prevImage()">‹</span>
-  <img id="lightbox-img" src="">
-  <span class="lightbox-next" onclick="nextImage()">›</span>
+<!-- نافذة التكبير مع الأسهم والإغلاق -->
+<div id="lightbox" class="lightbox-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; flex-direction: column; z-index: 1000;">
+
+  <!-- زر الإغلاق -->
+  <span onclick="closeLightbox()" style="position: absolute; top: 10px; right: 20px; font-size: 30px; color: white; cursor: pointer;">&times;</span>
+
+  <!-- الصورة المكبرة -->
+  <img id="lightbox-img" src="" style="max-width: 90%; max-height: 80%;">
+
+  <!-- التعليق تحت الصورة -->
   <p id="lightbox-caption" style="color: white; font-size: 18px; text-align: center; margin-top: 10px;"></p>
+
+  <!-- زر السابق -->
+  <span class="lightbox-prev" style="position: absolute; top: 50%; left: 20px; font-size: 40px; color: white; cursor: pointer;">&#10094;</span>
+
+  <!-- زر التالي -->
+  <span class="lightbox-next" style="position: absolute; top: 50%; right: 20px; font-size: 40px; color: white; cursor: pointer;">&#10095;</span>
 </div>
 	
 <style>
@@ -448,6 +459,19 @@
   <img id="lightbox-img" src="">
 </div>	
 
+
+<figure style="position: relative; display: inline-block;">
+  <img src="10.jpg" alt="صورة العميد" width="300"
+       class="lightbox-img"
+       data-caption="النص الذي يظهر في النافذة المنبثقة"
+       onclick="openLightbox(this)">
+  <figcaption style="font-size: 18px; text-align: center; margin-top: 5px;">
+    النص الذي يظهر تحت الصورة
+  </figcaption>
+</figure>
+
+	
+	
 <figure style="position: relative; display: inline-block;">
   <img src="10.jpg" alt="صورة العميد" width="300"
        class="lightbox-img"
@@ -455,15 +479,20 @@
        data-caption-page="النص اللي يظهر تحت الصورة"
        onclick="openLightbox(this)">
   <figcaption style="font-size: 18px; text-align: center; margin-top: 5px;">
-    النص اللي يظهر تحت الصورة
+    العميد الركن المتقاعد شاكر ابو حمور والعميد الركن المتقاعد عوده الفرايه 
   </figcaption>
 </figure>
 
-
-
-
-
-
+	
+<figure style="position: relative; display: inline-block;">
+  <img src="11.jpg" alt="صورة العميد" width="300"
+       class="lightbox-img"
+       data-caption="إحدى الدورات التي حضرها العميد شاكر ابوحمور في امريكا 1974"
+       onclick="openLightbox(this)">
+  <figcaption style="font-size: 12px; text-align: center; margin-top: 5px;">
+    إحدى الدورات التي حضرها العميد شاكر ابوحمور في امريكا 1974 
+  </figcaption>
+</figure>
 
 
 
@@ -899,6 +928,21 @@
 </div>	
 
 
+<script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = img.dataset.caption || "";
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
 	
 <button id="backToTop" onclick="scrollToTop()">↑</button>
 <script>
@@ -913,44 +957,47 @@
 </script>
 
 <script>
-<script>
   const images = Array.from(document.querySelectorAll('.lightbox-img'));
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxCaption = document.getElementById('lightbox-caption');
+  const nextBtn = document.querySelector('.lightbox-next');
+  const prevBtn = document.querySelector('.lightbox-prev');
 
   let currentIndex = 0;
 
-  function openLightbox(img) {
-    currentIndex = images.indexOf(img);
-    showImage();
-    lightbox.style.display = 'flex';
-  }
+  // فتح الصورة عند الضغط
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      showImage();
+      lightbox.style.display = 'flex';
+    });
+  });
 
+  // عرض الصورة حسب الفهرس
   function showImage() {
-    const img = images[currentIndex];
-    lightboxImg.src = img.src;
-    lightboxCaption.textContent = img.dataset.captionLightbox || "";
-  }
+  const img = images[currentIndex];
+  lightboxImg.src = img.src;
+  const caption = img.nextElementSibling?.textContent || '';
+  document.getElementById('lightbox-caption').textContent = caption;
+}
 
-  function closeLightbox() {
-    lightbox.style.display = 'none';
-  }
-
-  function nextImage() {
+  // زر التالي
+  nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     showImage();
-  }
+  });
 
-  function prevImage() {
+  // زر السابق
+  prevBtn.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage();
-  }
+  });
 
-  // إغلاق النافذة عند الضغط خارج الصورة
+  // إغلاق عند الضغط خارج الصورة
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
-      closeLightbox();
+      lightbox.style.display = 'none';
     }
   });
 </script>
