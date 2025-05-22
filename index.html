@@ -929,9 +929,14 @@
 
 
 <script>
-  function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").style.display = "flex";
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = img.dataset.caption || "";
+    lightbox.style.display = "flex";
   }
 
   function closeLightbox() {
