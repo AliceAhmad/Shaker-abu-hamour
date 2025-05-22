@@ -391,7 +391,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<figure style="position: relative; display: inline-block;">
+  <img src="10.jpg" alt="صورة العميد" width="300"
+       class="lightbox-img"
+       data-lightbox-caption="النص الذي يظهر داخل النافذة"
+       onclick="openLightbox(this)">
+  <figcaption style="font-size: 18px; text-align: center; margin-top: 5px;">
+    النص الذي يظهر تحت الصورة
+  </figcaption>
+</figure>
 
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" style="display: none;">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img" src="">
+  <p id="lightbox-caption" style="color: white; font-size: 18px; text-align: center; margin-top: 10px;"></p>
+  <button class="lightbox-prev" onclick="changeImage(-1)">‹</button>
+  <button class="lightbox-next" onclick="changeImage(1)">›</button>
+</div>
 
 
 <script>
