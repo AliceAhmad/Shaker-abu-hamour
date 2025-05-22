@@ -918,26 +918,11 @@
 
 
 <script>
-  function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").style.display = "flex";
-  }
-
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-</script>
-	
-<button id="backToTop" onclick="scrollToTop()">↑</button>
-<script>
-  window.onscroll = function() {
-    document.getElementById("backToTop").style.display =
-      window.scrollY > 300 ? "block" : "none";
-  };
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  function openLightbox(imgElement) {
+  document.getElementById("lightbox-img").src = imgElement.src;
+  document.getElementById("lightbox-caption").textContent = imgElement.dataset.captionLightbox || "";
+  document.getElementById("lightbox").style.display = "flex";
+}
 </script>
 
 <script>
