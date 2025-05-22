@@ -176,29 +176,6 @@
             bottom: 0;
         }
     </style>
-
-
-<!-- نافذة العرض المنبثقة -->
-<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
-    background:rgba(0,0,0,0.8); text-align:center; padding-top:50px; z-index:1000;">
-  <img id="lightbox-img" src="" style="max-width:90%; max-height:70%;">
-  <p id="lightbox-caption" style="color:white; font-size:18px; margin-top:15px;"></p>
-  <span onclick="closeLightbox()" style="position:absolute; top:20px; right:30px; color:white; font-size:30px; cursor:pointer;">&times;</span>
-</div>
-
-<!-- دوال JavaScript -->
-<script>
-  function openLightbox(src, caption) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox-caption').textContent = caption;
-    document.getElementById('lightbox').style.display = 'block';
-  }
-
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-  }
-</script>
-	
 </head>
 <body>
  
@@ -469,9 +446,7 @@
 </div>	
 
 <figure style="position: relative; display: inline-block;">
-<figure style="position: relative; display: inline-block;">
-  <img src="10.jpg" alt="صورة العميد" width="300" class="lightbox-img"
-       onclick="openLightbox(this.src, 'العميد الركن المتقاعد شاكر ابو حمور والعميد الركن المتقاعد عوده حسين الفرايه 1974')">
+  <img src="10.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
   
   <!-- التاريخ في الزاوية اليسرى العلوية -->
   <span style="
@@ -487,15 +462,11 @@
     1974
   </span>
   
-  <figcaption style="font-size: 18px; text-align: center; margin-top: 5px;">
-    العميد الركن المتقاعد شاكر ابو حمور والعميد الركن المتقاعد عوده حسين الفرايه 1974
+  <figcaption style="font-size: 10px; text-align: center; margin-top: 3px;">
+    العميد الركن المتقاعد عوده حسين الفرايه والعميد الركن المتقاعد شاكر ابوحمور 
   </figcaption>
-</figure>>
+</figure>
 
-
-
-
-	
 <!-- الصورة المصغرة -->
 <img src="11.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
 
