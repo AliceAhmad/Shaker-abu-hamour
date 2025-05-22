@@ -928,18 +928,6 @@
     document.getElementById("lightbox").style.display = "none";
   }
 </script>
-	
-<button id="backToTop" onclick="scrollToTop()">↑</button>
-<script>
-  window.onscroll = function() {
-    document.getElementById("backToTop").style.display =
-      window.scrollY > 300 ? "block" : "none";
-  };
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
 
 <script>
   const images = Array.from(document.querySelectorAll('.lightbox-img'));
