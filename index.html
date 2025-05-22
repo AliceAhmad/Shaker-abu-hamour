@@ -77,9 +77,24 @@
 	
 </style>
 
-<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
+
+<!-- نافذة التكبير مع الأسهم والإغلاق -->
+<div id="lightbox" class="lightbox-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; flex-direction: column; z-index: 1000;">
+
+  <!-- زر الإغلاق -->
+  <span onclick="closeLightbox()" style="position: absolute; top: 10px; right: 20px; font-size: 30px; color: white; cursor: pointer;">&times;</span>
+
+  <!-- الصورة المكبرة -->
   <img id="lightbox-img" src="" style="max-width: 90%; max-height: 80%;">
+
+  <!-- التعليق تحت الصورة -->
   <p id="lightbox-caption" style="color: white; font-size: 18px; text-align: center; margin-top: 10px;"></p>
+
+  <!-- زر السابق -->
+  <span class="lightbox-prev" style="position: absolute; top: 50%; left: 20px; font-size: 40px; color: white; cursor: pointer;">&#10094;</span>
+
+  <!-- زر التالي -->
+  <span class="lightbox-next" style="position: absolute; top: 50%; right: 20px; font-size: 40px; color: white; cursor: pointer;">&#10095;</span>
 </div>
 	
 <style>
@@ -926,6 +941,18 @@
 
   function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+	
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+<script>
+  window.onscroll = function() {
+    document.getElementById("backToTop").style.display =
+      window.scrollY > 300 ? "block" : "none";
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
 
