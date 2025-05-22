@@ -392,16 +392,15 @@
 </head>
 <body>
 
+	<div id="lightbox" class="lightbox-overlay" style="display: none;">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <span class="lightbox-prev" onclick="prevImage()">‹</span>
+  <img id="lightbox-img" src="">
+  <span class="lightbox-next" onclick="nextImage()">›</span>
+  <p id="lightbox-caption" style="color: white; font-size: 18px; text-align: center; margin-top: 10px;"></p>
+</div>
 
-<figure style="position: relative; display: inline-block;">
-  <img src="10.jpg" alt="صورة العميد" width="300"
-       class="lightbox-img"
-       data-caption="النص الذي يظهر في النافذة المنبثقة"
-       onclick="openLightbox(this)">
-  <figcaption style="font-size: 18px; text-align: center; margin-top: 5px;">
-    النص الذي يظهر تحت الصورة
-  </figcaption>
-</figure>
+
 
 
 
