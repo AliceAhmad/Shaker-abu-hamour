@@ -899,21 +899,6 @@
 </div>	
 
 
-<script>
-  function openLightbox(img) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxCaption = document.getElementById("lightbox-caption");
-
-    lightboxImg.src = img.src;
-    lightboxCaption.textContent = img.dataset.caption || "";
-    lightbox.style.display = "flex";
-  }
-
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-</script>
 	
 <button id="backToTop" onclick="scrollToTop()">↑</button>
 <script>
