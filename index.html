@@ -422,7 +422,7 @@
 </figure>
 
 <figure style="position: relative; display: inline-block; margin: 10px;">
-  <img src="10.jpg" alt="صورة 1974" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <img src="10.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
   <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
 </figure>
 
@@ -797,4 +797,23 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const button = document.getElementById('backToTop');
+    const footer = document.querySelector('footer');
+    if (!button || !footer) return;
+    const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+    const windowBottom = window.scrollY + window.innerHeight;
+
+    if (windowBottom >= footerTop) {
+      button.style.position = 'absolute';
+      button.style.bottom = (windowBottom - footerTop + 20) + 'px';
+    } else {
+      button.style.position = 'fixed';
+      button.style.bottom = '80px';
+    }
+  });
+</script>
+
 </body>
