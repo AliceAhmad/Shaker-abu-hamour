@@ -356,88 +356,437 @@
 	
 </footer>
 
+<!-- نافذة التكبير مع النص وزر الإغلاق والسهمين -->
+<div id="lightbox" class="lightbox-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; flex-direction: column; z-index: 1000;">
+  <span onclick="closeLightbox()" style="position: absolute; top: 10px; right: 20px; font-size: 30px; color: white; cursor: pointer;">&times;</span>
+  <img id="lightbox-img" src="" style="max-width: 90%; max-height: 80%;">
+  <p id="lightbox-caption" style="color: white; font-size: 18px; text-align: center; margin-top: 10px;"></p>
+  <span class="lightbox-prev" style="position: absolute; top: 50%; left: 20px; font-size: 40px; color: white; cursor: pointer;">&#10094;</span>
+  <span class="lightbox-next" style="position: absolute; top: 50%; right: 20px; font-size: 40px; color: white; cursor: pointer;">&#10095;</span>
+</div>
 
 <section id="gallery">
-  <h2>صور من الأرشيف</h2>
-  <img src="1.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="2.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="3.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="4.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="5.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="6.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="7.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="8.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="9.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="10.jpg" alt="صورة العميد" width="300"
-       class="lightbox-img"
-       data-caption-lightbox="العميد الركن المتقاعد عوده حسين الفرايه والعميد الركن المتقاعد شاكر أبو حمور 1974"
-       data-caption-page="1974"
-       onclick="openLightbox(this)">
-  <img src="11.jpg" alt="صورة العميد" width="300"
-       class="lightbox-img"
-       data-caption="إحدى الدورات التي حضرها العميد شاكر ابوحمور في امريكا 1974"
-       onclick="openLightbox(this)">
-  <img src="12.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="13.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="14.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="16.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="17.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="18.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="19.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="20.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="21.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="22.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="23.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="24.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="83.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="28.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="26.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="27.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="30.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="40.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="41.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="43.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="44.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="47.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="45.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="52.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="62.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="61.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="48.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="49.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="50.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="51.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="52.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="53.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="54.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="55.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="56.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="58.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="59.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="60.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="66.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="67.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="63.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="64.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="65.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="68.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="69.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="70.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="71.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="72.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="73.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="74.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="75.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="76.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="77.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="78.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="80.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="79.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="81.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="82.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="84.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="85.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="87.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
-  <img src="15.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+  <h2 style="text-align:center;">صور من الأرشيف</h2>
+  
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="1.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="2.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="3.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="4.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="5.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="6.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="7.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="8.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="9.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="10.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="11.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="12.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="13.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="14.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="16.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="17.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="18.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="19.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="20.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="21.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="22.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="23.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="24.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="83.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="28.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="26.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="27.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="30.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="40.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="41.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="43.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="44.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="47.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="45.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="52.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="62.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="61.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="48.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="49.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="50.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="51.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="52.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="53.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="54.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="55.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="56.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="58.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="59.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="60.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="66.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="67.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="63.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="64.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="65.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="68.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="69.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="70.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="71.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="72.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="73.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="74.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="75.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="76.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="77.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="78.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="80.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="79.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="81.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="82.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="84.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="85.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="87.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
+
+<figure style="position: relative; display: inline-block; margin: 10px;">
+  <img src="15.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this)">
+  <figcaption style="font-size: 14px; text-align: center; margin-top: 5px;">صورة العميد</figcaption>
+</figure>
 </section>
+
+<script>
+  const images = Array.from(document.querySelectorAll('.lightbox-img'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const caption = document.getElementById('lightbox-caption');
+  const prev = document.querySelector('.lightbox-prev');
+  const next = document.querySelector('.lightbox-next');
+
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      showImage();
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  function showImage() {
+    const img = images[currentIndex];
+    lightboxImg.src = img.src;
+    caption.textContent = img.alt || "";
+  }
+
+  prev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+  });
+
+  next.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage();
+  });
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+</script>
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+<script>
+  window.onscroll = function() {
+    document.getElementById("backToTop").style.display =
+      window.scrollY > 300 ? "block" : "none";
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 </body>
