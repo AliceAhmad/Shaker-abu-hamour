@@ -1,13 +1,1011 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<style>
+  .lightbox-img {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .lightbox-overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid gold;
+    border-radius: 12px;
+  }
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: orange;
+}
+	
+	
+</style>
+
+
+<!-- نافذة التكبير مع الأسهم والإغلاق -->
+<div id="lightbox" class="lightbox-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; flex-direction: column; z-index: 1000;">
+
+  <!-- زر الإغلاق -->
+  <span onclick="closeLightbox()" style="position: absolute; top: 10px; right: 20px; font-size: 30px; color: white; cursor: pointer;">&times;</span>
+
+  <!-- الصورة المكبرة -->
+  <img id="lightbox-img" src="" style="max-width: 90%; max-height: 80%;">
+
+  <!-- التعليق تحت الصورة -->
+  <p id="lightbox-caption" style="color: white; font-size: 18px; text-align: center; margin-top: 10px;"></p>
+
+  <!-- زر السابق -->
+  <span class="lightbox-prev" style="position: absolute; top: 50%; left: 20px; font-size: 40px; color: white; cursor: pointer;">&#10094;</span>
+
+  <!-- زر التالي -->
+  <span class="lightbox-next" style="position: absolute; top: 50%; right: 20px; font-size: 40px; color: white; cursor: pointer;">&#10095;</span>
+</div>
+	
+<style>
+  #backToTop {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 14px;
+    font-size: 16px;
+    font-family: sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+  }
+</style>
+	
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+</style>
+
+<style>
+  .gold-frame {
+    border: 4px solid gold;
+    border-radius: 10px;
+    padding: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السيرة الذاتية - العميد الركن شاكر احمد ابو حمور </title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #003366;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+ 
+
+<header>
+    <h1>السيرة الذاتية</h1>
+<!-- داخل <body> -->
+<img src="1.jpg" alt="صورة العميد شاكر" width="280" class="gold-frame">
+<p style="font-weight: normal; text-align: center; margin-top: 8px;">
+  العميد الركن المتقاعد شاكر أحمد أبو حمور
+</p>
+	   
+<h2>العميد الركن المتقاعد شاكر أحمد حسن أبو حمور</h2>
+
+<nav>
+<style>
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: gold;
+    font-weight: normal;
+  }
+
+  nav a:hover {
+    color: orange;
+  }
+</style>
+		 
+    <a href="#information"> نبذة </a>
+    <a href="#Qualifications"> -  المؤهلات العسكرية </a>
+    <a href="#Military march"> -  المسيرة العسكرية</a>
+    <a href="#After service"> -  ما بعد الخدمة العسكرية</a>
+    <a href="#Medals"> -  الأوسمة والشارات</a>
+    <a href="#gallery"> -  صور من الارشيف
+</a>
+  </nav>
+	
+</header>
+	
+<section>
+    <h2>المعلومات الشخصية</h2>
+    <ul>
+	  <div style="text-align: right;">  
+        <li><strong>الأسم:</strong> شاكر أحمد حسن أبو حمور</li>
+        <li><strong>تاريخ ومكان الولادة:</strong> 1951 – مدينة السلط، المملكة الأردنية الهاشمية</li>
+        <li><strong>الجنسية:</strong> الأردنية</li>
+        <li><strong>اللغات:</strong> العربية، الإنجليزية، الروسية</li>
+	<li><strong>الهواية المفضلة:</strong> كرة اليد</li>
+	</div>	  
+    </ul>
+</section>
+
+<section id="information"> 	
+<h2>نبذة عن شخصية</h2>
+
+العميد الركن المتقاعد شاكر أحمد أبو حمّور، ضابط رفيع المستوى خدم في القوات المسلحة الأردنية لمدة (46) عاما، منها (26) عام في الخدمة العسكرية الفعلية، تنقل خلالها في مناصب قيادية وميدانية متعددة و(20) عاما أخرى في مجال الاعلام العسكري، يتمتع بخبره طويلة في الميدان وخبره واسعة في القيادة والادارة العسكرية بالاضافة إلى خبرته في مجال الاعلام العسكري، وهو من أحد الضباط الذين جمعوا بين الالتزام العسكري والخلق الرفيع. تميز بجديته العالية، وعمق إيمانه بالله، وحرصه الدائم على الصدق والأمانة في كل ما تولاه من مسؤوليات. عُرف بكرمه وتواضعه وشجاعته، وكان مثالاً للوفاء والانتماء للوطن، حيث ترك بصمة واضحة في كل موقع خدم فيه، سواء في الميدان أو في مجال الإعلام العسكري. جعل من الصدق والإخلاص منهجًا لا يتغير." 
+
+يقول الحق كما هو دون تزييف، ويُقدَّر لموقفه الثابت وصراحته النابعة من مبدأ، حتى لو كانت كلمته لا تعجب البعض، فهو لا يعرف التلون ولا يجيد الالتفاف، بل يسير على خطٍ مستقيم تُحترم فيه كلمته قبل أفعاله. 
+</section>
+
+	<section id="Qualifications"> 
+    <h2>المؤهلات العسكرية </h2>
+    <ul>
+        <li>التحق بمدرسة المرشحين – القوات المسلحة الأردنية وتخرج برتبة تلميذ مرشح عام 1970 - صنف دروع  </li>
+        <li> تلقى العديد من الدورات العسكرية التأسيسية والمتقدمة داخل الأردن وخارجه، في عدة مجالات، كمجالات في القيادة، الإدارة، والتخطيط العسكري</li>
+		<li>الفائز الأول بدورة الصاعقة رقم 39 عام 1974</li>
+		<li>حاصل على بكالوريوس في العلوم العسكرية/ جامعة مؤتة</li>
+		<img src="15.jpg" alt="صورة العميد شاكر" width="200" class="gold-frame">
+
+    </ul>
+</section>
+	
+    <section id="Military march">   
+    <h2>المسيرة العسكرية</h2>
+    <ul>
+   <li>بدأ خدمته في وحدات الجيش العربي وتدرج في المناصب  التالية:</li>
+       
+	 <li> قائد فصيل اشارة</li>
+        <li>ركن/3 عمليات كتيبة مشاة آلية</li>
+	<li>أركان حرب كتيبة آلية</li>		
+	 <li>قائد سرية كتيبة آلية</li>		
+	<li>مساعد قائد كتيبة دبابات </li>
+	 <li>ركن أول إمداد وتجهيز فرقة آلية</li>
+        <li>قائد كتيبة آلية</li>
+        <li>قائد مجموعة إسناد إداري ولوجستي لفرقة آلية</li>
+        <li>مدير لواء آلي</li>
+        <li>رئيس شعبة الإعلام العسكري</li>
+        <li>مدير تحرير مجلة الأقصى العسكرية (1993-1996)</li>
+	<li>رئيس الوفود الأعلامية لقوات حفظ السلام الأردنية (1993-1996) </li>
+        <li>ضابط ادارة ومساعد الملحق الدفاعي موسكو- الاتحاد السوفيتي (1980-1983)</li>
+       
+    </ul>
+</section>
+
+<section>
+    <h2>الخبرة الإعلامية</h2>
+    <ul>
+       
+	   <li>ترأس الشعبة المسؤولة عن الاعلام في مديرية التوجيه المعنوي</li>
+	    <li>المنسق العام لبرنامج الجيش العربي</li>
+		<li>مدقق ومعد برامج- اذاعة القوات المسلحة الأردنية</li>
+		
+                   </ul>
+</section>
+
+	<section id="After service">    
+    <h2>ما بعد الخدمة العسكرية</h2>
+    <ul>
+        <li>أُحيل إلى التقاعد برتبة عميد ركن دروع عام 1996</li>
+        <li>أعيد تعينه مدنياً في عام 1997-مدقق ومعد برامج- اذاعة القوات المسلحة الأردنية</li>
+        <li>.استمر في هذا الدور حتى عام 2017، وترك بصمة مميزة في العمل الإذاعي العسكري</li>
+        <li>ساهم في اعداد وانتاج برامج توعوية وثقافية ذات طابع وطني وعسكري، ركزت </li>
+        <li> على رفع الروح المعنوية لدى الجنود وتوعية المجتمع المدني بدور القوات المسلحة</li>
+	<li>.عضو تجمع البلقاء للمتقاعدين العسكريين</li>
+	<li>.رئيس مجلس ادارة شركة الاورواسيوية للنقل البحري، وعضو مجلس ادارة لعدة شركات</li>
+	<li>.يحرص على تنمية المجتمع المحلي والتواصل والنشاطات الاجتماعية</li>
+	    
+    </ul>
+</section>
+
+<section id="Medals">
+    <h2>الأوسمة والشارات</h2>
+    <ul>
+        <li>وسام الكوكب الأردني</li>
+        <li>وسام الاستقلال الأردني</li>
+        <li>وسام الاستحقاق العسكري</li>
+	<li>وسام اليوبيل الفضي</li>
+	<li>وسام النهضه</li>
+        <li>وسام الخدمة المخلصة</li>
+        <li>شارة الخدمة 1967-1971</li>
+        <li>شارة الكفاءة القيادية</li>
+        <li>شارة الكفاءة الادارية والفنية</li>
+        <li>شارة الكفاءة التدريبية</li>
+    </ul>
+</section>
+
+<section>
+    <h2>الانتماء العشائري</h2>
+    <p>ينتمي إلى عشيرة أبو حمور، وهي عشيرة أردنية مستقلة ذات جذور عريقة في مدينة السلط</p>
+</section>
+
+<section>
+    <h2>شهادات الزملاء</h2>
+    <ul>
+        <li> شخصية عسكرية بارزة، عُرف خلال خدمته بانضباطه، حكمته، شجاعته، وحنكته القيادية</li>
+		<li>ترك اثراً طيباً في كل المواقع التي شغلها، وكان محل احترام وتقدير لدى الجميع</li>
+		
+		<li>ــــــــــــــ</li
+		  <li>زوج السيدة الفاضلة أسماء أبو حمّور (فضيه) والد كل من أحمد والضابط الجمركي حسن والدكتور زيد وليث والمهندسة الاء ونجم الدين والقبطان كمال والدكتوره آيه والدكتور محمد نور ومحمود خير وتسنيم </li>
+		
+		  <li>ـــــ</li>
+		  	  
+    </ul>
+</section>
+
+<footer>
+    <p>2018 &copy; العميد الركن شاكر أحمد أبو حمّور</p>
+	
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>السيرة الذاتية</title>
+</head>
+<body>
+  <h1>صور من الارشيف</h1>
+<section id="gallery"> 
+ <h2>العميد الركن المتقاعد شاكر احمد ابو حمور</h2> 
+</section>
+
+	
 <!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="السيرة الذاتية للعميد الركن المتقاعد شاكر أحمد أبو حمور، أحد ضباط القوات المسلحة الأردنية البارزين. تشمل المؤهلات، المناصب، الخبرات، الأوسمة، والانتماء العشائري.">
-  <title>السيرة الذاتية - العميد الركن شاكر أحمد أبو حمور</title>
+  <title>معرض صور العميد شاكر</title>
+	<style>
+  .lightbox-img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .lightbox-img:hover {
+    transform: scale(1.05);
+  }
+</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>تم تحديث الملف بنجاح</h1>
-  <p>جميع النصوص والصور والروابط تم إدراجها.</p>
+<!-- الصورة المصغرة -->
+<img src="1.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+<!-- الصورة المصغرة -->
+<img src="2.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+<!-- الصورة المصغرة -->
+<img src="3.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+	<!-- الصورة المصغرة -->
+<img src="4.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+<!-- الصورة المصغرة -->
+<img src="5.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="6.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+ <!-- الصورة المصغرة -->
+<img src="7.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+ <!-- الصورة المصغرة -->
+<img src="8.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="9.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+
+
+	
+	
+<figure style="position: relative; display: inline-block;">
+  <img src="10.jpg" alt="صورة العميد" width="300"
+       class="lightbox-img"
+       data-caption-lightbox="العميد الركن المتقاعد عوده حسين الفرايه والعميد الركن المتقاعد شاكر أبو حمور 1974"
+       data-caption-page="1974"
+       onclick="openLightbox(this)">
+  <figcaption style="font-size: 8px; text-align: center; margin-top: 5px;">
+    العميد الركن المتقاعد عوده حسين الفرايه والعميد الركن المتقاعد شاكر ابوحمور 1974 
+  </figcaption>
+</figure>
+
+	
+<figure style="position: relative; display: inline-block;">
+  <img src="11.jpg" alt="صورة العميد" width="300"
+       class="lightbox-img"
+       data-caption="إحدى الدورات التي حضرها العميد شاكر ابوحمور في امريكا 1974"
+       onclick="openLightbox(this)">
+  <figcaption style="font-size: 8px; text-align: center; margin-top: 5px;">
+   إحدى الدورات التي حضرها العميد شاكر ابوحمور في امريكا 1974
+  </figcaption>
+</figure>
+
+
+
+
+
+
+<!-- الصورة المصغرة -->
+<img src="12.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+<!-- الصورة المصغرة -->
+<img src="13.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+<!-- الصورة المصغرة -->
+<img src="14.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+<!-- الصورة المصغرة -->
+<img src="16.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+<!-- الصورة المصغرة -->
+<img src="17.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="18.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="19.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="20.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="21.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="22.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="23.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="24.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="83.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="28.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="26.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="27.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="30.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+ <li>الجيش العربي@العميد الركن شاكر أبو حمّور</li>
+<!-- الصورة المصغرة -->
+<img src="40.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="41.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="43.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="44.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="47.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="45.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="52.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+<!-- الصورة المصغرة -->
+<img src="62.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="61.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="48.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="49.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="50.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="51.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+<!-- الصورة المصغرة -->
+<img src="52.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="53.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="54.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="55.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="56.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>		
+<!-- الصورة المصغرة -->
+<img src="58.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="59.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="60.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="66.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="67.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="63.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="64.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="65.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="68.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="69.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="70.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="71.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+	<!-- الصورة المصغرة -->
+<img src="72.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="73.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="74.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="75.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="76.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="77.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="78.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="80.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="79.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="81.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="82.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="84.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="85.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="87.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+<!-- الصورة المصغرة -->
+<img src="15.jpg" alt="صورة العميد" width="300" class="lightbox-img" onclick="openLightbox(this.src)">
+<!-- نافذة التكبير -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>	
+
+
+<script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = img.dataset.caption || "";
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+	
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+<script>
+  window.onscroll = function() {
+    document.getElementById("backToTop").style.display =
+      window.scrollY > 300 ? "block" : "none";
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<script>
+  const images = Array.from(document.querySelectorAll('.lightbox-img'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const nextBtn = document.querySelector('.lightbox-next');
+  const prevBtn = document.querySelector('.lightbox-prev');
+
+  let currentIndex = 0;
+
+  // فتح الصورة عند الضغط
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      showImage();
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  // عرض الصورة حسب الفهرس
+  function showImage() {
+  const img = images[currentIndex];
+  lightboxImg.src = img.src;
+  const caption = img.nextElementSibling?.textContent || '';
+  document.getElementById('lightbox-caption').textContent = caption;
+}
+
+  // زر التالي
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage();
+  });
+
+  // زر السابق
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+  });
+
+  // إغلاق عند الضغط خارج الصورة
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+	
+</body>
+</html>
+
+ <div style="line-height: .4;">  
+<div style="text-align: right;">
+  <p> تاريخ الاردن: <a href="https://www.jordanhistory.com/kharja/photos/collection1_ar.php?id=2&page=7852" target="_blank">jordanhistory.com</a></p>
+<p>للمزيد عن القوات المسلحة الأردنية: <a href="https://www.jaf.mil.jo" target="_blank">jaf.mil.jo</a></p>
+<p> تاريخ الأردن: <a href="https://www.historyofjordan.com/jordan2/jh/collection1.php?id=2&page=4087" target="_blank">historyofjordan.com</a></p>
+<p> <a href="https://www.jaf.mil.jo/ContentstemplateC/Army_Radioar.aspx" target="_blank">إذاعة الجيش - jaf.mil.jo</a></p>
+</div>	
+</div>	
+	 
+		  <li>ـــ</li>
+  
+  <p>سيرة ذاتية مختصرة...</p>
 </body>
 </html>
