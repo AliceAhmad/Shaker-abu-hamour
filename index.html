@@ -105,7 +105,7 @@
     bottom: 50px;
     right: 10px;
     background-color: gold;
-    color: black;
+    color: red;
     border: none;
     border-radius: 12px;
     padding: 12px 18px;
@@ -116,9 +116,14 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: none;
     z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  #backToTop:hover {
+    background-color: orange;
+    color: white;
   }
 </style>
-	
 <style>
   img {
     max-width: 100%;
