@@ -878,7 +878,6 @@
 <p>2018 © العميد الركن شاكر أحمد أبو حمّور</p>
 <p style="font-size: 12px; margin-top: -12px; color: #ddd;">جميع الحقوق محفوظة</p>
 </footer>
-
 <button id="backToTop" onclick="scrollToTop()">↑</button>
 <script>
   window.onscroll = function() {
@@ -891,27 +890,45 @@
   }
 </script>
 <script>
+let currentImageIndex = 0;
+let galleryImages = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  galleryImages = Array.from(document.querySelectorAll(".lightbox-img"));
+});
+
 function openLightbox(imgElement) {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxCaption = document.getElementById("lightbox-caption");
 
+  galleryImages = Array.from(document.querySelectorAll(".lightbox-img"));
+  currentImageIndex = galleryImages.indexOf(imgElement);
+
   lightboxImg.src = imgElement.src;
   lightboxCaption.textContent = imgElement.alt;
   lightbox.style.display = "flex";
 
-  // إخفاء زر العودة للأعلى
   const backToTop = document.getElementById("backToTop");
   if (backToTop) backToTop.style.display = "none";
 }
 
 function closeLightbox() {
-  const lightbox = document.getElementById("lightbox");
-  lightbox.style.display = "none";
-
-  // إظهار زر العودة للأعلى مجددًا
+  document.getElementById("lightbox").style.display = "none";
   const backToTop = document.getElementById("backToTop");
   if (backToTop) backToTop.style.display = "block";
+}
+
+function showNextImage() {
+  if (galleryImages.length === 0) return;
+  currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+  openLightbox(galleryImages[currentImageIndex]);
+}
+
+function showPrevImage() {
+  if (galleryImages.length === 0) return;
+  currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+  openLightbox(galleryImages[currentImageIndex]);
 }
 </script></body>
 </html>
