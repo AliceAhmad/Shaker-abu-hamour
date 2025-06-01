@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-
 <html lang="ar">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&amp;display=swap" rel="stylesheet"/>
-<style>
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&display=swap" rel="stylesheet">
+  <style>
    .welcome-message {
   position: fixed;
   bottom: 20px;
@@ -50,6 +49,7 @@
 	  
     }
   </style>
+
 <meta content="شاكر أبو حمور, السيرة الذاتية, العميد الركن, متقاعدون عسكريون, لواء اليرموك, المنطقة العسكرية, تاريخ الأردن, الجيش العربي, القوات المسلحة الأردنية, الإعلام العسكري, أبو حمور" name="keywords"/>
 <meta content="السيرة الذاتية للعميد الركن المتقاعد شاكر أحمد أبو حمور، تشمل تاريخه العسكري، مناصبه القيادية، وإسهاماته في الإعلام والمجتمع." name="description"/>
 <style>
@@ -267,11 +267,13 @@
 </script>
 </head>
 <body>
+
 <div class="welcome-message">
-  ۞صَفْحَةُ العَمِيدِ الرُّكْنِ المُتَقَاعِدِ۞<br/>
-  ༺شَاكِرُ أَحْمَدَ أَبُو حَمُّور تُرَحِّبُ بِكُمْ༻ <br/>
+  ۞صَفْحَةُ العَمِيدِ الرُّكْنِ المُتَقَاعِدِ۞<br>
+  ༺شَاكِرُ أَحْمَدَ أَبُو حَمُّور تُرَحِّبُ بِكُمْ༻ <br>
  🇯🇴 ❀ أَهْلًا وَسَهْلًا ❀ 🇯🇴
 </div>
+
 <header>
 <h1>السيرة الذاتية</h1>
 <!-- داخل <body> -->
@@ -398,7 +400,7 @@
 <li><a href="service.html">شارة الخدمة 1967-1971</a></li>
 <li><a href="https://www.medals.org.uk/jordan/jordan033.htm">شارة الكفاءة القيادية</a></li>
 <li><a href="https://www.medals.org.uk/jordan/jordan031.htm">شارة الكفاءة الادارية والفنية</a></li>
-<li><a href="Sharah-Tdreeb.html">شارة الكفاءة التدريبية</a></li>
+<li><a href="Sharah-Tdreeb.html">شارة الكفاءة التدريبية</a></li>	
 </ul>
 <div style="text-align: right; padding-right: 6px;">
 <a href="https://www.jaf.mil.jo/ContentstemplateC/Ranks_And_Badgesar.aspx" style="display: block; margin-bottom: 6px;" target="_blank"> الرتب والأوسمة </a>
@@ -850,6 +852,8 @@
 <figure style="position: relative; display: inline-block; margin: 10px; display: block; text-align: center;">
 <img alt="العميد الركن شاكر أبو حمور خلال مناسبة عسكرية" class="lightbox-img" loading="lazy" onclick="openLightbox(this)" src="126.jpg" width="300"/>
 <figcaption style="text-align: center; font-size: 14px; margin-top: 6px;">صورة العميد</figcaption>
+
+
 <figure style="position: relative; display: inline-block; margin: 10px; display: block; text-align: center;">
 <img alt="العميد الركن شاكر أبو حمور خلال مناسبة عسكرية" class="lightbox-img" loading="lazy" onclick="openLightbox(this)" src="129.jpg" width="300"/>
 <figcaption style="text-align: center; font-size: 14px; margin-top: 6px;">صورة العميد</figcaption>
@@ -872,12 +876,56 @@
 <a href="terms.html" style="color: #006699; text-decoration: underline; font-weight: bold;" target="_blank">الشروط والأحكام</a> |
   <a href="privacy.html" style="color: #006699; text-decoration: underline; font-weight: bold;" target="_blank">سياسة الخصوصية</a>
 </p>
-</figure></section>
+</section>
 <!-- نافذة التكبير مع النص وزر الإغلاق والسهمين -->
 <footer>
 <p>2018 © العميد الركن شاكر أحمد أبو حمّور</p>
 <p style="font-size: 12px; margin-top: -12px; color: #ddd;">جميع الحقوق محفوظة</p>
 </footer>
+<script>
+  const images = Array.from(document.querySelectorAll('.lightbox-img'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const caption = document.getElementById('lightbox-caption');
+  const prev = document.querySelector('.lightbox-prev');
+  const next = document.querySelector('.lightbox-next');
+
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      showImage();
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  function showImage() {
+    const img = images[currentIndex];
+    lightboxImg.src = img.src;
+    caption.textContent = img.alt || "";
+  }
+
+  prev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+  });
+
+  next.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage();
+  });
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+</script>
 <button id="backToTop" onclick="scrollToTop()">↑</button>
 <script>
   window.onscroll = function() {
@@ -889,46 +937,31 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
+
 <script>
-let currentImageIndex = 0;
-let galleryImages = [];
+  function openLightbox(imgElement) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
 
-document.addEventListener("DOMContentLoaded", () => {
-  galleryImages = Array.from(document.querySelectorAll(".lightbox-img"));
-});
+    lightboxImg.src = imgElement.src;
+    lightboxCaption.textContent = imgElement.alt;
+    lightbox.style.display = 'flex';
 
-function openLightbox(imgElement) {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxCaption = document.getElementById("lightbox-caption");
+    // Hide the back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) backToTopBtn.style.display = 'none';
+  }
 
-  galleryImages = Array.from(document.querySelectorAll(".lightbox-img"));
-  currentImageIndex = galleryImages.indexOf(imgElement);
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
 
-  lightboxImg.src = imgElement.src;
-  lightboxCaption.textContent = imgElement.alt;
-  lightbox.style.display = "flex";
+    // Show the back to top button again
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) backToTopBtn.style.display = 'block';
+  }
+</script>
 
-  const backToTop = document.getElementById("backToTop");
-  if (backToTop) backToTop.style.display = "none";
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-  const backToTop = document.getElementById("backToTop");
-  if (backToTop) backToTop.style.display = "block";
-}
-
-function showNextImage() {
-  if (galleryImages.length === 0) return;
-  currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-  openLightbox(galleryImages[currentImageIndex]);
-}
-
-function showPrevImage() {
-  if (galleryImages.length === 0) return;
-  currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-  openLightbox(galleryImages[currentImageIndex]);
-}
-</script></body>
+</body>
 </html>
