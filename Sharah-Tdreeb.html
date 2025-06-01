@@ -14,6 +14,7 @@
       color: #333;
       text-align: center;
     }
+
     img {
       max-width: 280px;
       border: 4px solid gold;
@@ -22,15 +23,18 @@
       display: block;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
+
     h1 {
       color: #003366;
       font-size: 28px;
     }
+
     h2 {
       color: #003366;
       font-size: 22px;
       margin-top: 30px;
     }
+
     p {
       font-size: 18px;
       margin: 20px auto;
@@ -38,6 +42,7 @@
       max-width: 700px;
       text-align: justify;
     }
+
     ul {
       list-style-type: square;
       text-align: right;
@@ -47,20 +52,37 @@
       font-size: 18px;
       line-height: 1.8;
     }
+
     blockquote {
       font-weight: bold;
       color: #555;
       margin: 20px auto;
       font-size: 18px;
     }
+
     .source {
       margin-top: 30px;
       font-size: 16px;
       color: #444;
     }
+
     .source a {
       color: #003366;
       text-decoration: none;
+    }
+
+    /* توقيع ثابت في أعلى يمين الصفحة */
+    .signature {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      font-size: 15px;
+      font-weight: bold;
+      font-style: italic;
+      font-family: 'Cairo', serif;
+      color: #a67c00;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
     }
   </style>
 </head>
@@ -83,7 +105,6 @@
 
   <div class="source">
     🔗 للحصول على معلومات رسمية ومفصلة حول إشارة الكفاءة التدريبية، يُمكنك زيارة الموقع الرسمي للقوات المسلحة الأردنية – الجيش العربي عبر الرابط التالي:
-
     <a href="https://www.jaf.mil.jo" target="_blank">jaf.mil.jo</a>
   </div>
 
@@ -93,5 +114,7 @@
   <p>
     تهدف الشارة إلى تعزيز روح التنافس والتفوق في مجالات التدريب، وتحفيز الضباط والأفراد على تحقيق أعلى مستويات الكفاءة والجاهزية، بما يخدم العقيدة القتالية والمهنية للقوات المسلحة الأردنية.
   </p>
+
+  <div class="signature">— العميد شاكر أبو حمور —</div>
 </body>
 </html>
