@@ -61,6 +61,18 @@
 .lightbox-next:hover {
   color: white !important;
 }
+
+.lightbox-prev,
+.lightbox-next {
+  color: orange !important;
+  transition: color 0.3s ease;
+  font-size: 40px;
+  cursor: pointer;
+}
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: white !important;
+}
 </style>
 <meta content="شاكر أبو حمور, السيرة الذاتية, العميد الركن, متقاعدون عسكريون, لواء اليرموك, المنطقة العسكرية, تاريخ الأردن, الجيش العربي, القوات المسلحة الأردنية, الإعلام العسكري, أبو حمور" name="keywords"/>
 <meta content="السيرة الذاتية للعميد الركن المتقاعد شاكر أحمد أبو حمور، تشمل تاريخه العسكري، مناصبه القيادية، وإسهاماته في الإعلام والمجتمع." name="description"/>
@@ -147,9 +159,9 @@
 <!-- التعليق تحت الصورة -->
 <p id="lightbox-caption" style="color: white; font-size: 16px; text-align: center; margin-top: 10px;"></p>
 <!-- زر السابق -->
-<span class="lightbox-prev" style="position: absolute; top: 50%; left: 20px; font-size: 40px; color: white; cursor: pointer;">❮</span>
+<span class="lightbox-prev">❮</span>
 <!-- زر التالي -->
-<span class="lightbox-next" style="position: absolute; top: 50%; right: 20px; font-size: 40px; color: white; cursor: pointer;">❯</span>
+<span class="lightbox-next">❯</span>
 </div>
 <style>
   #backToTop {
