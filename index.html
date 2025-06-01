@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ar">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&amp;display=swap" rel="stylesheet"/>
@@ -877,50 +878,7 @@
 <p>2018 © العميد الركن شاكر أحمد أبو حمّور</p>
 <p style="font-size: 12px; margin-top: -12px; color: #ddd;">جميع الحقوق محفوظة</p>
 </footer>
-<script>
-  const images = Array.from(document.querySelectorAll('.lightbox-img'));
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const caption = document.getElementById('lightbox-caption');
-  const prev = document.querySelector('.lightbox-prev');
-  const next = document.querySelector('.lightbox-next');
 
-  let currentIndex = 0;
-
-  images.forEach((img, index) => {
-    img.addEventListener('click', () => {
-      currentIndex = index;
-      showImage();
-      lightbox.style.display = 'flex';
-    });
-  });
-
-  function showImage() {
-    const img = images[currentIndex];
-    lightboxImg.src = img.src;
-    caption.textContent = img.alt || "";
-  }
-
-  prev.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage();
-  });
-
-  next.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage();
-  });
-
-  function closeLightbox() {
-    lightbox.style.display = 'none';
-  }
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
-</script>
 <button id="backToTop" onclick="scrollToTop()">↑</button>
 <script>
   window.onscroll = function() {
@@ -932,5 +890,28 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
-</body>
+<script>
+function openLightbox(imgElement) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+
+  lightboxImg.src = imgElement.src;
+  lightboxCaption.textContent = imgElement.alt;
+  lightbox.style.display = "flex";
+
+  // إخفاء زر العودة للأعلى
+  const backToTop = document.getElementById("backToTop");
+  if (backToTop) backToTop.style.display = "none";
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  lightbox.style.display = "none";
+
+  // إظهار زر العودة للأعلى مجددًا
+  const backToTop = document.getElementById("backToTop");
+  if (backToTop) backToTop.style.display = "block";
+}
+</script></body>
 </html>
