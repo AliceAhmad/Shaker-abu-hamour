@@ -24,11 +24,24 @@
 
 
 @keyframes fadeInOut {
-  0%   { opacity: 0; transform: translateY(100%); }
-  10%  { opacity: 1; transform: translateY(0); }
-  85%  { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(100%); }
+  0% {
+    opacity: 0;
+    transform: translateY(100%); /* تبدأ من أسفل الشاشة */
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0); /* تظهر في مكانها */
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0); /* تبقى ثابتة */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%); /* تعود وتنزل للأسفل */
+  }
 }
+
 
 
 
