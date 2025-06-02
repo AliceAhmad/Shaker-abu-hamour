@@ -1,21 +1,76 @@
 <!DOCTYPE html>
-
 <html lang="ar">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&amp;display=swap" rel="stylesheet"/>
 <style>
-.floating-image {
-  display: inline-block;
-  width: 100px;
-  height: auto;
-  animation: float 5s infinite ease-in-out;
-  z-index: 1000;
-  margin: 0 15px;
+   .welcome-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #003366;
+  color: gold;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Scheherazade New', serif;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+  opacity: 0;
+  text-align: center;
+  animation: fadeInOut 4s ease-in-out forwards;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-25px); /* تصعد للأعلى قليلًا */
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-10px); /* تبقى على نفس الارتفاع */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+
+
+
+
+	  
+    }
+  
+.lightbox-prev,
+.lightbox-next {
+  color: orange !important;
+  transition: color 0.3s ease;
+  font-size: 40px;
+  cursor: pointer;
+}
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: white !important;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  color: orange !important;
+  transition: color 0.3s ease;
+  font-size: 40px;
+  cursor: pointer;
+}
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: white !important;
 }
 </style>
 <meta content="شاكر أبو حمور, السيرة الذاتية, العميد الركن, متقاعدون عسكريون, لواء اليرموك, المنطقة العسكرية, تاريخ الأردن, الجيش العربي, القوات المسلحة الأردنية, الإعلام العسكري, أبو حمور" name="keywords"/>
@@ -277,17 +332,23 @@
 </nav>
 </header>
 <section>
+
 <div style="text-align: center; margin-bottom: -10px;">
-<img alt="علم الأردن" src="flag-jordan.gif" style="width: 160px; animation: float 2s ease-in-out infinite;"/>
+  <img src="flag-jordan.gif" alt="علم الأردن" style="width: 160px; animation: float 2s ease-in-out infinite;">
 </div>
+
 <style>
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }
   }
 </style>
+
+
+		
+	
 <h2>المعلومات الشخصية</h2>
-<ul>
+<ul>		
 <div style="text-align: right;">
 <li><strong>الأسم:</strong> شاكر أحمد حسن أبو حمور</li>
 <li><strong>تاريخ ومكان الولادة:</strong> 1951 – <a href="https://ar.m.wikipedia.org/wiki/%D8%A7%D9%84%D8%B3%D9%84%D8%B7" onclick="window.open(this.href, 'popup', 'width=800,height=600'); return false;" target="_blank">مدينة السلط</a>، المملكة الأردنية الهاشمية</li>
@@ -309,7 +370,7 @@
 </div>
 </section>
 <section class="formatted-text" id="Qualifications">
-<div style="text-align:center; margin-bottom: 20px;"><img alt="شعار القيادة العامة" class="floating-image" src="GEADAH AMAH.jpg" style="right: 50px;"/><img alt="شعار الجيش الأردني" class="floating-image" src="JordaArme.png" style="right: 150px;"/></div><h2 style="text-align:center;">المؤهلات العسكرية</h2>
+<h2 style="text-align:center;">المؤهلات العسكرية</h2>
 <ul>
 <div style="text-align: justify;">
 <li>التحق بمدرسة المرشحين – القوات المسلحة الأردنية وتخرج برتبة تلميذ مرشح عام 1970 - صنف دروع.  </li>
@@ -323,7 +384,7 @@
 </ul>
 </section>
 <section class="formatted-text" id="Military march">
-<div style="text-align:center; margin-bottom: 20px;"><img alt="شعار القيادة العامة" class="floating-image" src="GEADAH AMAH.jpg" style="right: 50px;"/><img alt="شعار الجيش الأردني" class="floating-image" src="JordaArme.png" style="right: 150px;"/></div><h2 style="text-align:center;">المسيرة العسكرية</h2>
+<h2 style="text-align:center;">المسيرة العسكرية</h2>
 <ul>
 <li>بدأ خدمته في وحدات الجيش العربي وتدرج في المناصب  التالية:</li>
 <li> قائد فصيل اشارة.</li>
@@ -842,7 +903,7 @@
 <a href="https://esarsv.com/" style="display: block; margin-bottom: 6px;" target="_blank">⚔️مؤسسة المتقاعدين العسكريين</a>
 <a href="https://www.jordanhistory.com/kharja/photos/collection1_ar.php?id=2&amp;page=7240" style="display: block; margin-bottom: 6px;" target="_blank">📜تاريخ الأردن</a>
 <a class="footer-links" href="https://www.jaf.mil.jo/ContentstemplateC/Army_Radioar.aspx" style="display: block; margin-bottom: 6px;" target="_blank">⚔️بوابة اذاعة القوات المسلحة الأردنية </a>
-<a href="https://ar.wikipedia.org/wiki/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9:%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86" style="display: block; margin-bottom: 6px;" target="_blank">🏛️بوابة الأردن🇯🇴</a>
+<a href="https://ar.wikipedia.org/wiki/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9:%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86" style="display: block; margin-bottom: 6px;" target="_blank">🏛️بوابة الأردن🇯🇴</a>	
 <li>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــ </li>
 </div>
 <p style="text-align: center; margin-top: 40px; font-size: 14px;">
