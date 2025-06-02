@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ar">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&amp;display=swap" rel="stylesheet"/>
@@ -71,6 +72,21 @@
 .lightbox-prev:hover,
 .lightbox-next:hover {
   color: white !important;
+}
+
+.floating-image {
+  position: absolute;
+  top: 180px;
+  right: 30px;
+  width: 100px;
+  height: auto;
+  animation: float 5s infinite ease-in-out;
+  z-index: 1000;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 </style>
 <meta content="شاكر أبو حمور, السيرة الذاتية, العميد الركن, متقاعدون عسكريون, لواء اليرموك, المنطقة العسكرية, تاريخ الأردن, الجيش العربي, القوات المسلحة الأردنية, الإعلام العسكري, أبو حمور" name="keywords"/>
@@ -332,23 +348,17 @@
 </nav>
 </header>
 <section>
-
 <div style="text-align: center; margin-bottom: -10px;">
-  <img src="flag-jordan.gif" alt="علم الأردن" style="width: 160px; animation: float 2s ease-in-out infinite;">
+<img alt="علم الأردن" src="flag-jordan.gif" style="width: 160px; animation: float 2s ease-in-out infinite;"/>
 </div>
-
 <style>
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }
   }
 </style>
-
-
-		
-	
 <h2>المعلومات الشخصية</h2>
-<ul>		
+<ul>
 <div style="text-align: right;">
 <li><strong>الأسم:</strong> شاكر أحمد حسن أبو حمور</li>
 <li><strong>تاريخ ومكان الولادة:</strong> 1951 – <a href="https://ar.m.wikipedia.org/wiki/%D8%A7%D9%84%D8%B3%D9%84%D8%B7" onclick="window.open(this.href, 'popup', 'width=800,height=600'); return false;" target="_blank">مدينة السلط</a>، المملكة الأردنية الهاشمية</li>
@@ -370,7 +380,7 @@
 </div>
 </section>
 <section class="formatted-text" id="Qualifications">
-<h2 style="text-align:center;">المؤهلات العسكرية</h2>
+<div style="text-align:center; margin-bottom: 20px;"><img alt="شعار القيادة العامة" class="floating-image" src="GEADAH AMAH.jpg" style="right: 50px;"/><img alt="شعار الجيش الأردني" class="floating-image" src="JordaArme.png" style="right: 150px;"/></div><h2 style="text-align:center;">المؤهلات العسكرية</h2>
 <ul>
 <div style="text-align: justify;">
 <li>التحق بمدرسة المرشحين – القوات المسلحة الأردنية وتخرج برتبة تلميذ مرشح عام 1970 - صنف دروع.  </li>
@@ -378,8 +388,8 @@
 <li>الفائز الأول بدورة الصاعقة رقم 39 عام 1974. </li>
 <li>حاصل على بكالوريوس في العلوم العسكرية/ جامعة مؤتة. </li>
 <div style="text-align: center;">
-<img alt="صورة العميد شاكر" class="gold-frame" loading="lazy" src="15.jpg" style="display: inline-block;" width="200"/>
-</div>
+<img alt="صورة العميد شاكر" class="gold-frame" loading="lazy" src="15.jpg" style="display: inline-block;" width="200">
+</img></div>
 </div>
 </ul>
 </section>
@@ -903,7 +913,7 @@
 <a href="https://esarsv.com/" style="display: block; margin-bottom: 6px;" target="_blank">⚔️مؤسسة المتقاعدين العسكريين</a>
 <a href="https://www.jordanhistory.com/kharja/photos/collection1_ar.php?id=2&amp;page=7240" style="display: block; margin-bottom: 6px;" target="_blank">📜تاريخ الأردن</a>
 <a class="footer-links" href="https://www.jaf.mil.jo/ContentstemplateC/Army_Radioar.aspx" style="display: block; margin-bottom: 6px;" target="_blank">⚔️بوابة اذاعة القوات المسلحة الأردنية </a>
-<a href="https://ar.wikipedia.org/wiki/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9:%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86" style="display: block; margin-bottom: 6px;" target="_blank">🏛️بوابة الأردن🇯🇴</a>	
+<a href="https://ar.wikipedia.org/wiki/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9:%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86" style="display: block; margin-bottom: 6px;" target="_blank">🏛️بوابة الأردن🇯🇴</a>
 <li>ـــــــــــــــــــــــــــــــــــــــــــــــــــــــ </li>
 </div>
 <p style="text-align: center; margin-top: 40px; font-size: 14px;">
