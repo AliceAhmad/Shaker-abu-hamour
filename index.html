@@ -1,86 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="ar">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&amp;display=swap" rel="stylesheet"/>
 <style>
-   .welcome-message {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #003366;
-  color: gold;
-  font-weight: bold;
-  font-size: 16px;
-  font-family: 'Scheherazade New', serif;
-  padding: 14px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index: 9999;
-  opacity: 0;
-  text-align: center;
-  animation: fadeInOut 4s ease-in-out forwards;
-}
-
-
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  20% {
-    opacity: 1;
-    transform: translateY(-25px); /* تصعد للأعلى قليلًا */
-  }
-  80% {
-    opacity: 1;
-    transform: translateY(-10px); /* تبقى على نفس الارتفاع */
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-}
-
-
-
-
-
-	  
-    }
-  
-.lightbox-prev,
-.lightbox-next {
-  color: orange !important;
-  transition: color 0.3s ease;
-  font-size: 40px;
-  cursor: pointer;
-}
-.lightbox-prev:hover,
-.lightbox-next:hover {
-  color: white !important;
-}
-
-.lightbox-prev,
-.lightbox-next {
-  color: orange !important;
-  transition: color 0.3s ease;
-  font-size: 40px;
-  cursor: pointer;
-}
-.lightbox-prev:hover,
-.lightbox-next:hover {
-  color: white !important;
-}
-
 .floating-image {
-  position: absolute;
-  top: 180px;
-  right: 30px;
+  display: inline-block;
   width: 100px;
   height: auto;
   animation: float 5s infinite ease-in-out;
   z-index: 1000;
+  margin: 0 15px;
 }
 
 @keyframes float {
