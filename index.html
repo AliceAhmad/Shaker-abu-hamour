@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ar">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&amp;display=swap" rel="stylesheet"/>
@@ -296,6 +295,25 @@
 </head>
 <body>
 
+<!-- فيديو جانبي مخفي مبدئيًا يظهر عند الوصول لقسم "نبذة عن الشخصية" -->
+<video id="sideVideo" autoplay muted loop playsinline preload="none"
+  style="
+    position: fixed;
+    left: 0;
+    top: 140px;
+    width: 160px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    transition: opacity 0.4s ease-in-out;
+  ">
+  <source src="videoone.mp4" type="video/mp4">
+  متصفحك لا يدعم عرض الفيديو.
+</video>
+
+
 <!-- فيديو جانبي مخفي مبدئيًا -->
 <video id="sideVideo" autoplay muted loop playsinline preload="none"
   style="
@@ -321,6 +339,25 @@
 <header>
 <h1>السيرة الذاتية</h1>
 <!-- داخل <body>
+
+<!-- فيديو جانبي مخفي مبدئيًا يظهر عند الوصول لقسم "نبذة عن الشخصية" -->
+<video id="sideVideo" autoplay muted loop playsinline preload="none"
+  style="
+    position: fixed;
+    left: 0;
+    top: 140px;
+    width: 160px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    transition: opacity 0.4s ease-in-out;
+  ">
+  <source src="videoone.mp4" type="video/mp4">
+  متصفحك لا يدعم عرض الفيديو.
+</video>
+
 
 <!-- فيديو جانبي مخفي مبدئيًا -->
 <video id="sideVideo" autoplay muted loop playsinline preload="none"
@@ -1092,6 +1129,24 @@
         } else {
           video.style.opacity = "0";
         }
+      });
+    });
+
+    if (targetSection) {
+      observer.observe(targetSection);
+    }
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const targetSection = document.getElementById("about");
+    const video = document.getElementById("sideVideo");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        video.style.opacity = entry.isIntersecting ? "0.6" : "0";
       });
     });
 
