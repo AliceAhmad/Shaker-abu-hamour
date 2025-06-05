@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ar">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&amp;display=swap" rel="stylesheet"/>
@@ -295,25 +294,6 @@
 </script>
 </head>
 <body>
-
-<!-- فيديو جانبي يظهر تلقائيًا عند الوصول إلى قسم نبذة عن الشخصية -->
-<video id="sideVideo" autoplay muted loop playsinline preload="none"
-  style="
-    position: fixed;
-    left: 0;
-    top: 140px;
-    width: 160px;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 10;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
-    transition: opacity 0.5s ease-in-out;
-  ">
-  <source src="videoone.mp4" type="video/mp4">
-  متصفحك لا يدعم عرض هذا الفيديو.
-</video>
-
 <div class="welcome-message">
   ۞صَفْحَةُ العَمِيدِ الرُّكْنِ المُتَقَاعِدِ۞<br/>
   ༺شَاكِرُ أَحْمَدَ أَبُو حَمُّور تُرَحِّبُ بِكُمْ༻ <br/>
@@ -321,26 +301,7 @@
 </div>
 <header>
 <h1>السيرة الذاتية</h1>
-<!-- داخل <body>
-
-<!-- فيديو جانبي يظهر تلقائيًا عند الوصول إلى قسم نبذة عن الشخصية -->
-<video id="sideVideo" autoplay muted loop playsinline preload="none"
-  style="
-    position: fixed;
-    left: 0;
-    top: 140px;
-    width: 160px;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 10;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
-    transition: opacity 0.5s ease-in-out;
-  ">
-  <source src="videoone.mp4" type="video/mp4">
-  متصفحك لا يدعم عرض هذا الفيديو.
-</video>
- -->
+<!-- داخل <body> -->
 <img alt="صورة العميد شاكر" class="gold-frame" loading="lazy" src="1002.jpg" width="280"/>
 <p style="font-weight: normal; text-align: center; margin-top: 8px;">
   العميد الركن المتقاعد شاكر أحمد أبو حمور
@@ -1081,23 +1042,5 @@
     if (backToTopBtn) backToTopBtn.style.display = 'block';
   }
 </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const targetSection = document.getElementById("information"); // قسم نبذة عن الشخصية
-    const video = document.getElementById("sideVideo");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        video.style.opacity = entry.isIntersecting ? "0.6" : "0";
-      });
-    });
-
-    if (targetSection) {
-      observer.observe(targetSection);
-    }
-  });
-</script>
-
 </body>
 </html>
