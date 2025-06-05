@@ -295,6 +295,24 @@
 </script>
 </head>
 <body>
+
+<!-- فيديو جانبي مخفي مبدئيًا -->
+<video id="sideVideo" autoplay muted loop playsinline preload="none"
+  style="
+    position: fixed;
+    left: 0;
+    top: 150px;
+    width: 160px;
+    opacity: 0;
+    z-index: 10;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: opacity 0.5s ease;
+  ">
+  <source src="videoone.mp4" type="video/mp4">
+  متصفحك لا يدعم عرض الفيديو.
+</video>
+
 <div class="welcome-message">
   ۞صَفْحَةُ العَمِيدِ الرُّكْنِ المُتَقَاعِدِ۞<br/>
   ༺شَاكِرُ أَحْمَدَ أَبُو حَمُّور تُرَحِّبُ بِكُمْ༻ <br/>
@@ -302,7 +320,25 @@
 </div>
 <header>
 <h1>السيرة الذاتية</h1>
-<!-- داخل <body> -->
+<!-- داخل <body>
+
+<!-- فيديو جانبي مخفي مبدئيًا -->
+<video id="sideVideo" autoplay muted loop playsinline preload="none"
+  style="
+    position: fixed;
+    left: 0;
+    top: 150px;
+    width: 160px;
+    opacity: 0;
+    z-index: 10;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: opacity 0.5s ease;
+  ">
+  <source src="videoone.mp4" type="video/mp4">
+  متصفحك لا يدعم عرض الفيديو.
+</video>
+ -->
 <img alt="صورة العميد شاكر" class="gold-frame" loading="lazy" src="1002.jpg" width="280"/>
 <p style="font-weight: normal; text-align: center; margin-top: 8px;">
   العميد الركن المتقاعد شاكر أحمد أبو حمور
@@ -1043,5 +1079,27 @@
     if (backToTopBtn) backToTopBtn.style.display = 'block';
   }
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const targetSection = document.getElementById("about");
+    const video = document.getElementById("sideVideo");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.style.opacity = "0.6";
+        } else {
+          video.style.opacity = "0";
+        }
+      });
+    });
+
+    if (targetSection) {
+      observer.observe(targetSection);
+    }
+  });
+</script>
+
 </body>
 </html>
