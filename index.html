@@ -302,48 +302,16 @@
 </div>
 <header>
 
-<!-- مكون Google Translate المرئي لتفعيله -->
-<div id="google_translate_element" style="position: fixed; top: 5px; right: 5px; z-index: 9999;"></div>
+<!-- Google Translate Widget رسمي -->
+<div id="google_translate_element" style="position: fixed; top: 10px; left: 10px; z-index: 9999;"></div>
 
-<!-- زر اختيار اللغة -->
-<div style="position: absolute; top: 10px; left: 10px; z-index: 9999;">
-  <select id="customLangSelector" onchange="changeLanguage(this.value)" style="padding: 8px; border-radius: 6px; font-size: 14px;">
-    <option value="">🔽 اختر اللغة</option>
-    <option value="en">English</option>
-    <option value="ru">Русский</option>
-    <option value="fr">Français</option>
-    <option value="de">Deutsch</option>
-    <option value="es">Español</option>
-    <option value="pt">Português</option>
-    <option value="tr">Türkçe</option>
-    <option value="id">Bahasa Indonesia</option>
-    <option value="it">Italiano</option>
-    <option value="ko">한국어</option>
-    <option value="ur">اردو</option>
-    <option value="zh-CN">中文 (简体)</option>
-    <option value="bn">বাংলা</option>
-  </select>
-</div>
-
-<!-- سكريبت الترجمة -->
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'ar',
-    includedLanguages: 'en,ru,fr,de,es,pt,tr,id,it,ko,ur,zh-CN,bn',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    includedLanguages: 'ar,en,ru,fr,de,es,pt,tr,id,it,ko,ur,zh-CN,bn',
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
   }, 'google_translate_element');
-}
-
-function changeLanguage(lang) {
-  const interval = setInterval(() => {
-    const select = document.querySelector('.goog-te-combo');
-    if (select) {
-      select.value = lang;
-      select.dispatchEvent(new Event('change'));
-      clearInterval(interval);
-    }
-  }, 500);
 }
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
