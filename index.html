@@ -302,6 +302,9 @@
 </div>
 <header>
 
+<!-- مكون Google Translate المرئي لتفعيله -->
+<div id="google_translate_element" style="position: fixed; top: 5px; right: 5px; z-index: 9999;"></div>
+
 <!-- زر اختيار اللغة -->
 <div style="position: absolute; top: 10px; left: 10px; z-index: 9999;">
   <select id="customLangSelector" onchange="changeLanguage(this.value)" style="padding: 8px; border-radius: 6px; font-size: 14px;">
@@ -321,9 +324,6 @@
     <option value="bn">বাংলা</option>
   </select>
 </div>
-
-<!-- مكان الترجمة -->
-<div id="google_translate_element" style="display: none;"></div>
 
 <!-- سكريبت الترجمة -->
 <script type="text/javascript">
