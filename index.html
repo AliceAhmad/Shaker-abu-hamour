@@ -327,31 +327,23 @@
 
 <!-- سكريبت الترجمة -->
 <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'ar',
+    includedLanguages: 'en,ru,fr,de,es,pt,tr,id,it,ko,ur,zh-CN,bn',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+
 function changeLanguage(lang) {
-  if (!window.googleTranslateElementInit) {
-    var gtScript = document.createElement('script');
-    gtScript.type = 'text/javascript';
-    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    document.body.appendChild(gtScript);
+  var select = document.querySelector('.goog-te-combo');
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event('change'));
   }
-
-  window.googleTranslateElementInit = function() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ar',
-      includedLanguages: 'en,ru,fr,de,es,pt,tr,id,it,ko,ur,zh-CN,bn',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  };
-
-  setTimeout(function() {
-    var select = document.querySelector('.goog-te-combo');
-    if (select) {
-      select.value = lang;
-      select.dispatchEvent(new Event('change'));
-    }
-  }, 1500);
 }
 </script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <h1>السيرة الذاتية</h1>
 <div style="text-align: center;">
