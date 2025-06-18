@@ -295,6 +295,37 @@
 </script>
 </head>
 <body>
+
+<!-- زر اختيار اللغة مع تحويل إلى ترجمة Google -->
+<div style="position: fixed; top: 10px; left: 10px; z-index: 9999;">
+  <select onchange="redirectToTranslate(this.value)" style="padding: 6px 12px; border-radius: 5px; font-size: 14px;">
+    <option value="">🔽 اختر اللغة</option>
+    <option value="ar">العربية</option>
+    <option value="en">English</option>
+    <option value="ru">Русский</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Español</option>
+    <option value="pt">Português</option>
+    <option value="tr">Türkçe</option>
+    <option value="id">Bahasa Indonesia</option>
+    <option value="it">Italiano</option>
+    <option value="ko">한국어</option>
+    <option value="ur">اردو</option>
+    <option value="zh-CN">中文 (简体)</option>
+    <option value="bn">বাংলা</option>
+  </select>
+</div>
+<script>
+  function redirectToTranslate(lang) {
+    if (!lang) return;
+    var baseUrl = "https://translate.google.com/translate";
+    var targetUrl = "https://aliceahmad.github.io/Shaker-abu-hamour/";
+    var fullUrl = baseUrl + "?hl=" + lang + "&sl=ar&u=" + encodeURIComponent(targetUrl);
+    window.location.href = fullUrl;
+  }
+</script>
+
 <div class="welcome-message">
   ۞صَفْحَةُ العَمِيدِ الرُّكْنِ المُتَقَاعِدِ۞<br/>
   ༺شَاكِرُ أَحْمَدَ أَبُو حَمُّور تُرَحِّبُ بِكُمْ༻ <br/>
