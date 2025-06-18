@@ -302,9 +302,9 @@
 </div>
 <header>
 
-<!-- زر اختيار اللغة -->
+<!-- زر اختيار اللغة مع توجيه إلى ترجمة Google -->
 <div style="position: fixed; top: 10px; left: 10px; z-index: 9999;">
-  <select id="languageSelector" onchange="changeLanguage(this.value)" style="padding: 6px 12px; border-radius: 5px; font-size: 14px;">
+  <select onchange="redirectToTranslate(this.value)" style="padding: 6px 12px; border-radius: 5px; font-size: 14px;">
     <option value="">🔽 اختر اللغة</option>
     <option value="ar">العربية</option>
     <option value="en">English</option>
@@ -323,50 +323,14 @@
   </select>
 </div>
 
-<!-- عنصر Google Translate -->
-<div id="google_translate_element" style="display: none;"></div>
-
 <script type="text/javascript">
-  function loadGoogleTranslate() {
-    if (window.google && window.google.translate) {
-      initGoogleTranslate();
-    } else {
-      var script = document.createElement('script');
-      script.src = "https://translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
-      document.head.appendChild(script);
-    }
-  }
-
-  function initGoogleTranslate() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'ar',
-      includedLanguages: 'ar,en,ru,fr,de,es,pt,tr,id,it,ko,ur,zh-CN,bn',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-
-  function changeLanguage(lang) {
-    const interval = setInterval(() => {
-      const select = document.querySelector('.goog-te-combo');
-      if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event('change'));
-        clearInterval(interval);
-      }
-    }, 500);
-  }
-
-  window.onload = loadGoogleTranslate;
-
-  // إخفاء الشريط العلوي المزعج
-  const hideGoogleBanner = setInterval(() => {
-    const banner = document.querySelector('iframe.goog-te-banner-frame');
-    if (banner) {
-      banner.style.display = 'none';
-      document.body.style.top = '0px';
-      clearInterval(hideGoogleBanner);
-    }
-  }, 500);
+function redirectToTranslate(lang) {
+  if (!lang) return;
+  var baseUrl = "https://translate.google.com/translate";
+  var targetUrl = "https://aliceahmad.github.io/Shaker-abu-hamour/";
+  var fullUrl = baseUrl + "?hl=" + lang + "&sl=ar&u=" + encodeURIComponent(targetUrl);
+  window.location.href = fullUrl;
+}
 </script>
 
 <h1>السيرة الذاتية</h1>
