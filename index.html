@@ -302,9 +302,9 @@
 </div>
 <header>
 
-<!-- زر اللغة المخصص -->
+<!-- زر اختيار اللغة -->
 <div style="position: fixed; top: 10px; left: 10px; z-index: 9999;">
-  <select onchange="changeLanguage(this.value)" style="padding: 6px 12px; border-radius: 5px; font-size: 14px;">
+  <select id="languageSelector" onchange="changeLanguage(this.value)" style="padding: 6px 12px; border-radius: 5px; font-size: 14px;">
     <option value="">🔽 اختر اللغة</option>
     <option value="ar">العربية</option>
     <option value="en">English</option>
@@ -323,46 +323,51 @@
   </select>
 </div>
 
-<!-- عنصر Google Translate مخفي -->
-<div id="google_translate_element" style="display:none;"></div>
+<!-- عنصر Google Translate -->
+<div id="google_translate_element" style="display: none;"></div>
 
-<!-- تفعيل الترجمة -->
 <script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'ar',
-    includedLanguages: 'ar,en,ru,fr,de,es,pt,tr,id,it,ko,ur,zh-CN,bn',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-
-function changeLanguage(lang) {
-  const interval = setInterval(() => {
-    const select = document.querySelector('.goog-te-combo');
-    if (select) {
-      select.value = lang;
-      select.dispatchEvent(new Event('change'));
-      clearInterval(interval);
+  function loadGoogleTranslate() {
+    if (window.google && window.google.translate) {
+      initGoogleTranslate();
+    } else {
+      var script = document.createElement('script');
+      script.src = "https://translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
+      document.head.appendChild(script);
     }
-  }, 500);
-}
+  }
 
-// إخفاء الشريط العلوي تلقائيًا
-window.addEventListener('load', () => {
-  const observer = new MutationObserver(() => {
+  function initGoogleTranslate() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ar',
+      includedLanguages: 'ar,en,ru,fr,de,es,pt,tr,id,it,ko,ur,zh-CN,bn',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+
+  function changeLanguage(lang) {
+    const interval = setInterval(() => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+        clearInterval(interval);
+      }
+    }, 500);
+  }
+
+  window.onload = loadGoogleTranslate;
+
+  // إخفاء الشريط العلوي المزعج
+  const hideGoogleBanner = setInterval(() => {
     const banner = document.querySelector('iframe.goog-te-banner-frame');
     if (banner) {
       banner.style.display = 'none';
+      document.body.style.top = '0px';
+      clearInterval(hideGoogleBanner);
     }
-    const body = document.querySelector('body');
-    if (body) {
-      body.style.top = '0px';
-    }
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
-});
+  }, 500);
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <h1>السيرة الذاتية</h1>
 <div style="text-align: center;">
