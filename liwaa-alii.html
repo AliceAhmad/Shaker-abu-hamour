@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>🔰 اللواء الآلي 🔰</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Cairo', sans-serif;
@@ -24,9 +25,13 @@
       margin-top: 30px;
     }
     .share-buttons a {
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
-      font-size: 28px; /* يمكن تغييره حسب الحاجة */
+      color: inherit;
+      transition: transform 0.3s ease;
+    }
+    .share-buttons a:hover {
+      transform: scale(1.2);
     }
     .source {
       margin-top: 50px;
@@ -44,7 +49,7 @@
   <h2>🔰 اللواء الآلي 🔰</h2>
 
   <p>
-    اللواء الآلي هو تشكيل عسكري متكامل يتكوّن من كتائب مدرعة ومشاة آلية مدعومة بمدفعية وهندسة ولوجستيات، من 2  إلى 5  حسب جيش كل دولة، ويتميز بقدرته على تنفيذ عمليات قتالية مستقلة تشمل الهجوم والدفاع والمناورة السريعة، ضمن إطار الفرق. قائده ضابط برتبة عميد، ويضم نحو 3,000 إلى 5,000 عنصر.
+    اللواء الآلي هو تشكيل عسكري متكامل يتكوّن من كتائب مدرعة ومشاة آلية مدعومة بمدفعية وهندسة ولوجستيات، من 2 إلى 5 حسب جيش كل دولة، ويتميز بقدرته على تنفيذ عمليات قتالية مستقلة تشمل الهجوم والدفاع والمناورة السريعة، ضمن إطار الفرق. قائده ضابط برتبة عميد، ويضم نحو 3,000 إلى 5,000 عنصر.
   </p>
 
   <h3>🕰️ لمحة تاريخية</h3>
@@ -76,19 +81,18 @@
   </p>
 
   <div class="share-buttons">
-    <a href="https://wa.me/?text=📌%20شاهد%20مقال%20عن%20اللواء%20الآلي%3A%20https://example.com/liwaa-alii.html"
-       target="_blank" style="color: green;" title="مشاركة على واتساب">📱</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com/liwaa-alii.html"
-       target="_blank" style="color: #1877f2;" title="مشاركة على فيسبوك">📘</a>
-    <a href="#" onclick="copyLink()" style="color: #333;" title="نسخ الرابط">📋</a>
-    <a href="#" onclick="window.print();" style="color: #000;" title="طباعة الصفحة">🖨️</a>
+    <a class="whatsapp" href="https://wa.me/?text=https://www.shakerabuhamour.com/rokon-amliat.html" target="_blank"><i class="fab fa-whatsapp fa-4x" style="color: #25D366;"></i></a>
+    <a class="messenger" href="fb-messenger://share?link=https://www.shakerabuhamour.com/rokon-amliat.html"><i class="fab fa-facebook-messenger fa-4x" style="color: #0084ff;"></i></a>
+    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/rokon-amliat.html" target="_blank"><i class="fab fa-facebook fa-4x" style="color: #1877f2;"></i></a>
+    <a class="copy" href="#" onclick="copyLink()"><i class="fas fa-link fa-3x" style="color: #555;"></i></a>
+    <a class="print" href="#" onclick="window.print();"><i class="fas fa-print fa-3x" style="color: #000;"></i></a>
   </div>
 
   <script>
     function copyLink() {
-      navigator.clipboard.writeText(window.location.href).then(function() {
+      navigator.clipboard.writeText(window.location.href).then(function () {
         alert("✅ تم نسخ الرابط إلى الحافظة");
-      }, function(err) {
+      }, function (err) {
         alert("❌ لم يتم النسخ. حاول مرة أخرى");
       });
     }
