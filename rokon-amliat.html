@@ -23,7 +23,7 @@
       font-family: 'Cairo', sans-serif;
       font-size: 15px;
       color: #333;
-      text-align: right;
+      text-align: center;
       margin-top: 40px;
     }
     .more-info {
@@ -35,6 +35,22 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .share-buttons {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 20px;
+    }
+    .share-buttons a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .share-buttons .whatsapp { color: green; }
+    .share-buttons .messenger { color: #0084ff; }
+    .share-buttons .facebook { color: #1877f2; }
+    .share-buttons .copy { color: #333; }
+    .share-buttons .print { color: #000; }
   </style>
 </head>
 <body>
@@ -71,9 +87,6 @@
   </p>
 
   <h3>🪖الدورة العملياتية لركن العمليات (وفق المفاهيم العسكرية العامة):</h3>
-  <p>
-    تستند الدورة العملياتية لركن العمليات إلى خطوات متسلسلة تهدف إلى تنظيم وإدارة المعركة بفعالية، وهي كما يلي:
-  </p>
   <ul>
     <li><strong>♟️التصور:</strong> تحديد الأهداف أو الغايات العسكرية.</li>
     <li><strong>♟️الاستخبارات:</strong> جمع وتحليل المعلومات لتقييم قدرة العدو.</li>
@@ -95,39 +108,12 @@
     📎 <a href="https://www.jaf.mil.jo" target="_blank">🪖للمزيد من المعلومات، قم بزيارة موقع القوات المسلحة الأردنية</a>
   </div>
 
-  <!-- أزرار المشاركة الاجتماعية -->
-  <div style="margin-top: 40px; text-align: center; font-size: 20px;">
-    <!-- واتساب -->
-    <a href="https://wa.me/?text=📌%20شاهد%20هذا%20المحتوى%20عن%20ركن%20عمليات%20كتيبة%20آلية:%20%0A%0Ahttps://www.shakerabuhamour.com/rokon-amliat.html" 
-       target="_blank" 
-       style="margin: 0 10px; text-decoration: none; color: green; font-weight: bold;">
-      🟢 مشاركة واتساب
-    </a>
-
-    <!-- ماسنجر -->
-    <a href="fb-messenger://share?link=https://www.shakerabuhamour.com/rokon-amliat.html" 
-       style="margin: 0 10px; text-decoration: none; color: #0084ff; font-weight: bold;">
-      🔷 مشاركة ماسنجر
-    </a>
-
-    <!-- فيسبوك -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/rokon-amliat.html" 
-       target="_blank" 
-       style="margin: 0 10px; text-decoration: none; color: #1877f2; font-weight: bold;">
-      🔵 مشاركة فيسبوك
-    </a>
-
-    <!-- نسخ الرابط -->
-    <a href="#" onclick="copyLink()" 
-       style="margin: 0 10px; text-decoration: none; color: #333; font-weight: bold;">
-      📋 نسخ الرابط
-    </a>
-
-    <!-- طباعة -->
-    <a href="#" onclick="window.print();" 
-       style="margin: 0 10px; text-decoration: none; color: #000; font-weight: bold;">
-      🖨️ طباعة الصفحة
-    </a>
+  <div class="share-buttons">
+    <a class="whatsapp" href="https://wa.me/?text=📌%20شاهد%20هذا%20المحتوى:%20https://www.shakerabuhamour.com/rokon-amliat.html" target="_blank">🟢 مشاركة واتساب</a>
+    <a class="messenger" href="fb-messenger://share?link=https://www.shakerabuhamour.com/rokon-amliat.html">🔷 مشاركة ماسنجر</a>
+    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/rokon-amliat.html" target="_blank">🔵 مشاركة فيسبوك</a>
+    <a class="copy" href="#" onclick="copyLink()">📋 نسخ الرابط</a>
+    <a class="print" href="#" onclick="window.print();">🖨️ طباعة الصفحة</a>
   </div>
 
   <script>
@@ -140,9 +126,8 @@
     }
   </script>
 
-  <!-- التوقيع -->
   <div class="signature">
-    <span>⚔️العميد الركن المتقاعد &nbsp; شاكر أبو حمور</span>
+    ⚔️العميد الركن المتقاعد شاكر أبو حمور
   </div>
 
 </body>
