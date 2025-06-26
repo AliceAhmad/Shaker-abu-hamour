@@ -329,42 +329,27 @@ padding: 6px;
   - <a href="https://ar.wikipedia.org/wiki/تشكيل_عسكري" target="_blank">ويكيبيديا – تشكيل عسكري</a><br>
   - <a href="https://www.nato.int" target="_blank"> حلف الناتو–NATO.int</a><br>
   </div>
-
-<!-- زر مشاركة قابل للفتح -->
-<div style="text-align: center; margin-top: 40px;">
-  <button onclick="toggleShare()" style="padding: 8px 20px; font-size: 16px; background-color: #0026ff; color: #fff; border: none; border-radius: 8px; cursor: pointer;">
-    🔗 مشاركة
-  </button>
-
-  <div id="share-box" style="display: none; margin-top: 20px;">
-    <!-- واتساب -->
-    <a href="https://wa.me/?text=https://www.shakerabuhamour.com/military-structure" target="_blank" title="واتساب" style="margin: 0 10px;">
-      <img src="/icons/whatsapp.svg" alt="واتساب" width="32" height="32" loading="lazy">
-    </a>
-
-    <!-- فيسبوك -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/military-structure" target="_blank" title="فيسبوك" style="margin: 0 10px;">
-      <img src="/icons/facebook.svg" alt="فيسبوك" width="32" height="32" loading="lazy">
-    </a>
-
-    <!-- نسخ الرابط -->
-    <a href="#" onclick="copyLink()" title="نسخ الرابط" style="margin: 0 10px;">
-      <img src="/icons/link.svg" alt="نسخ الرابط" width="32" height="32" loading="lazy">
-    </a>
-
-    <!-- طباعة -->
-    <a href="#" onclick="window.print();" title="طباعة" style="margin: 0 10px;">
-      <img src="/icons/print.svg" alt="طباعة" width="32" height="32" loading="lazy">
-    </a>
-  </div>
+<!-- ✅ أزرار المشاركة -->
+<div class="share-buttons" style="text-align: center; margin-top: 40px;">
+  <a class="whatsapp" href="https://wa.me/?text=https://www.shakerabuhamour.com/military-structure" target="_blank">
+    <i class="fab fa-whatsapp fa-2x" style="color: #25D366; margin: 0 20px;"></i>
+  </a>
+  <a class="messenger" href="fb-messenger://share?link=https://www.shakerabuhamour.com/military-structure">
+    <i class="fab fa-facebook-messenger fa-2x" style="color: #0084ff; margin: 0 20px;"></i>
+  </a>
+  <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/military-structure" target="_blank">
+    <i class="fab fa-facebook fa-2x" style="color: #1877f2; margin: 0 20px;"></i>
+  </a>
+  <div style="height: 30px;"></div>
+  <a class="copy" href="#" onclick="copyLink()">
+    <i class="fas fa-link fa-2x" style="color: #555; margin: 0 20px;"></i>
+  </a>
+  <a class="print" href="#" onclick="window.print();">
+    <i class="fas fa-print fa-2x" style="color: #000; margin: 0 20px;"></i>
+  </a>
 </div>
 
 <script>
-  function toggleShare() {
-    const box = document.getElementById('share-box');
-    box.style.display = box.style.display === 'none' ? 'block' : 'none';
-  }
-
   function copyLink() {
     const link = "https://www.shakerabuhamour.com/military-structure";
     navigator.clipboard.writeText(link).then(() => {
@@ -374,9 +359,6 @@ padding: 6px;
     });
   }
 </script>
-
-
-
   
 <div class="signature" style="font-size: 13px; text-align: center; margin-top: 40px;">
   <div style="color: #003366; font-weight: bold; margin-bottom: 4px;">
