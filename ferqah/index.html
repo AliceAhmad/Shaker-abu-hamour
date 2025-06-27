@@ -176,32 +176,46 @@
 </ul>
 </div>
  <hr>  
-  <!-- ✅ أزرار المشاركة -->
-<div class="share-buttons" style="text-align: center; margin-top: 40px;">
-  <a class="whatsapp" href="https://wa.me/?text=https://www.shakerabuhamour.com/ferqah/" target="_blank">
-    <i class="fab fa-whatsapp fa-6x" style="color: #25D366; margin: 0 20px;"></i>
+<div style="text-align: center; margin-top: 30px;">
+  <!-- زر واتساب -->
+  <a href="https://wa.me/?text=https://www.shakerabuhamour.com/ferqah"
+     target="_blank"
+     style="background-color: #25D366; color: white; padding: 10px 15px; margin: 5px; border-radius: 5px; text-decoration: none; font-size: 14px;">
+    واتساب
   </a>
-  <a class="messenger" href="fb-messenger://share?link=https://www.shakerabuhamour.com/ferqah/">
-    <i class="fab fa-facebook-messenger fa-6x" style="color: #0084ff; margin: 0 20px;"></i>
+
+  <!-- زر فيسبوك -->
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/ferqah"
+     target="_blank"
+     style="background-color: #4267B2; color: white; padding: 10px 15px; margin: 5px; border-radius: 5px; text-decoration: none; font-size: 14px;">
+    فيسبوك
   </a>
-  <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/ferqah/" target="_blank">
-    <i class="fab fa-facebook fa-6x" style="color: #1877f2; margin: 0 20px;"></i>
-  </a>
-  <a class="copy" href="#" onclick="copyLink()">
-    <i class="fas fa-link fa-4x" style="color: #555; margin: 0 20px;"></i>
-  </a>
-  <a class="print" href="#" onclick="window.print();">
-    <i class="fas fa-print fa-4x" style="color: #000; margin: 0 20px;"></i>
+
+  <!-- زر ماسنجر -->
+  <a href="fb-messenger://share?link=https://www.shakerabuhamour.com/ferqah"
+     target="_blank"
+     style="background-color: #0084ff; color: white; padding: 10px 15px; margin: 5px; border-radius: 5px; text-decoration: none; font-size: 14px;">
+    ماسنجر
   </a>
 </div>
-<!-- ✅ كود نسخ الرابط -->
+
+<!-- ✅ زر نسخ الرابط وزر الطباعة -->
+<div style="text-align: center; margin-top: 15px;">
+  <button onclick="copyLink()" style="background-color: #f0f0f0; border: none; color: #333; padding: 10px 20px; margin: 5px; font-size: 14px; border-radius: 8px; cursor: pointer;">
+    📋 نسخ الرابط
+  </button>
+  <button onclick="window.print()" style="background-color: #f0f0f0; border: none; color: #333; padding: 10px 20px; margin: 5px; font-size: 14px; border-radius: 8px; cursor: pointer;">
+    🖨️ طباعة
+  </button>
+</div>
+
 <script>
 function copyLink() {
-  const link = "https://www.shakerabuhamour.com/ferqah/";
-  navigator.clipboard.writeText(link).then(function() {
-    alert("✅ تم نسخ الرابط بنجاح!");
-  }, function() {
-    alert("❌ حدث خطأ أثناء النسخ.");
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    alert("✅ تم نسخ الرابط بنجاح");
+  }).catch(err => {
+    alert("❌ لم يتم النسخ، يرجى المحاولة يدويًا");
   });
 }
 </script>
