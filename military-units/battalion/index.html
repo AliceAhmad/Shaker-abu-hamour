@@ -152,6 +152,28 @@
 </div>
 
 
+<!-- ✅ زر نسخ الرابط وزر الطباعة -->
+<div style="text-align: center; margin-top: 15px;">
+  <button onclick="copyLink()" style="background-color: #f0f0f0; border: none; color: #333; padding: 10px 20px; margin: 5px; font-size: 14px; border-radius: 8px; cursor: pointer;">
+    📋 نسخ الرابط
+  </button>
+  <button onclick="window.print()" style="background-color: #f0f0f0; border: none; color: #333; padding: 10px 20px; margin: 5px; font-size: 14px; border-radius: 8px; cursor: pointer;">
+    🖨️ طباعة
+  </button>
+</div>
+
+<script>
+function copyLink() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    alert("✅ تم نسخ الرابط بنجاح");
+  }).catch(err => {
+    alert("❌ لم يتم النسخ، يرجى المحاولة يدويًا");
+  });
+}
+</script>
+
+  
 
   
 <hr> 
