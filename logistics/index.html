@@ -201,22 +201,48 @@
   🔗 للمزيد من المعلومات، يمكنك زيارة الموقع الرسمي للقوات المسلحة الأردنية – الجيش العربي:
   <a href="https://www.jaf.mil.jo" target="_blank">jaf.mil.jo</a>
 </div>
-<!-- أزرار المشاركة -->
-<div class="share-buttons">
-  <a class="whatsapp" href="https://wa.me/?text=https://www.shakerabuhamour.com/logistics/" target="_blank" title="مشاركة واتساب"><i class="fab fa-whatsapp"></i></a>
-  <a class="messenger" href="fb-messenger://share?link=https://www.shakerabuhamour.com/logistics/" title="مشاركة ماسنجر"><i class="fab fa-facebook-messenger"></i></a>
-  <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/logistics/" target="_blank" title="مشاركة فيسبوك"><i class="fab fa-facebook"></i></a>
-  <a class="copy" href="#" onclick="copyLink()" title="نسخ الرابط"><i class="fas fa-link"></i></a>
-  <a class="print" href="#" onclick="window.print();" title="طباعة الصفحة"><i class="fas fa-print"></i></a>
+<div style="text-align: center; margin-top: 30px;">
+  <!-- زر واتساب -->
+  <a href="https://wa.me/?text=https://www.shakerabuhamour.com/logistics"
+     target="_blank"
+     style="background-color: #25D366; color: white; padding: 10px 15px; margin: 5px; border-radius: 5px; text-decoration: none; font-size: 14px;">
+    واتساب
+  </a>
+
+  <!-- زر فيسبوك -->
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/logistics"
+     target="_blank"
+     style="background-color: #4267B2; color: white; padding: 10px 15px; margin: 5px; border-radius: 5px; text-decoration: none; font-size: 14px;">
+    فيسبوك
+  </a>
+
+  <!-- زر ماسنجر -->
+  <a href="fb-messenger://share?link=https://www.shakerabuhamour.com/logistics"
+     target="_blank"
+     style="background-color: #0084ff; color: white; padding: 10px 15px; margin: 5px; border-radius: 5px; text-decoration: none; font-size: 14px;">
+    ماسنجر
+  </a>
 </div>
+
+<!-- ✅ زر نسخ الرابط وزر الطباعة -->
+<div style="text-align: center; margin-top: 15px;">
+  <button onclick="copyLink()" style="background-color: #f0f0f0; border: none; color: #333; padding: 10px 20px; margin: 5px; font-size: 14px; border-radius: 8px; cursor: pointer;">
+    📋 نسخ الرابط
+  </button>
+  <button onclick="window.print()" style="background-color: #f0f0f0; border: none; color: #333; padding: 10px 20px; margin: 5px; font-size: 14px; border-radius: 8px; cursor: pointer;">
+    🖨️ طباعة
+  </button>
+</div>
+
 <script>
-  function copyLink() {
-    navigator.clipboard.writeText(window.location.href).then(function() {
-      alert("✅ تم نسخ الرابط إلى الحافظة");
-    }, function() {
-      alert("❌ لم يتم النسخ. حاول مرة أخرى");
-    });
-  }
+function copyLink() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    alert("✅ تم نسخ الرابط بنجاح");
+  }).catch(err => {
+    alert("❌ لم يتم النسخ، يرجى المحاولة يدويًا");
+  });
+}
 </script>
 
 <div class="signature" style="font-size: 13px; text-align: center; margin-top: 40px;">
