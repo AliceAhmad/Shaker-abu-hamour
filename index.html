@@ -1141,6 +1141,74 @@ function copyPageLink() {
   alert('✅ تم نسخ رابط الصفحة إلى الحافظة!');
 }
 </script>
+
+
+
+
+
+<div id="share-buttons" style="text-align:center; margin-top: 20px; margin-bottom: 80px;">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/?text=https://www.shakerabuhamour.com" target="_blank" rel="noopener noreferrer"
+     aria-label="مشاركة عبر واتساب" title="WhatsApp" style="margin: 0 5px;">
+    <img alt="WhatsApp" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" />
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com" target="_blank" rel="noopener noreferrer"
+     aria-label="مشاركة عبر فيسبوك" title="Facebook" style="margin: 0 5px;">
+    <img alt="Facebook" src="https://img.icons8.com/color/48/000000/facebook-new.png" />
+  </a>
+
+  <!-- Messenger -->
+  <a href="fb-messenger://share?link=https://www.shakerabuhamour.com" target="_blank" rel="noopener noreferrer"
+     aria-label="مشاركة عبر ماسنجر فيسبوك" title="Messenger" style="margin: 0 5px;">
+    <img alt="Messenger" src="https://img.icons8.com/color/48/000000/facebook-messenger--v1.png" />
+  </a>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/intent/tweet?url=https://www.shakerabuhamour.com" target="_blank" rel="noopener noreferrer"
+     aria-label="مشاركة عبر تويتر" title="Twitter" style="margin: 0 5px;">
+    <img alt="Twitter" src="https://img.icons8.com/color/48/000000/twitter--v1.png" />
+  </a>
+
+  <!-- Telegram -->
+  <a href="https://t.me/share/url?url=https://www.shakerabuhamour.com" target="_blank" rel="noopener noreferrer"
+     aria-label="مشاركة عبر تيليغرام" title="Telegram" style="margin: 0 5px;">
+    <img alt="Telegram" src="https://img.icons8.com/color/48/000000/telegram-app.png" />
+  </a>
+
+  <!-- Instagram (فتح الرسالة في التطبيق) -->
+  <a href="https://www.instagram.com/direct/new/?text=https://www.shakerabuhamour.com" target="_blank" rel="noopener noreferrer"
+     aria-label="مشاركة رابط الصفحة عبر رسالة على إنستقرام" title="Instagram DM" style="margin: 0 5px;">
+    <img alt="Instagram" src="https://img.icons8.com/color/48/000000/instagram-new.png" />
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:?subject=مشاركة موقع شاكر أبو حمور&amp;body=https://www.shakerabuhamour.com" rel="noopener noreferrer"
+     aria-label="مشاركة عبر البريد الإلكتروني" title="Email" style="margin: 0 5px;">
+    <img alt="Email" src="https://img.icons8.com/color/48/000000/email.png" />
+  </a>
+
+  <!-- نسخ الرابط -->
+  <a href="javascript:void(0);" onclick="copyPageLink()" aria-label="نسخ الرابط" title="نسخ الرابط" style="margin: 0 5px;">
+    <img alt="نسخ الرابط" src="https://img.icons8.com/color/48/000000/copy-link.png" />
+  </a>
+</div>
+
+<!-- سكربت نسخ الرابط -->
+<script>
+  function copyPageLink() {
+    const dummy = document.createElement('input');
+    const url = window.location.href;
+    document.body.appendChild(dummy);
+    dummy.value = url;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+    alert("✅ تم نسخ الرابط بنجاح");
+  }
+</script>
+	
 <footer>
 <p>2018 © العميد الركن شاكر أحمد أبو حمّور</p>
 <p style="font-size: 12px; margin-top: -12px; color: #ddd;">جميع الحقوق محفوظة</p>
