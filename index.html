@@ -1146,16 +1146,16 @@
 
 <!-- سكربت نسخ الرابط -->
 <script>
-  function copyPageLink() {
-    const dummy = document.createElement('input');
-    const url = window.location.href;
-    document.body.appendChild(dummy);
-    dummy.value = url;
-    dummy.select();
-    document.execCommand('copy');
-    document.body.removeChild(dummy);
-    alert("✅ تم نسخ الرابط بنجاح");
-  }
+function copyPageLink() {
+  const dummy = document.createElement('input');
+  // نسخ الرابط بدون الـ Fragment
+  dummy.value = window.location.origin + window.location.pathname;
+  document.body.appendChild(dummy);
+  dummy.select();
+  document.execCommand('copy');
+  document.body.removeChild(dummy);
+  alert('✅ تم نسخ رابط الصفحة إلى الحافظة!');
+}
 </script>
 	
 <footer>
