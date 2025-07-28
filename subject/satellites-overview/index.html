@@ -70,36 +70,24 @@
      <li><strong>أقمار البحث العلمي:</strong> تُستخدم في دراسة الفضاء والفيزياء، مثل تلسكوب هابل الذي أُطلق عام 1990 في مدار أرضي منخفض، ويُستخدم لرصد المجرات والنجوم والكواكب البعيدة باستخدام أطوال موجية متعددة، مما مكّن العلماء من دراسة نشأة الكون، الثقوب السوداء، والمادة المظلمة بدقة عالية خارج تأثير الغلاف الجوي للأرض.</li>
     </ul>
 <h2>🔸 ثالثاً: تطور الأقمار الصناعية – من التجارب الأولى إلى الذكاء الاصطناعي</h2>
-
- <!-- الصورة في الصفحة -->
-<div style="text-align: center; margin-top: 40px;">
+<!-- الصورة في الصفحة -->
+<div style="text-align: center; margin-top: 30px;">
   <img id="imageThumb" 
        src="https://www.shakerabuhamour.com/subject/satellites-overview/alwasiah.webp" 
-       alt="صورة حديثة (2024) وصورة أرشيفية (1959) ملتقطتان بواسطة القمر الصناعي" 
+       alt="الوسية 1959" 
        loading="lazy" 
-       style="width: 300px; height: auto; max-width: 100%; border-radius: 8px; cursor: pointer;">
-  <p style="font-size: 14px; color: #444; margin-top: 8px;">الوسية – بين الماضي والحاضر</p>
+       style="width: 320px; height: auto; max-width: 100%; border-radius: 8px; cursor: pointer;">
+  <p style="font-size: 14px; color: #444; margin-top: 8px;">الوسية – صورة نادرة عام 1959</p>
 </div>
 
 <!-- النافذة المنبثقة (Modal) -->
-<div id="imageModal" style="
-  display: none; 
-  position: fixed; 
-  z-index: 1000; 
-  left: 0; 
-  top: 0; 
-  width: 100%; 
-  height: 100%; 
-  background-color: rgba(0,0,0,0.8);
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  flex-direction: column;">
-  
-  <span id="closeModal" style="position: absolute; top: 15px; right: 30px; color: #fff; font-size: 26px; cursor: pointer;">&times;</span>
-  
-  <img id="modalImage" style="max-width: 90%; max-height: 75%; border-radius: 8px; margin-bottom: 12px;">
-  <p id="modalCaption" style="color: #fff; font-size: 16px; text-align: center;"></p>
+<div id="imageModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; 
+background-color: rgba(0,0,0,0.8);">
+  <span id="closeModal" style="position: absolute; top: 15px; right: 30px; color: #fff; font-size: 30px; cursor: pointer;">&times;</span>
+  <div style="text-align: center; margin-top: 60px;">
+    <img id="modalImage" style="max-width: 90%; max-height: 80%; border-radius: 8px;">
+    <p id="modalCaption" style="color: #fff; font-size: 16px; margin-top: 10px;"></p>
+  </div>
 </div>
 
 <script>
@@ -112,7 +100,7 @@
 
   // عند الضغط على الصورة
   imageThumb.onclick = function() {
-    modal.style.display = "flex"; // عرض الـ modal في منتصف الشاشة
+    modal.style.display = "block";
     modalImage.src = this.src;
     modalCaption.innerText = this.alt; // النص أسفل الصورة
   }
@@ -128,7 +116,12 @@
       modal.style.display = "none";
     }
   }
-</script><ul>
+</script>
+
+
+
+    
+<ul>
   <li><strong>المرحلة الأولى – البدايات (1957):</strong> إطلاق أول قمر صناعي في التاريخ "سبوتنيك-1" من قبل الاتحاد السوفيتي، وكان يُصدر إشارات لاسلكية بسيطة.</li>
   <li><strong>المرحلة الثانية – الاتصالات (1960s):</strong> ظهور أول أقمار الاتصالات مثل "تلستار" التي ساعدت في نقل الإشارات التلفزيونية بين القارات.</li>
   <li><strong>المرحلة الثالثة – الأقمار المتخصصة (1970s–1980s):</strong> تم تطوير أقمار الطقس، الاستشعار عن بعد، والملاحة مثل الأقمار الأولى لنظام GPS الأمريكي.</li>
