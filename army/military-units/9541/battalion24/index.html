@@ -477,24 +477,25 @@ function copyLink() {
   </p>
 
 
-<audio id="bg-music" loop>
+<audio id="bg-music" autoplay muted loop>
   <source src="https://www.shakerabuhamour.com/music/shakermp3.mp3" type="audio/mpeg">
 </audio>
 
-<button id="play-music" style="padding:10px; font-size:16px; background:#005eff; color:#fff; border:none; border-radius:6px;">
-  ▶️ تشغيل الموسيقى
+<button id="unmute" style="position:fixed; bottom:20px; right:20px; padding:10px;">
+  🔊 تشغيل الصوت
 </button>
 
 <script>
   const audio = document.getElementById('bg-music');
-  const playBtn = document.getElementById('play-music');
+  const unmuteBtn = document.getElementById('unmute');
 
-  playBtn.addEventListener('click', () => {
+  unmuteBtn.addEventListener('click', () => {
+    audio.muted = false; // إلغاء الكتم
     audio.play();
-    playBtn.style.display = 'none'; // إخفاء الزر بعد التشغيل
+    unmuteBtn.style.display = 'none';
   });
 </script>
-
+  
   
 </footer>
 <div style="text-align: center; background-color: #f2f2f2; margin-top: 15px;">
