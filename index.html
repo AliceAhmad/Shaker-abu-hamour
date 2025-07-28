@@ -1275,6 +1275,9 @@ function copyPageLink() {
   alert('✅ تم نسخ رابط الصفحة إلى الحافظة!');
 }
 </script>
+
+
+	
 <audio id="bg-music" loop>
   <source src="https://www.shakerabuhamour.com/music/shakermp3A1.mp3" type="audio/mpeg">
 </audio>
@@ -1288,14 +1291,14 @@ function copyPageLink() {
   height: 50px; 
   border-radius: 50%; 
   background: #005eff; 
-  display: none; /* لا تظهر عند تحميل الصفحة */
+  display: none; /* مخفية عند تحميل الصفحة */
   align-items: center; 
   justify-content: center; 
   cursor: pointer; 
   box-shadow: 0 3px 8px rgba(0,0,0,0.3);
   z-index: 9999;
-  opacity: 0; /* البداية شفافة */
-  transition: opacity 0.8s ease; /* تأثير الظهور */
+  opacity: 0;
+  transition: opacity 0.5s ease;
 ">
   <span id="audio-icon" style="color:#fff; font-size:22px;">🔊</span>
 </div>
@@ -1305,9 +1308,8 @@ function copyPageLink() {
   const audioControl = document.getElementById('audio-control');
   const audioIcon = document.getElementById('audio-icon');
   let isPlaying = false;
-  let shown = false; // للتحكم في ظهور الأيقونة مرة واحدة
 
-  // تشغيل الصوت عند أول تفاعل (ضغط أو تمرير)
+  // التشغيل عند أول تفاعل
   function startMusic() {
     audio.play().then(() => {
       isPlaying = true;
@@ -1320,7 +1322,7 @@ function copyPageLink() {
   document.addEventListener('click', startMusic);
   document.addEventListener('scroll', startMusic);
 
-  // زر التحكم بالصوت
+  // التحكم بالصوت
   audioControl.addEventListener('click', () => {
     if (isPlaying) {
       audio.pause();
@@ -1333,21 +1335,25 @@ function copyPageLink() {
     }
   });
 
-  // إظهار الأيقونة عند الوصول إلى قسم "المعلومات الشخصية"
+  // إظهار السماعة من قسم المعلومات الشخصية حتى آخر الصفحة
   window.addEventListener('scroll', () => {
-    const section = document.querySelector('h2#personal-info, h2');
-    // إذا العنوان لديه id=personal-info أو النص مطابق
+    const section = document.querySelector('#personal-info') || 
+                    Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.trim() === 'المعلومات الشخصية');
+
     if (section) {
-      const isTarget = section.id === 'personal-info' || section.textContent.trim() === 'المعلومات الشخصية';
-      if (isTarget) {
-        const sectionTop = section.offsetTop;
-        const scrollPos = window.scrollY + window.innerHeight;
-        if (scrollPos >= sectionTop + 50 && !shown) {
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+      if (window.scrollY + 50 >= sectionTop) {
+        // وصل للقسم أو تجاوزه للأسفل ⇒ إظهار الأيقونة
+        if (audioControl.style.display !== 'flex') {
           audioControl.style.display = 'flex';
-          setTimeout(() => {
-            audioControl.style.opacity = '1'; // الظهور التدريجي
-          }, 50);
-          shown = true;
+          setTimeout(() => (audioControl.style.opacity = '1'), 50);
+        }
+      } else {
+        // قبل قسم المعلومات الشخصية ⇒ إخفاء الأيقونة
+        if (audioControl.style.display === 'flex') {
+          audioControl.style.opacity = '0';
+          setTimeout(() => (audioControl.style.display = 'none'), 500);
         }
       }
     }
