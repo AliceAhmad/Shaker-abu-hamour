@@ -1314,10 +1314,10 @@ function copyPageLink() {
     audio.play().then(() => {
       // نجح التشغيل التلقائي
       isPlaying = true;
-      audioIcon.textContent = "🔊";
+      audioIcon.textContent = "🔊"; // الأيقونة غير مكتومة
     }).catch(() => {
-      // المتصفح منع التشغيل التلقائي، ننتظر أول تفاعل
-      audioIcon.textContent = "🔇";
+      // المتصفح منع التشغيل التلقائي
+      audioIcon.textContent = "🔊"; // تبقى الأيقونة غير مكتومة
       document.addEventListener('click', autoStart);
       document.addEventListener('scroll', autoStart);
     });
@@ -1338,11 +1338,11 @@ function copyPageLink() {
     if (isPlaying) {
       audio.pause();
       isPlaying = false;
-      audioIcon.textContent = "🔇";
+      audioIcon.textContent = "🔇"; // مكتومة عند الإيقاف
     } else {
       audio.play();
       isPlaying = true;
-      audioIcon.textContent = "🔊";
+      audioIcon.textContent = "🔊"; // غير مكتومة عند التشغيل
     }
   });
 
