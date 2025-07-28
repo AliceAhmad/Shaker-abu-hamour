@@ -1277,7 +1277,7 @@ function copyPageLink() {
 </script>
 
 
-<audio id="bg-music" autoplay loop>
+<audio id="bg-music" loop>
   <source src="https://www.shakerabuhamour.com/music/shakermp3A1.mp3" type="audio/mpeg">
 </audio>
 
@@ -1306,21 +1306,34 @@ function copyPageLink() {
   const audio = document.getElementById('bg-music');
   const audioControl = document.getElementById('audio-control');
   const audioIcon = document.getElementById('audio-icon');
-  let isPlaying = true;  // الصوت يعمل مباشرة
+  let isPlaying = false;
   let isVisible = false;
 
-  // عند فتح الصفحة: محاولة التشغيل التلقائي
+  // محاولة التشغيل التلقائي عند فتح الصفحة
   window.addEventListener('load', () => {
     audio.play().then(() => {
+      // نجح التشغيل التلقائي
       isPlaying = true;
       audioIcon.textContent = "🔊";
     }).catch(() => {
-      // إذا منع المتصفح التشغيل التلقائي، نظهر الأيقونة ليسمح المستخدم بالتحكم
+      // المتصفح منع التشغيل التلقائي، ننتظر أول تفاعل
       audioIcon.textContent = "🔇";
+      document.addEventListener('click', autoStart);
+      document.addEventListener('scroll', autoStart);
     });
   });
 
-  // التحكم بالصوت عند الضغط على السماعة
+  // تشغيل الصوت عند أول تفاعل إذا منعه المتصفح
+  function autoStart() {
+    audio.play().then(() => {
+      isPlaying = true;
+      audioIcon.textContent = "🔊";
+      document.removeEventListener('click', autoStart);
+      document.removeEventListener('scroll', autoStart);
+    });
+  }
+
+  // التحكم بالصوت عند الضغط على الأيقونة
   audioControl.addEventListener('click', () => {
     if (isPlaying) {
       audio.pause();
@@ -1333,7 +1346,7 @@ function copyPageLink() {
     }
   });
 
-  // إظهار السماعة عند قسم المعلومات الشخصية وحتى آخر الصفحة
+  // إظهار الأيقونة عند قسم المعلومات الشخصية حتى نهاية الصفحة
   window.addEventListener('scroll', () => {
     const section = document.querySelector('#personal-info') || 
                     Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.trim() === 'المعلومات الشخصية');
@@ -1349,7 +1362,7 @@ function copyPageLink() {
           isVisible = true;
         }
       } else {
-        // إخفاء الأيقونة قبل القسم
+        // إخفاء الأيقونة إذا عاد للأعلى
         if (isVisible) {
           audioControl.style.opacity = '0';
           setTimeout(() => (audioControl.style.display = 'none'), 500);
@@ -1359,8 +1372,6 @@ function copyPageLink() {
     }
   });
 </script>
-
-
 
 
 	
