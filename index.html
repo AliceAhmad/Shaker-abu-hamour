@@ -1275,7 +1275,6 @@ function copyPageLink() {
   alert('✅ تم نسخ رابط الصفحة إلى الحافظة!');
 }
 </script>
-
 <audio id="bg-music" loop>
   <source src="https://www.shakerabuhamour.com/music/shakermp3A1.mp3" type="audio/mpeg">
 </audio>
@@ -1296,7 +1295,7 @@ function copyPageLink() {
   box-shadow: 0 3px 8px rgba(0,0,0,0.3);
   z-index: 9999;
   opacity: 0; /* البداية شفافة */
-  transition: opacity 0.6s ease; /* تأثير الظهور والاختفاء */
+  transition: opacity 0.8s ease; /* تأثير الظهور */
 ">
   <span id="audio-icon" style="color:#fff; font-size:22px;">🔊</span>
 </div>
@@ -1306,6 +1305,7 @@ function copyPageLink() {
   const audioControl = document.getElementById('audio-control');
   const audioIcon = document.getElementById('audio-icon');
   let isPlaying = false;
+  let shown = false; // للتحكم في ظهور الأيقونة مرة واحدة
 
   // تشغيل الصوت عند أول تفاعل (ضغط أو تمرير)
   function startMusic() {
@@ -1333,28 +1333,21 @@ function copyPageLink() {
     }
   });
 
-  // إظهار أو إخفاء الأيقونة حسب موقع المستخدم
+  // إظهار الأيقونة عند الوصول إلى قسم "المعلومات الشخصية"
   window.addEventListener('scroll', () => {
     const section = document.querySelector('h2#personal-info, h2');
+    // إذا العنوان لديه id=personal-info أو النص مطابق
     if (section) {
       const isTarget = section.id === 'personal-info' || section.textContent.trim() === 'المعلومات الشخصية';
       if (isTarget) {
         const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
-        const scrollBottom = window.scrollY + window.innerHeight;
-
-        if (scrollBottom >= sectionTop + 50) {
-          // إظهار الأيقونة عند الوصول للقسم
-          if (audioControl.style.display !== 'flex') {
-            audioControl.style.display = 'flex';
-            setTimeout(() => (audioControl.style.opacity = '1'), 50);
-          }
-        } else {
-          // إخفاء الأيقونة عند العودة للأعلى
-          if (audioControl.style.display === 'flex') {
-            audioControl.style.opacity = '0';
-            setTimeout(() => (audioControl.style.display = 'none'), 600);
-          }
+        const scrollPos = window.scrollY + window.innerHeight;
+        if (scrollPos >= sectionTop + 50 && !shown) {
+          audioControl.style.display = 'flex';
+          setTimeout(() => {
+            audioControl.style.opacity = '1'; // الظهور التدريجي
+          }, 50);
+          shown = true;
         }
       }
     }
