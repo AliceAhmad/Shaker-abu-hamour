@@ -1277,7 +1277,6 @@ function copyPageLink() {
 </script>
 
 
-	
 <audio id="bg-music" loop>
   <source src="https://www.shakerabuhamour.com/music/shakermp3A1.mp3" type="audio/mpeg">
 </audio>
@@ -1291,7 +1290,7 @@ function copyPageLink() {
   height: 50px; 
   border-radius: 50%; 
   background: #005eff; 
-  display: none; /* مخفية عند تحميل الصفحة */
+  display: none;
   align-items: center; 
   justify-content: center; 
   cursor: pointer; 
@@ -1308,21 +1307,10 @@ function copyPageLink() {
   const audioControl = document.getElementById('audio-control');
   const audioIcon = document.getElementById('audio-icon');
   let isPlaying = false;
+  let isVisible = false;
+  let autoStarted = false; // لتشغيل الصوت مرة واحدة فقط
 
-  // التشغيل عند أول تفاعل
-  function startMusic() {
-    audio.play().then(() => {
-      isPlaying = true;
-      audioIcon.textContent = "🔊";
-    }).catch(() => {});
-    document.removeEventListener('click', startMusic);
-    document.removeEventListener('scroll', startMusic);
-  }
-
-  document.addEventListener('click', startMusic);
-  document.addEventListener('scroll', startMusic);
-
-  // التحكم بالصوت
+  // التحكم بالصوت عند الضغط على السماعة
   audioControl.addEventListener('click', () => {
     if (isPlaying) {
       audio.pause();
@@ -1335,7 +1323,7 @@ function copyPageLink() {
     }
   });
 
-  // إظهار السماعة من قسم المعلومات الشخصية حتى آخر الصفحة
+  // إظهار السماعة وتشغيل الصوت عند قسم المعلومات الشخصية
   window.addEventListener('scroll', () => {
     const section = document.querySelector('#personal-info') || 
                     Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.trim() === 'المعلومات الشخصية');
@@ -1345,20 +1333,33 @@ function copyPageLink() {
 
       if (window.scrollY + 50 >= sectionTop) {
         // وصل للقسم أو تجاوزه للأسفل ⇒ إظهار الأيقونة
-        if (audioControl.style.display !== 'flex') {
+        if (!isVisible) {
           audioControl.style.display = 'flex';
           setTimeout(() => (audioControl.style.opacity = '1'), 50);
+          isVisible = true;
+        }
+
+        // تشغيل الصوت مرة واحدة عند الدخول لأول مرة
+        if (!autoStarted) {
+          audio.play().then(() => {
+            isPlaying = true;
+            audioIcon.textContent = "🔊";
+          }).catch(() => {}); // لو المتصفح منع التشغيل التلقائي
+          autoStarted = true;
         }
       } else {
-        // قبل قسم المعلومات الشخصية ⇒ إخفاء الأيقونة
-        if (audioControl.style.display === 'flex') {
+        // قبل قسم المعلومات الشخصية ⇒ إخفاء الأيقونة فقط (الصوت يبقى يعمل)
+        if (isVisible) {
           audioControl.style.opacity = '0';
           setTimeout(() => (audioControl.style.display = 'none'), 500);
+          isVisible = false;
         }
       }
     }
   });
-</script>
+</script>	
+
+
 
 	
 <footer>
