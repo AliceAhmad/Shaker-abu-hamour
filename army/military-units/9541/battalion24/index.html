@@ -475,6 +475,27 @@ function copyLink() {
       المشاع الإبداعي – النسب - غير تجاري (CC BY-NC 4.0)
     </a>. يُسمح باستخدام هذا المحتوى لأغراض التعليم والتعريف والنشر غير التجاري مع الإشارة إلى المصدر: <strong>shakerabuhamour.com</strong>.
   </p>
+
+
+<audio id="bg-music" loop>
+  <source src="https://www.shakerabuhamour.com/music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="play-music" style="padding:10px; font-size:16px; background:#005eff; color:#fff; border:none; border-radius:6px;">
+  ▶️ تشغيل الموسيقى
+</button>
+
+<script>
+  const audio = document.getElementById('bg-music');
+  const playBtn = document.getElementById('play-music');
+
+  playBtn.addEventListener('click', () => {
+    audio.play();
+    playBtn.style.display = 'none'; // إخفاء الزر بعد التشغيل
+  });
+</script>
+
+  
 </footer>
 <div style="text-align: center; background-color: #f2f2f2; margin-top: 15px;">
   <a href="#" style="font-size: 13px; text-decoration: none; color: #003366; font-weight: bold;">
