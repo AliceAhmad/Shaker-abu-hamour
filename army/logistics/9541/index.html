@@ -358,6 +358,65 @@ function copyLink() {
       المشاع الإبداعي – النسب - غير تجاري (CC BY-NC 4.0)
     </a>. يُسمح باستخدام هذا المحتوى لأغراض التعليم والتعريف والنشر غير التجاري مع الإشارة إلى المصدر: <strong>shakerabuhamour.com</strong>.
   </p>
+
+<audio id="bg-music" loop>
+  <source src="https://www.shakerabuhamour.com/music/shakermp3A1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- أيقونة التحكم بالصوت -->
+<div id="audio-control" style="
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  background: #005eff; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  z-index: 9999;
+">
+  <span id="audio-icon" style="color:#fff; font-size:22px;">🔊</span>
+</div>
+
+<script>
+  const audio = document.getElementById('bg-music');
+  const audioControl = document.getElementById('audio-control');
+  const audioIcon = document.getElementById('audio-icon');
+  let isPlaying = false;
+
+  // تشغيل الصوت عند أول تفاعل (ضغط أو تمرير)
+  function startMusic() {
+    audio.play().then(() => {
+      isPlaying = true;
+      audioIcon.textContent = "🔊";
+    }).catch(() => {});
+    document.removeEventListener('click', startMusic);
+    document.removeEventListener('scroll', startMusic);
+  }
+
+  document.addEventListener('click', startMusic);
+  document.addEventListener('scroll', startMusic);
+
+  // زر التحكم بالصوت
+  audioControl.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      audioIcon.textContent = "🔇";
+    } else {
+      audio.play();
+      isPlaying = true;
+      audioIcon.textContent = "🔊";
+    }
+  });
+</script>
+
+
+ 
 </footer>
   <div style="text-align: center; background-color: #f2f2f2; margin-top: 15px;">
   <a href="#" style="font-size: 13px; text-decoration: none; color: #003366; font-weight: bold;">
