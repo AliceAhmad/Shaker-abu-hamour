@@ -319,121 +319,7 @@ function copyLink() {
     </a>. يُسمح باستخدام هذا المحتوى لأغراض التعليم والتعريف والنشر غير التجاري مع الإشارة إلى المصدر: <strong>shakerabuhamour.com</strong>.
   </p>
 
-<audio id="bg-music" loop>
-  <source src="https://www.shakerabuhamour.com/music/shakermp3A1.mp3" type="audio/mpeg">
-</audio>
 
-<!-- أيقونة التحكم بالصوت + شريط التحكم -->
-<div id="audio-control-container" style="
-  position: fixed;
-  bottom: 125px;
-  right: 6px;
-  display: none;
-  align-items: center;
-  gap: 8px;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-">
-  <!-- الأيقونة -->
-  <div id="audio-control" style="
-    width: 40px;
-    height: 50px;
-    border-radius: 50%;
-    background: #005eff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  ">
-    <span id="audio-icon" style="color:#fff; font-size:22px;">🔊</span>
-  </div>
-
-  <!-- شريط التحكم بالصوت -->
-  <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.1" style="
-    width: 100px;
-    cursor: pointer;
-  ">
-</div>
-
-<script>
-  const audio = document.getElementById('bg-music');
-  const audioControlContainer = document.getElementById('audio-control-container');
-  const audioControl = document.getElementById('audio-control');
-  const audioIcon = document.getElementById('audio-icon');
-  const volumeSlider = document.getElementById('volume-slider');
-
-  let isPlaying = false;
-  let isVisible = false;
-
-  // تحديد الصوت عند البداية على 10%
-  audio.volume = 0.1;
-
-  // محاولة التشغيل التلقائي عند تحميل الصفحة
-  window.addEventListener('load', () => {
-    audio.play().then(() => {
-      isPlaying = true;
-      audioIcon.textContent = "🔊";
-    }).catch(() => {
-      // إذا منع المتصفح التشغيل التلقائي، ننتظر أول تفاعل
-      document.addEventListener('click', autoStart);
-      document.addEventListener('scroll', autoStart);
-    });
-  });
-
-  // تشغيل الصوت عند أول تفاعل إذا منعه المتصفح
-  function autoStart() {
-    audio.play().then(() => {
-      isPlaying = true;
-      audioIcon.textContent = "🔊";
-      document.removeEventListener('click', autoStart);
-      document.removeEventListener('scroll', autoStart);
-    });
-  }
-
-  // تشغيل/إيقاف الصوت عند الضغط على الأيقونة
-  audioControl.addEventListener('click', () => {
-    if (isPlaying) {
-      audio.pause();
-      isPlaying = false;
-      audioIcon.textContent = "🔇";
-    } else {
-      audio.play();
-      isPlaying = true;
-      audioIcon.textContent = "🔊";
-    }
-  });
-
-  // التحكم بالصوت من شريط التحكم
-  volumeSlider.addEventListener('input', () => {
-    audio.volume = volumeSlider.value;
-  });
-
-  // إظهار الأيقونة + شريط الصوت عند قسم المعلومات الشخصية
-  window.addEventListener('scroll', () => {
-    const section = document.querySelector('#personal-info') || 
-      Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.trim() === 'المعلومات الشخصية');
-
-    if (section) {
-      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-
-      if (window.scrollY + 50 >= sectionTop) {
-        if (!isVisible) {
-          audioControlContainer.style.display = 'flex';
-          setTimeout(() => audioControlContainer.style.opacity = '1', 50);
-          isVisible = true;
-        }
-      } else {
-        if (isVisible) {
-          audioControlContainer.style.opacity = '0';
-          setTimeout(() => audioControlContainer.style.display = 'none', 500);
-          isVisible = false;
-        }
-      }
-    }
-  });
-</script>
 
    
 </footer>
