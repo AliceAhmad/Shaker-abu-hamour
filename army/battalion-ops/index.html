@@ -320,16 +320,16 @@ function copyLink() {
   </p>
 
 <audio id="bg-music" loop>
-  <source src="https://www.shakerabuhamour.com/music/shakermp3A2.mp3" type="audio/mpeg">
+  <source src="https://www.shakerabuhamour.com/music/shakermp3A1.mp3" type="audio/mpeg">
 </audio>
 
 <!-- أيقونة التحكم بالصوت + شريط التحكم -->
 <div id="audio-control-container" style="
-  position: fixed; 
-  bottom: 125px; 
-  right: 6px; 
+  position: fixed;
+  bottom: 125px;
+  right: 6px;
   display: none;
-  align-items: center; 
+  align-items: center;
   gap: 8px;
   z-index: 9999;
   opacity: 0;
@@ -337,22 +337,22 @@ function copyLink() {
 ">
   <!-- الأيقونة -->
   <div id="audio-control" style="
-    width: 40px; 
-    height: 50px; 
-    border-radius: 50%; 
-    background: #005eff; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    cursor: pointer; 
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+    background: #005eff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     box-shadow: 0 3px 8px rgba(0,0,0,0.3);
   ">
     <span id="audio-icon" style="color:#fff; font-size:22px;">🔊</span>
   </div>
 
-  <!-- شريط التحكم في الصوت -->
+  <!-- شريط التحكم بالصوت -->
   <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.1" style="
-    width: 100px; 
+    width: 100px;
     cursor: pointer;
   ">
 </div>
@@ -367,16 +367,16 @@ function copyLink() {
   let isPlaying = false;
   let isVisible = false;
 
-  // ضبط مستوى الصوت على 10% عند البداية
+  // تحديد الصوت عند البداية على 10%
   audio.volume = 0.1;
 
-  // محاولة التشغيل التلقائي عند فتح الصفحة
+  // محاولة التشغيل التلقائي عند تحميل الصفحة
   window.addEventListener('load', () => {
     audio.play().then(() => {
       isPlaying = true;
       audioIcon.textContent = "🔊";
     }).catch(() => {
-      audioIcon.textContent = "🔊";
+      // إذا منع المتصفح التشغيل التلقائي، ننتظر أول تفاعل
       document.addEventListener('click', autoStart);
       document.addEventListener('scroll', autoStart);
     });
@@ -392,7 +392,7 @@ function copyLink() {
     });
   }
 
-  // التحكم بالصوت من الأيقونة (تشغيل/إيقاف)
+  // تشغيل/إيقاف الصوت عند الضغط على الأيقونة
   audioControl.addEventListener('click', () => {
     if (isPlaying) {
       audio.pause();
@@ -405,15 +405,15 @@ function copyLink() {
     }
   });
 
-  // التحكم بمستوى الصوت من الشريط
-  volumeSlider.addEventListener('input', (e) => {
-    audio.volume = e.target.value;
+  // التحكم بالصوت من شريط التحكم
+  volumeSlider.addEventListener('input', () => {
+    audio.volume = volumeSlider.value;
   });
 
-  // إظهار الأيقونة + شريط التحكم عند قسم المعلومات الشخصية
+  // إظهار الأيقونة + شريط الصوت عند قسم المعلومات الشخصية
   window.addEventListener('scroll', () => {
     const section = document.querySelector('#personal-info') || 
-                    Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.trim() === 'المعلومات الشخصية');
+      Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.trim() === 'المعلومات الشخصية');
 
     if (section) {
       const sectionTop = section.getBoundingClientRect().top + window.scrollY;
@@ -421,20 +421,19 @@ function copyLink() {
       if (window.scrollY + 50 >= sectionTop) {
         if (!isVisible) {
           audioControlContainer.style.display = 'flex';
-          setTimeout(() => (audioControlContainer.style.opacity = '1'), 50);
+          setTimeout(() => audioControlContainer.style.opacity = '1', 50);
           isVisible = true;
         }
       } else {
         if (isVisible) {
           audioControlContainer.style.opacity = '0';
-          setTimeout(() => (audioControlContainer.style.display = 'none'), 500);
+          setTimeout(() => audioControlContainer.style.display = 'none', 500);
           isVisible = false;
         }
       }
     }
   });
 </script>
-
 
    
 </footer>
