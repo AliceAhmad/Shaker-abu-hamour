@@ -5,17 +5,26 @@
   <title>عالم الروبوتات – من البدايات إلى المستقبل وعلاقته بالذكاء الاصطناعي</title>
   <meta name="description" content="دليل احترافي شامل عن عالم الروبوتات: التعريفات القياسية، التاريخ والتطور، الأنواع الصناعية والخدمية، الأمان والمعايير، العلاقة بالذكاء الاصطناعي، والاتجاهات المستقبلية. مدعوم بمصادر موثوقة." />
   <meta name="keywords" content="الروبوتات, روبوت, روبوتات صناعية, روبوتات خدمية, الذكاء الاصطناعي, تاريخ الروبوتات, ISO 8373, ROS, HRI, URLLC, IFR" />
-  <link rel="canonical" href="https://www.shakerabuhamour.com/subject9541/robots-overview" />  <!-- Open Graph -->  <meta property="og:type" content="article" />
+  <link rel="canonical" href="https://www.shakerabuhamour.com/subject9541/robots-overview" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
   <meta property="og:locale" content="ar_AR" />
   <meta property="og:title" content="عالم الروبوتات – من البدايات إلى المستقبل وعلاقته بالذكاء الاصطناعي" />
   <meta property="og:description" content="مقال احترافي شامل يعرّف الروبوتات تاريخًا وتقنياتٍ ومعاييرَ وتطبيقات، ويربطها بالذكاء الاصطناعي، مع مراجع موثوقة." />
   <meta property="og:url" content="https://www.shakerabuhamour.com/subject9541/robots-overview" />
   <meta property="og:site_name" content="shakerabuhamour.com" />
   <meta property="og:image" content="https://www.shakerabuhamour.com/subject9541/robots-overview/.webp" />
-  <meta property="og:image:alt" content="صورة تعبيرية لروبوتات صناعية وخدمية" />  <!-- Twitter Cards -->  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:alt" content="صورة تعبيرية لروبوتات صناعية وخدمية" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="عالم الروبوتات – من البدايات إلى المستقبل وعلاقته بالذكاء الاصطناعي" />
   <meta name="twitter:description" content="تعريف شامل للروبوتات وتاريخها وأنواعها وعلاقتها بالذكاء الاصطناعي، ومصادر موثوقة." />
-  <meta name="twitter:image" content="https://www.shakerabuhamour.com/subject9541/robots-overview/.webp" />  <!-- Structured Data (JSON-LD) -->  <script type="application/ld+json">
+  <meta name="twitter:image" content="https://www.shakerabuhamour.com/subject9541/robots-overview/.webp" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -28,42 +37,90 @@
     "datePublished": "2025-08-14",
     "image": ["https://www.shakerabuhamour.com/assets/og/robots.webp"]
   }
-  </script>  <style>
+  </script>
+
+  <style>
     :root{
       --bg:#0f1320; --card:#151a2f; --text:#e9eefc; --muted:#a9b4d0; --accent:#46b3ff; --accent-2:#7ef0c1;
       --border: rgba(255,255,255,.08);
     }
     html{scroll-behavior:smooth}
-    body{margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Kufi Arabic", "Cairo", Tahoma, Arial, sans-serif; background:var(--bg); color:var(--text); line-height:1.8}
+    body{
+      margin:0; background:var(--bg); color:var(--text); line-height:1.8;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Kufi Arabic", "Cairo", Tahoma, Arial, sans-serif;
+    }
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
+
     header{
-      background: radial-gradient(1200px 400px at 70% -10%, rgba(70,179,255,.15), transparent),
-                 linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.0));
+      background:
+        radial-gradient(1200px 400px at 70% -10%, rgba(70,179,255,.15), transparent),
+        linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.0));
       border-bottom:1px solid var(--border);
     }
     .container{max-width:1100px; margin-inline:auto; padding:20px}
     .hero{display:grid; gap:14px; padding:40px 0}
-    .hero h1{font-size:clamp(28px, 4vw, 44px); margin:0 0 6px}
+    .hero h1{font-size:clamp(26px, 4vw, 44px); margin:0 0 6px}
     .hero p{color:var(--muted); margin:0}
+
     .toc{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:18px; margin:18px 0}
     .toc h2{margin-top:0; font-size:20px}
     .toc ol{margin:0; padding-right:18px}
+
     section{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:22px; margin:22px 0}
     h2{font-size:26px; margin-top:0}
     h3{font-size:20px; margin-bottom:8px}
+
     .grid{display:grid; gap:14px}
     @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
-    .note{background:linear-gradient(135deg, rgba(70,179,255,.08), rgba(126,240,193,.08)); border:1px dashed var(--accent); border-radius:14px; padding:12px}
-    table{width:100%; border-collapse:collapse; margin:12px 0; font-size:15px}
-    th,td{padding:10px 8px; border-bottom:1px solid var(--border)}
-    th{background:rgba(255,255,255,.03); text-align:right}
+
+    .note{
+      background:linear-gradient(135deg, rgba(70,179,255,.08), rgba(126,240,193,.08));
+      border:1px dashed var(--accent); border-radius:14px; padding:12px
+    }
+
+    /* جدول مناسب للهاتف */
+    table{
+      width:100%; border-collapse:collapse; margin:12px 0; font-size:15px;
+      display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; /* تمرير ناعم على iOS */
+      border-radius:12px; border:1px solid var(--border);
+    }
+    thead{background:rgba(255,255,255,.03)}
+    th,td{padding:10px 8px; border-bottom:1px solid var(--border); text-align:right; white-space:nowrap}
+    tr:last-child td{border-bottom:none}
+
     .footer{color:var(--muted); font-size:13px; text-align:center; padding:26px 10px}
     .tag{display:inline-block; border:1px solid var(--border); background:rgba(255,255,255,.03); border-radius:999px; padding:4px 10px; margin:2px 4px; font-size:12px}
     .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
-  </style></head>
+
+    /* تحسينات للشاشات الصغيرة */
+    @media (max-width: 768px){
+      .container{padding:16px}
+      .hero{padding:28px 0}
+      h2{font-size:22px}
+      h3{font-size:18px}
+      section{padding:18px; margin:18px 0}
+      .toc{padding:14px}
+      table{font-size:14px}
+      th,td{padding:9px 7px}
+    }
+    @media (max-width: 480px){
+      .container{padding:14px}
+      .hero{padding:22px 0}
+      .hero h1{font-size:clamp(22px, 6vw, 32px)}
+      .hero p{font-size:14px}
+      h2{font-size:20px}
+      h3{font-size:16px}
+      section{padding:16px}
+      .tag{font-size:11px; padding:4px 8px}
+      table{font-size:13px}
+      th,td{padding:8px 6px}
+    }
+  </style>
+</head>
 <body>
   <a class="sr-only" href="#content">تخطِّ إلى المحتوى</a>
+
   <header>
     <div class="container hero">
       <div>
@@ -78,7 +135,9 @@
         </div>
       </div>
     </div>
-  </header>  <main id="content" class="container">
+  </header>
+
+  <main id="content" class="container">
     <!-- فهرس -->
     <nav class="toc" aria-label="محتويات">
       <h2>محتويات</h2>
@@ -92,198 +151,198 @@
         <li><a href="#future">اتجاهات المستقبل</a></li>
         <li><a href="#resources">روابط ومراجع موثوقة</a></li>
       </ol>
-    </nav><!-- التعريف -->
-<section id="def">
-  <h2>1) تعريف الروبوت وفق المعايير</h2>
-  <p>
-    بحسب <strong>ISO&nbsp;8373:2012</strong> (كما يورده اتحاد الروبوتات الدولي IFR):
-    <em>«الروبوت الصناعي مُعالجٌ تلقائيًا، قابلٌ لإعادة البرمجة، متعدد الأغراض، قابل للبرمجة في ثلاثة محاور أو أكثر، يمكن أن يكون ثابتًا أو متنقلًا لاستخدامه في أتمتة العمليات الصناعية.»</em>
-  </p>
-  <div class="note">هذا التعريف يُستخدم على نطاق واسع في الإحصاءات الرسمية والتقارير السنوية لقطاع الروبوتات، ويُستند إليه في التمييز بين الروبوتات <strong>الصناعية</strong> وروبوتات <strong>الخدمات</strong>.</div>
-</section>
+    </nav>
 
-<!-- التاريخ -->
-<section id="history">
-  <h2>2) لمحة تاريخية – من Unimate إلى الروبوتات المتعاونة</h2>
-  <div class="grid grid-2">
-    <div>
-      <h3>الانطلاقة الصناعية (1950s–1960s)</h3>
+    <!-- التعريف -->
+    <section id="def">
+      <h2>1) تعريف الروبوت وفق المعايير</h2>
       <p>
-        يُعد <strong>Unimate</strong> أول روبوت صناعي أُدخل إلى خط إنتاج فعلي عام 1961 في مصنع جنرال موتورز لمعالجة قطع الصب الساخنة. سبقه تطوير المفهوم عام 1954 على يد جورج ديفول، وتأسيس شركة <em>Unimation</em> بالتعاون مع جوزيف إنجلبرجر.
+        بحسب <strong>ISO&nbsp;8373:2012</strong> (كما يورده اتحاد الروبوتات الدولي IFR):
+        <em>«الروبوت الصناعي مُعالجٌ تلقائيًا، قابلٌ لإعادة البرمجة، متعدد الأغراض، قابل للبرمجة في ثلاثة محاور أو أكثر، يمكن أن يكون ثابتًا أو متنقلًا لاستخدامه في أتمتة العمليات الصناعية.»</em>
       </p>
-      <h3>الروبوتات المتنقلة والذكاء (1966–1972)</h3>
+      <div class="note">هذا التعريف يُستخدم على نطاق واسع في الإحصاءات الرسمية والتقارير السنوية لقطاع الروبوتات، ويُستند إليه في التمييز بين الروبوتات <strong>الصناعية</strong> وروبوتات <strong>الخدمات</strong>.</div>
+    </section>
+
+    <!-- التاريخ -->
+    <section id="history">
+      <h2>2) لمحة تاريخية – من Unimate إلى الروبوتات المتعاونة</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>الانطلاقة الصناعية (1950s–1960s)</h3>
+          <p>
+            يُعد <strong>Unimate</strong> أول روبوت صناعي أُدخل إلى خط إنتاج فعلي عام 1961 في مصنع جنرال موتورز لمعالجة قطع الصب الساخنة. سبقه تطوير المفهوم عام 1954 على يد جورج ديفول، وتأسيس شركة <em>Unimation</em> بالتعاون مع جوزيف إنجلبرجر.
+          </p>
+          <h3>الروبوتات المتنقلة والذكاء (1966–1972)</h3>
+          <p>
+            قدّم <strong>Shakey</strong> (من SRI) أول نموذج لروبوت متنقل قادر على إدراك البيئة والتخطيط واتخاذ القرار، مؤثرًا في أجيال لاحقة من الملاحة والتخطيط.
+          </p>
+        </div>
+        <div>
+          <h3>التوسع والتنوع (1970s–2000s)</h3>
+          <ul>
+            <li>انتشار الأذرع الصناعية (Cartesian, SCARA, Articulated, Delta).</li>
+            <li>ظهور الروبوتات الخدمية والمتحركة للأبحاث والمهام المدنية.</li>
+            <li>تحسينات في الرؤية الحاسوبية والتحكم والاستشعار.</li>
+          </ul>
+          <h3>العصر الحديث (2010s–الآن)</h3>
+          <ul>
+            <li>الروبوتات <strong>المتعاونة</strong> (Cobots) للعمل بأمان قرب البشر وفق مواصفة <strong>ISO/TS 15066</strong>.</li>
+            <li>توحيد برمجيات الروبوتات عبر <strong>ROS/ROS&nbsp;2</strong> كمنظومة مفتوحة المصدر.</li>
+            <li>قفزات في الروبوتات العاملة بالذكاء الاصطناعي والتعلم العميق.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- الأنواع -->
+    <section id="types">
+      <h2>3) الأنواع والتصنيفات</h2>
+      <h3>أولًا: بحسب البنية الميكانيكية</h3>
+      <table aria-label="تصنيف ميكانيكي للروبوتات">
+        <thead>
+          <tr><th>النوع</th><th>الوصف المختصر</th><th>أبرز الاستخدامات</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Articulated (مفصلي)</td><td>ذراع ذو ثلاث مفاصل دوّارة أو أكثر، مجال حركة واسع.</td><td>اللحام، المناولة، الطلاء.</td></tr>
+          <tr><td>SCARA</td><td>مفصلان متوازيان يُتيحان امتثالًا في مستوى أفقي.</td><td>التجميع السريع، التعبئة.</td></tr>
+          <tr><td>Delta/Parallel</td><td>أذرع متوازية خفيفة وسريعة.</td><td>الالتقاط والوضع (Pick & Place).</td></tr>
+          <tr><td>Cartesian/Gantry</td><td>محاور خطية متعامدة (X/Y/Z).</td><td>المعالجات الدقيقة، التوضيع الدقيق.</td></tr>
+          <tr><td>Cylindrical</td><td>محاور تُشكّل نظامًا أسطوانيًا.</td><td>مناولة في مساحات أسطوانية.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>ثانيًا: بحسب مجال الاستخدام</h3>
+      <ul>
+        <li><strong>الصناعية:</strong> تُستخدم في الأتمتة التصنيعية، وتخضع لتعريف ISO&nbsp;8373.</li>
+        <li><strong>الخدمية:</strong> روبوتات لأغراض مدنية/مهنية (تنظيف، سياحة، رعاية صحية، لوجستيات)، وفق تعريف ISO للخدمة (خارج الأتمتة الصناعية).</li>
+      </ul>
+
+      <div class="note">
+        <strong>أرقام حديثة:</strong> سجّل <abbr title="اتحاد الروبوتات الدولي">IFR</abbr> نحو <strong>4.28 مليون</strong> روبوت عامل في المصانع حول العالم (2023)، مع أكثر من <strong>541 ألف</strong> تركيب جديد في 2023 وحده.
+      </div>
+    </section>
+
+    <!-- الاستخدامات -->
+    <section id="apps">
+      <h2>4) أهم الاستخدامات العملية اليوم</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>الصناعة والتحويل</h3>
+          <ul>
+            <li>السيارات والإلكترونيات والمعادن: اللحام، التجميع، المناولة، الطلاء، الفحص البصري.</li>
+            <li>المخازن واللوجستيات: الروبوتات المتنقلة (AMRs) للانتقاء والنقل.</li>
+          </ul>
+          <h3>الطب والرعاية</h3>
+          <ul>
+            <li>مساعدة المرضى وإعادة التأهيل، الروبوتات الجراحية (ضمن أطر تنظيمية صارمة).</li>
+          </ul>
+        </div>
+        <div>
+          <h3>البنية التحتية والخدمات</h3>
+          <ul>
+            <li>التفتيش والصيانة في البيئات الخطرة (الطاقة، المصانع، الأنابيب).</li>
+            <li>الروبوتات التعليمية والخدمية والضيافة.</li>
+          </ul>
+          <h3>المجال الأمني والعسكري</h3>
+          <ul>
+            <li>المركبات غير المأهولة (برية/بحرية/جوية) للاستطلاع والدعم وفق الأطر القانونية.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- الأمان والمعايير -->
+    <section id="safety">
+      <h2>5) الأمان والمعايير والتشريعات</h2>
+      <ul>
+        <li><strong>ISO/TS&nbsp;15066 (التعاون الآمن):</strong> مواصفة إرشادية لأنظمة الروبوتات المتعاونة ومساحات العمل المشتركة.</li>
+        <li><strong>ISO&nbsp;10218-1/2:</strong> المتطلبات العامة للسلامة في الروبوتات الصناعية (تكمّلها 15066).</li>
+        <li><strong>التشريعات الأفقية للذكاء الاصطناعي:</strong> يضبط <em>قانون الذكاء الاصطناعي للاتحاد الأوروبي (2024/1689)</em> استخدام أنظمة الذكاء الاصطناعي، ويصنّف التطبيقات <em>عالية المخاطر</em> خاصة حين تكون جزءًا من منتج منظَّم السلامة.</li>
+      </ul>
+      <p class="note">يؤثر الامتثال للمعايير على التصميم والهندسة وعوامل الأمان الوظيفي (PL/SIL) وإدارة البيانات والأثر الأخلاقي.</p>
+    </section>
+
+    <!-- الروبوتات والذكاء الاصطناعي -->
+    <section id="ai">
+      <h2>6) الروبوتات والذكاء الاصطناعي</h2>
       <p>
-        قدّم <strong>Shakey</strong> (من SRI) أول نموذج لروبوت متنقل قادر على إدراك البيئة والتخطيط واتخاذ القرار، مؤثرًا في أجيال لاحقة من الملاحة والتخطيط.
+        يُعد الذكاء الاصطناعي مُحرّكًا رئيسيًا في إدراك الروبوت وفهمه للعالم (رؤية حاسوبية، محاكاة، تعلم معزز)، وفي التخطيط واتخاذ القرار. منذ ورشة <em>دارتموث 1956</em> التي صاغت مصطلح "الذكاء الاصطناعي"، تطورت الخوارزميات من الرمزية إلى التعلم العميق والنماذج متعددة الوسائط، ما حسّن إدراك الروبوت وتكيّفه.
       </p>
+      <div class="grid grid-2">
+        <div>
+          <h3>طبقات الذكاء في الروبوت</h3>
+          <ul>
+            <li><strong>الإدراك:</strong> رؤية/استشعار، تقدير الوضعية، تجزئة الأجسام، كشف العوائق.</li>
+            <li><strong>التخطيط والتحكم:</strong> تخطيط المسار، تجنّب الاصطدام، تحكم أمثل/تنبؤي.</li>
+            <li><strong>التعلّم:</strong> تعلّم معزز من محاكيات/عالم حقيقي، نقل المعرفة.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>المنظومات البرمجية</h3>
+          <ul>
+            <li><strong>ROS&nbsp;2:</strong> بنية وحداتية (Nodes/Topics/Services)، أدوات محاكاة وتصور، مجتمع واسع يدعم السائقين والخوارزميات.</li>
+            <li><strong>اتصال عالي الاعتمادية:</strong> تستفيد الروبوتات المتصلة من ميزات اتصالات <abbr title="Ultra-Reliable Low-Latency Communications">URLLC</abbr> في 5G لتطبيقات التحكم عن بعد والزمن الحقيقي.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- المستقبل -->
+    <section id="future">
+      <h2>7) اتجاهات المستقبل</h2>
+      <ul>
+        <li><strong>الروبوتات اللينة (Soft Robotics):</strong> مواد مرنة ومحركات هوائية/هيدروليكية وأنسجة صناعية للتعامل الآمن مع البشر والأنسجة والأطعمة.</li>
+        <li><strong>الروبوتات السربيّة (Swarm Robotics):</strong> تنسيق جماعات روبوتات بسيطة لتحقيق سلوكيات جماعية مُعقّدة.</li>
+        <li><strong>التفاعل الإنسان–الروبوت (HRI):</strong> الثقة، الشرحية، المعايير الاجتماعية، وتجارب الاستخدام في البيئات الواقعية.</li>
+        <li><strong>الاستشعار والمحاكاة المتقدمة:</strong> دمج المستشعرات المتعددة ومحاكيات فوتورية لتقليل فجوة المحاكاة–الواقع.</li>
+        <li><strong>الاستقلالية الآمنة:</strong> دمج ضمانات السلامة والامتثال والحوكمة الخوارزمية ضمن دورة حياة النظام.</li>
+      </ul>
+    </section>
+
+    <!-- روابط ومراجع -->
+    <section id="resources">
+      <h2>8) روابط ومراجع موثوقة</h2>
+      <ul>
+        <li>IFR – رقم قياسي يبلغ ~4.28 مليون روبوت عامل عالميًا (تقرير World Robotics 2024):
+          <a href="https://ifr.org/ifr-press-releases/news/record-of-4-million-robots-working-in-factories-worldwide" target="_blank" rel="noopener">ifr.org</a>
+        </li>
+        <li>تعريف الروبوت الصناعي وفق ISO&nbsp;8373 كما يورده IFR (PDF):
+          <a href="https://ifr.org/img/office/Industrial_Robots_2016_Chapter_1_2.pdf" target="_blank" rel="noopener">ifr.org – Industrial Robots 2016 (1.2)</a>
+        </li>
+        <li>Unimate – أول روبوت صناعي على خط الإنتاج (موسوعة بريتانيكا):
+          <a href="https://www.britannica.com/technology/Unimate" target="_blank" rel="noopener">britannica.com</a>
+        </li>
+        <li>Shakey – أول روبوت متنقل قادر على الإدراك والتخطيط (SRI):
+          <a href="https://www.sri.com/hoi/shakey-the-robot/" target="_blank" rel="noopener">sri.com</a>
+        </li>
+        <li>ROS&nbsp;2 – التوثيق الرسمي:
+          <a href="https://docs.ros.org/en/rolling/index.html" target="_blank" rel="noopener">docs.ros.org</a>
+        </li>
+        <li>ISO/TS&nbsp;15066 – التعاون الآمن بين الإنسان والروبوت:
+          <a href="https://www.iso.org/standard/62996.html" target="_blank" rel="noopener">iso.org</a>
+        </li>
+        <li>قانون الذكاء الاصطناعي للاتحاد الأوروبي (Reg. 2024/1689) – نظرة عامة ونص رسمي:
+          <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">EU – Digital Strategy</a> ·
+          <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng" target="_blank" rel="noopener">EUR‑Lex</a>
+        </li>
+        <li>الروبوتات اللينة – Harvard SEAS:
+          <a href="https://seas.harvard.edu/news/2024/02/world-soft-robotics" target="_blank" rel="noopener">seas.harvard.edu – World of Soft Robotics</a>
+        </li>
+        <li>الروبوتات السربيّة – مراجعات ودراسات:
+          <a href="https://www.mdpi.com/2504-446X/7/4/269" target="_blank" rel="noopener">MDPI – Review of Swarm Robotics</a>
+        </li>
+        <li>اتصالات 5G/URLLC لتطبيقات الزمن الحقيقي:
+          <a href="https://www.ngmn.org/wp-content/uploads/200210-NGMN_Verticals_URLLC_Requirements_v16.pdf" target="_blank" rel="noopener">NGMN – URLLC Requirements</a>
+        </li>
+        <li>مقال شامل عن الروبوت (التاريخ والاستخدامات):
+          <a href="https://www.britannica.com/technology/robot-technology" target="_blank" rel="noopener">britannica.com – Robot</a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="footer">
+      تم إعداد المحتوى وصياغته بأسلوب احترافي مع اعتماد مراجع إلكترونية موثوقة، وإضافة تحسينات SEO وOG وبيانات مُنظمة.
     </div>
-    <div>
-      <h3>التوسع والتنوع (1970s–2000s)</h3>
-      <ul>
-        <li>انتشار الأذرع الصناعية (Cartesian, SCARA, Articulated, Delta).</li>
-        <li>ظهور الروبوتات الخدمية والمتحركة للأبحاث والمهام المدنية.</li>
-        <li>تحسينات في الرؤية الحاسوبية والتحكم والاستشعار.</li>
-      </ul>
-      <h3>العصر الحديث (2010s–الآن)</h3>
-      <ul>
-        <li>الروبوتات <strong>المتعاونة</strong> (Cobots) للعمل بأمان قرب البشر وفق مواصفة <strong>ISO/TS 15066</strong>.</li>
-        <li>توحيد برمجيات الروبوتات عبر <strong>ROS/ROS&nbsp;2</strong> كمنظومة مفتوحة المصدر.</li>
-        <li>قفزات في الروبوتات العاملة بالذكاء الاصطناعي والتعلم العميق.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- الأنواع -->
-<section id="types">
-  <h2>3) الأنواع والتصنيفات</h2>
-  <h3>أولًا: بحسب البنية الميكانيكية</h3>
-  <table aria-label="تصنيف ميكانيكي للروبوتات">
-    <thead>
-      <tr><th>النوع</th><th>الوصف المختصر</th><th>أبرز الاستخدامات</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Articulated (مفصلي)</td><td>ذراع ذو ثلاث مفاصل دوّارة أو أكثر، مجال حركة واسع.</td><td>اللحام، المناولة، الطلاء.</td></tr>
-      <tr><td>SCARA</td><td>مفصلان متوازيان يُتيحان امتثالًا في مستوى أفقي.</td><td>التجميع السريع، التعبئة.</td></tr>
-      <tr><td>Delta/Parallel</td><td>أذرع متوازية خفيفة وسريعة.</td><td>الالتقاط والوضع (Pick & Place).</td></tr>
-      <tr><td>Cartesian/Gantry</td><td>محاور خطية متعامدة (X/Y/Z).</td><td>المعالجات الدقيقة، التوضيع الدقيق.</td></tr>
-      <tr><td>Cylindrical</td><td>محاور تُشكّل نظامًا أسطوانيًا.</td><td>مناولة في مساحات أسطوانية.</td></tr>
-    </tbody>
-  </table>
-
-  <h3>ثانيًا: بحسب مجال الاستخدام</h3>
-  <ul>
-    <li><strong>الصناعية:</strong> تُستخدم في الأتمتة التصنيعية، وتخضع لتعريف ISO&nbsp;8373.</li>
-    <li><strong>الخدمية:</strong> روبوتات لأغراض مدنية/مهنية (تنظيف، سياحة، رعاية صحية، لوجستيات)، وفق تعريف ISO للخدمة (خارج الأتمتة الصناعية).</li>
-  </ul>
-
-  <div class="note">
-    <strong>أرقام حديثة:</strong> سجّل <abbr title="اتحاد الروبوتات الدولي">IFR</abbr> نحو <strong>4.28 مليون</strong> روبوت عامل في المصانع حول العالم (2023)، مع أكثر من <strong>541 ألف</strong> تركيب جديد في 2023 وحده.
-  </div>
-</section>
-
-<!-- الاستخدامات -->
-<section id="apps">
-  <h2>4) أهم الاستخدامات العملية اليوم</h2>
-  <div class="grid grid-2">
-    <div>
-      <h3>الصناعة والتحويل</h3>
-      <ul>
-        <li>السيارات والإلكترونيات والمعادن: اللحام، التجميع، المناولة، الطلاء، الفحص البصري.</li>
-        <li>المخازن واللوجستيات: الروبوتات المتنقلة (AMRs) للانتقاء والنقل.</li>
-      </ul>
-      <h3>الطب والرعاية</h3>
-      <ul>
-        <li>مساعدة المرضى وإعادة التأهيل، الروبوتات الجراحية (ضمن أطر تنظيمية صارمة).</li>
-      </ul>
-    </div>
-    <div>
-      <h3>البنية التحتية والخدمات</h3>
-      <ul>
-        <li>التفتيش والصيانة في البيئات الخطرة (الطاقة، المصانع، الأنابيب).</li>
-        <li>الروبوتات التعليمية والخدمية والضيافة.</li>
-      </ul>
-      <h3>المجال الأمني والعسكري</h3>
-      <ul>
-        <li>المركبات غير المأهولة (برية/بحرية/جوية) للاستطلاع والدعم وفق الأطر القانونية.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- الأمان والمعايير -->
-<section id="safety">
-  <h2>5) الأمان والمعايير والتشريعات</h2>
-  <ul>
-    <li><strong>ISO/TS&nbsp;15066 (التعاون الآمن):</strong> مواصفة إرشادية لأنظمة الروبوتات المتعاونة ومساحات العمل المشتركة.</li>
-    <li><strong>ISO&nbsp;10218-1/2:</strong> المتطلبات العامة للسلامة في الروبوتات الصناعية (تكمّلها 15066).</li>
-    <li><strong>التشريعات الأفقية للذكاء الاصطناعي:</strong> يضبط <em>قانون الذكاء الاصطناعي للاتحاد الأوروبي (2024/1689)</em> استخدام أنظمة الذكاء الاصطناعي، ويصنّف التطبيقات <em>عالية المخاطر</em> خاصة حين تكون جزءًا من منتج منظَّم السلامة.</li>
-  </ul>
-  <p class="note">يؤثر الامتثال للمعايير على التصميم والهندسة وعوامل الأمان الوظيفي (PL/SIL) وإدارة البيانات والأثر الأخلاقي.</p>
-</section>
-
-<!-- الروبوتات والذكاء الاصطناعي -->
-<section id="ai">
-  <h2>6) الروبوتات والذكاء الاصطناعي</h2>
-  <p>
-    يُعد الذكاء الاصطناعي مُحرّكًا رئيسيًا في إدراك الروبوت وفهمه للعالم (رؤية حاسوبية، محاكاة، تعلم معزز)، وفي التخطيط واتخاذ القرار. منذ ورشة <em>دارتموث 1956</em> التي صاغت مصطلح "الذكاء الاصطناعي"، تطورت الخوارزميات من الرمزية إلى التعلم العميق والنماذج متعددة الوسائط، ما حسّن إدراك الروبوت وتكيّفه.
-  </p>
-  <div class="grid grid-2">
-    <div>
-      <h3>طبقات الذكاء في الروبوت</h3>
-      <ul>
-        <li><strong>الإدراك:</strong> رؤية/استشعار، تقدير الوضعية، تجزئة الأجسام، كشف العوائق.</li>
-        <li><strong>التخطيط والتحكم:</strong> تخطيط المسار، تجنّب الاصطدام، تحكم أمثل/تنبؤي.</li>
-        <li><strong>التعلّم:</strong> تعلّم معزز من محاكيات/عالم حقيقي، نقل المعرفة.</li>
-      </ul>
-    </div>
-    <div>
-      <h3>المنظومات البرمجية</h3>
-      <ul>
-        <li><strong>ROS&nbsp;2:</strong> بنية وحداتية (Nodes/Topics/Services)، أدوات محاكاة وتصور، مجتمع واسع يدعم السائقين والخوارزميات.</li>
-        <li><strong>اتصال عالي الاعتمادية:</strong> تستفيد الروبوتات المتصلة من ميزات اتصالات <abbr title="Ultra-Reliable Low-Latency Communications">URLLC</abbr> في 5G لتطبيقات التحكم عن بعد والزمن الحقيقي.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- المستقبل -->
-<section id="future">
-  <h2>7) اتجاهات المستقبل</h2>
-  <ul>
-    <li><strong>الروبوتات اللينة (Soft Robotics):</strong> مواد مرنة ومحركات هوائية/هيدروليكية وأنسجة صناعية للتعامل الآمن مع البشر والأنسجة والأطعمة.</li>
-    <li><strong>الروبوتات السربيّة (Swarm Robotics):</strong> تنسيق جماعات روبوتات بسيطة لتحقيق سلوكيات جماعية مُعقّدة.</li>
-    <li><strong>التفاعل الإنسان–الروبوت (HRI):</strong> الثقة، الشرحية، المعايير الاجتماعية، وتجارب الاستخدام في البيئات الواقعية.</li>
-    <li><strong>الاستشعار والمحاكاة المتقدمة:</strong> دمج المستشعرات المتعددة ومحاكيات فوتورية لتقليل فجوة المحاكاة–الواقع.</li>
-    <li><strong>الاستقلالية الآمنة:</strong> دمج ضمانات السلامة والامتثال والحوكمة الخوارزمية ضمن دورة حياة النظام.</li>
-  </ul>
-</section>
-
-<!-- روابط ومراجع -->
-<section id="resources">
-  <h2>8) روابط ومراجع موثوقة</h2>
-  <ul>
-    <li>IFR – رقم قياسي يبلغ ~4.28 مليون روبوت عامل عالميًا (تقرير World Robotics 2024):
-      <a href="https://ifr.org/ifr-press-releases/news/record-of-4-million-robots-working-in-factories-worldwide" target="_blank" rel="noopener">ifr.org</a>
-    </li>
-    <li>تعريف الروبوت الصناعي وفق ISO&nbsp;8373 كما يورده IFR (PDF):
-      <a href="https://ifr.org/img/office/Industrial_Robots_2016_Chapter_1_2.pdf" target="_blank" rel="noopener">ifr.org – Industrial Robots 2016 (1.2)</a>
-    </li>
-    <li>Unimate – أول روبوت صناعي على خط الإنتاج (موسوعة بريتانيكا):
-      <a href="https://www.britannica.com/technology/Unimate" target="_blank" rel="noopener">britannica.com</a>
-    </li>
-    <li>Shakey – أول روبوت متنقل قادر على الإدراك والتخطيط (SRI):
-      <a href="https://www.sri.com/hoi/shakey-the-robot/" target="_blank" rel="noopener">sri.com</a>
-    </li>
-    <li>ROS&nbsp;2 – التوثيق الرسمي:
-      <a href="https://docs.ros.org/en/rolling/index.html" target="_blank" rel="noopener">docs.ros.org</a>
-    </li>
-    <li>ISO/TS&nbsp;15066 – التعاون الآمن بين الإنسان والروبوت:
-      <a href="https://www.iso.org/standard/62996.html" target="_blank" rel="noopener">iso.org</a>
-    </li>
-    <li>قانون الذكاء الاصطناعي للاتحاد الأوروبي (Reg. 2024/1689) – نظرة عامة ونص رسمي:
-      <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">EU – Digital Strategy</a> ·
-      <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng" target="_blank" rel="noopener">EUR‑Lex</a>
-    </li>
-    <li>الروبوتات اللينة – Harvard SEAS:
-      <a href="https://seas.harvard.edu/news/2024/02/world-soft-robotics" target="_blank" rel="noopener">seas.harvard.edu – World of Soft Robotics</a>
-    </li>
-    <li>الروبوتات السربيّة – مراجعات ودراسات:
-      <a href="https://www.mdpi.com/2504-446X/7/4/269" target="_blank" rel="noopener">MDPI – Review of Swarm Robotics</a>
-    </li>
-    <li>اتصالات 5G/URLLC لتطبيقات الزمن الحقيقي:
-      <a href="https://www.ngmn.org/wp-content/uploads/200210-NGMN_Verticals_URLLC_Requirements_v16.pdf" target="_blank" rel="noopener">NGMN – URLLC Requirements</a>
-    </li>
-    <li>مقال شامل عن الروبوت (التاريخ والاستخدامات):
-      <a href="https://www.britannica.com/technology/robot-technology" target="_blank" rel="noopener">britannica.com – Robot</a>
-    </li>
-  </ul>
-</section>
-
-
-<div class="footer">
-  تم إعداد المحتوى وصياغته بأسلوب احترافي مع اعتماد مراجع إلكترونية موثوقة، وإضافة تحسينات SEO وOG وبيانات مُنظمة.
-</div>
-
   </main>
 </body>
 </html>
