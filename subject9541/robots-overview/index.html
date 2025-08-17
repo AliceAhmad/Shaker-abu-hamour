@@ -14,14 +14,14 @@
   <meta property="og:description" content="مقال احترافي شامل يعرّف الروبوتات تاريخًا وتقنياتٍ ومعاييرَ وتطبيقات، ويربطها بالذكاء الاصطناعي، مع مراجع موثوقة." />
   <meta property="og:url" content="https://www.shakerabuhamour.com/subject9541/robots-overview" />
   <meta property="og:site_name" content="shakerabuhamour.com" />
-  <meta property="og:image" content="https://www.shakerabuhamour.com/subject9541/robots-overview/.webp" />
+  <meta property="og:image" content="https://www.shakerabuhamour.com/assets/og/robots.webp" />
   <meta property="og:image:alt" content="صورة تعبيرية لروبوتات صناعية وخدمية" />
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="عالم الروبوتات – من البدايات إلى المستقبل وعلاقته بالذكاء الاصطناعي" />
   <meta name="twitter:description" content="تعريف شامل للروبوتات وتاريخها وأنواعها وعلاقتها بالذكاء الاصطناعي، ومصادر موثوقة." />
-  <meta name="twitter:image" content="https://www.shakerabuhamour.com/subject9541/robots-overview/.webp" />
+  <meta name="twitter:image" content="https://www.shakerabuhamour.com/assets/og/robots.webp" />
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -45,7 +45,8 @@
       --border: rgba(255,255,255,.08);
     }
     html{scroll-behavior:smooth}
-    body{ padding: 18px; margin:0; background:var(--bg); color:var(--text); line-height:1.8;
+    body{
+      margin:0; background:var(--bg); color:var(--text); line-height:1.8;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Kufi Arabic", "Cairo", Tahoma, Arial, sans-serif;
     }
     a{color:var(--accent); text-decoration:none}
@@ -57,17 +58,21 @@
         linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.0));
       border-bottom:1px solid var(--border);
     }
-    .container{max-width:1100px; margin-inline:auto; padding:17px}
-    .hero{display:grid; gap:14px; padding:25px 0}
-    .hero h1{font-size:clamp(23px, 4vw, 44px); margin:0 0 6px}
+    .container{max-width:1100px; margin-inline:auto; padding:16px}
+    .hero{display:grid; gap:14px; padding:28px 0}
+    .hero h1{font-size:clamp(24px, 4.2vw, 44px); margin:0 0 6px}
     .hero p{color:var(--muted); margin:0}
 
-    .toc{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:16px; margin:18px 0}
-    .toc h2{margin-top:0; font-size:19px}
-    .toc ol{margin:0; padding-right:15px}
+    /* وسوم الكلمات المفتاحية */
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
+    .tag{display:inline-block; border:1px solid var(--border); background:rgba(255,255,255,.03); border-radius:999px; padding:6px 12px; font-size:12px}
 
-    section{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:16px; margin:22px 0}
-    h2{font-size:22px; margin-top:0}
+    .toc{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:16px; margin:18px 0}
+    .toc h2{margin-top:0; font-size:20px}
+    .toc ol{margin:0; padding-right:18px}
+
+    section{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:18px; margin:22px 0}
+    h2{font-size:26px; margin-top:0}
     h3{font-size:20px; margin-bottom:8px}
 
     .grid{display:grid; gap:14px}
@@ -81,41 +86,37 @@
     /* جدول مناسب للهاتف */
     table{
       width:100%; border-collapse:collapse; margin:12px 0; font-size:15px;
-      display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; /* تمرير ناعم على iOS */
-      border-radius:12px; border:1px solid var(--border);
+      display:block; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      border-radius:12px; border:1px solid var(--border); min-width:560px;
     }
     thead{background:rgba(255,255,255,.03)}
     th,td{padding:10px 8px; border-bottom:1px solid var(--border); text-align:right; white-space:nowrap}
+    th[scope="col"]{font-weight:600}
     tr:last-child td{border-bottom:none}
 
-    .tag{display:inline-block; border:1px solid var(--border); background:rgba(255,255,255,.03); border-radius:999px; padding:4px 10px; margin:2px 4px; font-size:12px}
+    .footer{color:var(--muted); font-size:13px; text-align:center; padding:26px 10px}
     .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
 
     /* تحسينات للشاشات الصغيرة */
     @media (max-width: 768px){
-      .container{padding:16px}
-      .hero{padding:28px 0}
+      .container{padding:14px}
+      .hero{padding:22px 0}
       h2{font-size:22px}
       h3{font-size:18px}
-      section{padding:18px; margin:18px 0}
+      section{padding:16px; margin:18px 0}
       .toc{padding:14px}
       table{font-size:14px}
       th,td{padding:9px 7px}
+      .tag{font-size:11px; padding:5px 10px}
     }
     @media (max-width: 480px){
-      .container{padding:14px}
-      .hero{padding:22px 0}
       .hero h1{font-size:clamp(22px, 6vw, 32px)}
       .hero p{font-size:14px}
       h2{font-size:20px}
       h3{font-size:16px}
-      section{padding:16px}
-      .tag{font-size:11px; padding:4px 8px}
       table{font-size:13px}
       th,td{padding:8px 6px}
     }
-
-
   </style>
 </head>
 <body>
@@ -126,7 +127,7 @@
       <div>
         <h1>عالم الروبوتات – من البدايات إلى المستقبل وعلاقته بالذكاء الاصطناعي</h1>
         <p>مرجع عملي محدث يُغطي التعريفات القياسية، التاريخ، التصنيفات، الأمان والمعايير، التطبيقات المدنية والعسكرية، ثم يوضح كيف يُغذّي الذكاء الاصطناعي قدرات الروبوتات.</p>
-        <div aria-label="وسوم" style="margin-top:6px">
+        <div class="tags" aria-label="وسوم">
           <span class="tag">ISO 8373</span>
           <span class="tag">IFR</span>
           <span class="tag">ROS 2</span>
@@ -136,26 +137,30 @@
       </div>
     </div>
   </header>
- 
-  <section id="glossary">
-  <h2>📚 المصطلحات الرئيسية</h2>
 
-  <h3>ISO 8373</h3>
-  <p>معيار دولي يحدد المصطلحات الخاصة بالروبوتات الصناعية ويضمن توحيدها عالميًا.</p>
-
-  <h3>IFR</h3>
-  <p>الاتحاد الدولي للروبوتات، الجهة المرجعية للإحصاءات والتقارير المتعلقة بالروبوتات عالميًا.</p>
-
-  <h3>ROS 2</h3>
-  <p>نظام تشغيل الروبوتات (الإصدار الثاني)، يوفر بيئة برمجية معيارية لتطوير تطبيقات الروبوتات الحديثة.</p>
-
-  <h3>HRI</h3>
-  <p>التفاعل بين الإنسان والروبوت (Human-Robot Interaction)، فرع يدرس طرق التواصل والتعاون بين البشر والروبوتات.</p>
-
-  <h3>5G-URLLC</h3>
-  <p>تقنية الاتصالات فائقة الاعتمادية بزمن استجابة منخفض جدًا في شبكات الجيل الخامس، تدعم تشغيل الروبوتات في البيئات الحرجة.</p>
-</section>
+  <!-- كل المحتوى داخل الحاوية الرئيسية ليتوافق مع Skip Link والهواتف -->
   <main id="content" class="container">
+
+    <!-- المصطلحات الرئيسية -->
+    <section id="glossary">
+      <h2>📚 المصطلحات الرئيسية</h2>
+
+      <h3>ISO 8373</h3>
+      <p>معيار دولي يحدد المصطلحات الخاصة بالروبوتات الصناعية ويضمن توحيدها عالميًا.</p>
+
+      <h3>IFR</h3>
+      <p>الاتحاد الدولي للروبوتات، الجهة المرجعية للإحصاءات والتقارير المتعلقة بالروبوتات عالميًا.</p>
+
+      <h3>ROS 2</h3>
+      <p>نظام تشغيل الروبوتات (الإصدار الثاني)، يوفر بيئة برمجية معيارية لتطوير تطبيقات الروبوتات الحديثة.</p>
+
+      <h3>HRI</h3>
+      <p>التفاعل بين الإنسان والروبوت (Human-Robot Interaction)، فرع يدرس طرق التواصل والتعاون بين البشر والروبوتات.</p>
+
+      <h3>5G-URLLC</h3>
+      <p>تقنية الاتصالات فائقة الاعتمادية بزمن استجابة منخفض جدًا في شبكات الجيل الخامس، تدعم تشغيل الروبوتات في البيئات الحرجة.</p>
+    </section>
+
     <!-- فهرس -->
     <nav class="toc" aria-label="محتويات">
       <h2>محتويات</h2>
@@ -218,28 +223,25 @@
       <h3>أولًا: بحسب البنية الميكانيكية</h3>
       <table aria-label="تصنيف ميكانيكي للروبوتات">
         <thead>
-          <tr><th>النوع</th><th>الوصف المختصر</th><th>أبرز الاستخدامات</th></tr>
+          <tr>
+            <th scope="col">النوع</th>
+            <th scope="col">الوصف المختصر</th>
+            <th scope="col">أبرز الاستخدامات</th>
+          </tr>
         </thead>
         <tbody>
           <tr><td>Articulated (مفصلي)</td><td>ذراع ذو ثلاث مفاصل دوّارة أو أكثر، مجال حركة واسع.</td><td>اللحام، المناولة، الطلاء.</td></tr>
-          <tr>
-  <td>SCARA</td>
-  <td>ذراع روبوتية لها محوران متوازيان، تتحرك بسهولة في المستوى الأفقي مع مرونة محدودة في الاتجاه العمودي.</td>
-  <td>مناسبة لأعمال التجميع السريع، إدخال المكونات الإلكترونية، والتعبئة الدقيقة.</td> </tr>
-  <tr><td>Delta/Parallel</td><td>أذرع متوازية خفيفة وسريعة.</td><td>الالتقاط والوضع (Pick & Place).</td></tr>   
-  <tr> <td>Cartesian/Gantry</td> <td>روبوت يتحرك على ثلاثة محاور خطية متعامدة (X، Y، Z) مثل نظام الإحداثيات، ويتميز بدقة عالية في الحركة.</td>
-  <td>مناسب لأعمال المعالجات الدقيقة، الطباعة ثلاثية الأبعاد، والتوضيع الدقيق في خطوط الإنتاج.</td></tr>
-
-
-<tr> <td>Cylindrical</td> <td>روبوت يتحرك بخط مستقيم على محور رأسي، مع إمكانية الدوران حول قاعدة أسطوانية، مما يتيح له العمل داخل مساحات أسطوانية أو دائرية.</td>
- <td>مناسب لأعمال المناولة والتجميع في المصانع، خاصة داخل المعدات أو الهياكل ذات الشكل الأسطواني مثل الأنابيب والخزانات.</td></tr>
-   </tbody>
+          <tr><td>SCARA</td><td>ذراع روبوتية لها محوران متوازيان، تتحرك بسهولة في المستوى الأفقي مع مرونة محدودة في الاتجاه العمودي.</td><td>التجميع السريع، إدخال المكونات الإلكترونية، التعبئة الدقيقة.</td></tr>
+          <tr><td>Delta/Parallel</td><td>أذرع متوازية خفيفة وسريعة.</td><td>الالتقاط والوضع (Pick &amp; Place).</td></tr>
+          <tr><td>Cartesian/Gantry</td><td>روبوت يتحرك على ثلاثة محاور خطية متعامدة (X، Y، Z) مثل نظام الإحداثيات، بدقة عالية.</td><td>المعالجات الدقيقة، الطباعة ثلاثية الأبعاد، التوضيع الدقيق.</td></tr>
+          <tr><td>Cylindrical</td><td>حركة خطية عمودية مع دوران حول قاعدة أسطوانية للعمل داخل مساحات أسطوانية/دائرية.</td><td>المناولة والتجميع داخل الأنابيب والخزانات والهياكل الأسطوانية.</td></tr>
+        </tbody>
       </table>
 
       <h3>ثانيًا: بحسب مجال الاستخدام</h3>
       <ul>
         <li><strong>الصناعية:</strong> تُستخدم في الأتمتة التصنيعية، وتخضع لتعريف ISO&nbsp;8373.</li>
-        <li><strong>الخدمية:</strong> روبوتات لأغراض مدنية/مهنية (تنظيف، سياحة، رعاية صحية، لوجستيات)، وفق تعريف ISO للخدمة (خارج الأتمتة الصناعية).</li>
+        <li><strong>الخدمية:</strong> روبوتات لأغراض مدنية/مهنية (تنظيف، سياحة، رعاية صحية، لوجستيات)، وفق تعريف ISO للخدمة.</li>
       </ul>
 
       <div class="note">
