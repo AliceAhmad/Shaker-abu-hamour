@@ -37,9 +37,7 @@
         "url": "https://www.shakerabuhamour.com/persons/bau/managerahmad1964",
         "description": "السيرة الذاتية للمرحوم أحمد محمد الحسن أبو حمور (أبو معتز).",
         "dateModified": "2025-08-20",
-        "about": {
-          "@id": "#person"
-        }
+        "about": { "@id": "#person" }
       },
       {
         "@type": "Person",
@@ -51,19 +49,11 @@
         "birthPlace": {
           "@type": "Place",
           "name": "السلط، الأردن",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "JO",
-            "addressLocality": "السلط"
-          }
+          "address": { "@type": "PostalAddress", "addressCountry": "JO", "addressLocality": "السلط" }
         },
         "knowsLanguage": "ar",
-        "worksFor": [
-          { "@type": "Organization", "name": "جامعة البلقاء التطبيقية" }
-        ],
-        "affiliation": [
-          { "@type": "Organization", "name": "الجامعة الأردنية" }
-        ],
+        "worksFor": [ { "@type": "Organization", "name": "جامعة البلقاء التطبيقية" } ],
+        "affiliation": [ { "@type": "Organization", "name": "الجامعة الأردنية" } ],
         "url": "https://www.shakerabuhamour.com/persons/bau/managerahmad1964"
       }
     ]
@@ -84,11 +74,14 @@
       background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; margin-block:14px;
       box-shadow:0 1px 10px rgba(0,0,0,.03)
     }
-    .hero{display:flex; gap:18px; align-items:center}
-    .hero img{width:120px; height:120px; border-radius:12px; object-fit:cover; border:2px solid var(--line)}
+
+    /* === تعديل محاذاة الهيدر: الصورة في المنتصف والعنوان تحتها === */
+    .hero{display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px}
+    .hero img{width:150px; height:150px; border-radius:12px; object-fit:cover; border:2px solid var(--line); margin-bottom:6px}
+
     h1{font-size:1.7rem; margin:0 0 6px}
     .subtitle{color:var(--muted); margin-top:4px}
-    .meta{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:.95rem}
+    .meta{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:.95rem; justify-content:center}
     .kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-top:6px}
     .badge{display:inline-block; background:var(--ring); color:#064e3b; padding:.25rem .55rem; border-radius:999px; font-size:.85rem; margin-inline:4px 0}
     h2{font-size:1.25rem; margin:0 0 10px}
@@ -96,12 +89,11 @@
     li{margin:.3rem 0}
     .dl{display:grid; grid-template-columns:140px 1fr; gap:8px 14px}
     .dl dt{color:var(--muted)}
-    .toc{font-size:.95rem}
+    .toc{font-size:.95rem; text-align:center}
     .toc a{display:inline-block; margin:.15rem .6rem .15rem 0}
     .print{display:inline-block; padding:.4rem .7rem; border-radius:10px; border:1px solid var(--line); background:#fff}
     .muted{color:var(--muted)}
     @media (max-width:640px){
-      .hero{flex-direction:column; align-items:flex-start}
       .dl{grid-template-columns:1fr}
     }
     @media print{
@@ -120,21 +112,18 @@
   <div class="container">
     <header class="card" aria-labelledby="title">
       <div class="hero">
-       
         <img src="https://www.shakerabuhamour.com/persons/bau/managerahmad1964/abu-moataz.webp" alt="صورة أحمد محمد الحسن أبو حمور (أبو معتز)" loading="lazy" decoding="async">
-        <div>
-          <h1 id="title">السيرة الذاتية – أحمد محمد الحسن أبو حمور <span class="muted">(أبو معتز)</span></h1>
-          <div class="subtitle">مدير دائرة اللوازم المركزية – جامعة البلقاء التطبيقية (سابقًا)</div>
-          <div class="meta" aria-label="بيانات موجزة">
-            <span>الميلاد: 26 تموز 1964</span>
-            <span>المكان: السلط – الأردن</span>
-          </div>
-          <div class="kpis" aria-label="مزايا بارزة">
-            <span class="badge" aria-label="خبرة">خبرة عميقة في اللوازم والعطاءات</span>
-            <span class="badge" aria-label="تأسيس">دور فاعل في تأسيس الجامعة وكلياتها</span>
-            <span class="badge" aria-label="قيادة">حسن إدارة ونزاهة وقدوة</span>
-            <span class="badge" aria-label="تدريب">تأهيل وتدريب كوادر اللوازم</span>
-          </div>
+        <h1 id="title">السيرة الذاتية – أحمد محمد الحسن أبو حمور <span class="muted">(أبو معتز)</span></h1>
+        <div class="subtitle">مدير دائرة اللوازم المركزية – جامعة البلقاء التطبيقية (سابقًا)</div>
+        <div class="meta" aria-label="بيانات موجزة">
+          <span>الميلاد: 26 تموز 1964</span>
+          <span>المكان: السلط – الأردن</span>
+        </div>
+        <div class="kpis" aria-label="مزايا بارزة">
+          <span class="badge" aria-label="خبرة">خبرة عميقة في اللوازم والعطاءات</span>
+          <span class="badge" aria-label="تأسيس">دور فاعل في تأسيس الجامعة وكلياتها</span>
+          <span class="badge" aria-label="قيادة">حسن إدارة ونزاهة وقدوة</span>
+          <span class="badge" aria-label="تدريب">تأهيل وتدريب كوادر اللوازم</span>
         </div>
       </div>
       <nav class="toc" aria-label="فهرس">
@@ -143,21 +132,21 @@
         <a href="#traits">الصفات الشخصية والإدارية والتدريبية</a> ·
         <a href="#standards">معايير المدير الناجح وتجسيدها</a>
       </nav>
-      <div style="margin-top:8px">
+      <div style="margin-top:8px; text-align:center">
         <button class="print" onclick="window.print()" aria-label="طباعة الصفحة">🖨️ طباعة</button>
       </div>
     </header>
 
     <main id="main">
       <section id="summary" class="card" aria-labelledby="summary-h">
-<h2 id="summary-h">ملخص</h2>
-<p>
-  عُرف المرحوم بإذن الله الحاج <strong>أحمد محمد الحسن أبو حمور (أبو معتز)</strong> بكفاءته الإدارية وخبرته الواسعة في إدارة اللوازم والمشتريات والعطاءات، 
-  وكان له دور محوري في مراحل تأسيس <strong>جامعة البلقاء التطبيقية</strong> وكلياتها الداخلية والخارجية. 
-  جمع بين النزاهة وحسن القيادة، والتزامٍ عالٍ بخدمة الجامعة والعاملين والمراجعين، وتميّز بأخلاقه الحميدة وحسن تعامله ولطفه وتواضعه.  
-  أحبّ العمل بإخلاص ونشاط، وكانت ابتسامته الحاضرة لا تفارقه، فكان خير قدوة وأحسن رفيق، كما كان معلماً ومرجعًا موثوقًا لمعلومات نظام اللوازم والأشغال، 
-  تاركًا أثرًا طيبًا وذكرى عطرة في قلوب كل من عرفه.
-</p>
+        <h2 id="summary-h">ملخص</h2>
+        <p>
+          عُرف المرحوم بإذن الله الحاج <strong>أحمد محمد الحسن أبو حمور (أبو معتز)</strong> بكفاءته الإدارية وخبرته الواسعة في إدارة اللوازم والمشتريات والعطاءات، 
+          وكان له دور محوري في مراحل تأسيس <strong>جامعة البلقاء التطبيقية</strong> وكلياتها الداخلية والخارجية. 
+          جمع بين النزاهة وحسن القيادة، والتزامٍ عالٍ بخدمة الجامعة والعاملين والمراجعين، وتميّز بأخلاقه الحميدة وحسن تعامله ولطفه وتواضعه.  
+          أحبّ العمل بإخلاص ونشاط، وكانت ابتسامته الحاضرة لا تفارقه، فكان خير قدوة وأحسن رفيق، كما كان معلماً ومرجعًا موثوقًا لمعلومات نظام اللوازم والأشغال، 
+          تاركًا أثرًا طيبًا وذكرى عطرة في قلوب كل من عرفه.
+        </p>
       </section>
 
       <section id="facts" class="card" aria-labelledby="facts-h">
@@ -189,8 +178,8 @@
         <p><strong>عضويات اللجان:</strong></p>
         <ul>
           <li>عضو لجنة العطاءات المركزية.</li>
-          <li>عضو لجنة الشراء الرئيسية للوازم والخدمات</li>
-          <li>عضو لجنة الأشغال والخدمات الفنية والاستشارية </li>
+          <li>عضو لجنة الشراء الرئيسية للوازم والخدمات.</li>
+          <li>عضو لجنة الأشغال والخدمات الفنية والاستشارية.</li>
           <li>عضو لجنة الأشغال الفرعية.</li>
           <li>ولجان أخرى أسهمت في تطوير العمل المؤسسي.</li>
         </ul>
