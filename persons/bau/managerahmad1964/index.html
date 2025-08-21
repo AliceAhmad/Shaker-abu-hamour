@@ -25,7 +25,7 @@
   <meta name="twitter:description" content="خبرة ممتدة في إدارة اللوازم والمشتريات والعطاءات ودور محوري في تأسيس جامعة البلقاء التطبيقية." />
   <meta name="twitter:image" content="https://www.shakerabuhamour.com/persons/bau/managerahmad1964/abu-moataz.webp" />
 
-  <!-- Structured Data: Person + WebPage -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,169 +61,219 @@
   </script>
 
   <style>
+    /* ========== Theme ========== */
     :root{
-      --bg:#fafafa; --card:#ffffff; --ink:#1f2937; --muted:#6b7280; --accent:#14532d;
-      --line:#e5e7eb; --ring:#d1fae5;
+      --bg:#f4f6f8; --ink:#222; --muted:#5c6b76;
+      --brand:#0a466e; --card:#ffffff; --line:#e7ecef;
+      --chip:#eef6fb;
     }
+
+    /* ========== Base ========== */
     *{box-sizing:border-box}
-    html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Noto Naskh Arabic", Tahoma, Arial, sans-serif; line-height:1.75}
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:900px; margin-inline:auto; padding:20px}
-    header.card, section.card, footer.card{
-      background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; margin-block:14px;
-      box-shadow:0 1px 10px rgba(0,0,0,.03)
+    html,body{margin:0; padding:0}
+    body{
+      font-family:'Segoe UI', Tahoma, Arial, sans-serif;
+      background-color:var(--bg);
+      color:var(--ink);
+      line-height:1.8;
+      padding:18px;
+    }
+    img{max-width:100%; height:auto; display:block}
+
+    /* ========== Typography ========== */
+    h1{ text-align:center; font-size:23px; color:var(--brand); margin:10px 0 6px }
+    h2{ font-size:20px; color:var(--brand); margin:0 0 12px }
+    h3{ font-size:18px; color:#103a58; margin:12px 0 8px }
+    p{ margin:0 0 10px }
+    .muted{ color:var(--muted) }
+
+    /* ========== Layout ========== */
+    .wrap{ max-width:980px; margin-inline:auto }
+    .section{
+      margin-bottom:50px;
+      background:#fff;
+      padding:18px;
+      border-radius:8px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.05);
+      border:1px solid var(--line);
     }
 
-    /* === تعديل محاذاة الهيدر: الصورة في المنتصف والعنوان تحتها === */
-    .hero{display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px}
-    .hero img{width:150px; height:150px; border-radius:12px; object-fit:cover; border:2px solid var(--line); margin-bottom:6px}
-
-    h1{font-size:1.7rem; margin:0 0 6px}
-    .subtitle{color:var(--muted); margin-top:4px}
-    .meta{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:.95rem; justify-content:center}
-    .kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-top:6px}
-    .badge{display:inline-block; background:var(--ring); color:#064e3b; padding:.25rem .55rem; border-radius:999px; font-size:.85rem; margin-inline:4px 0}
-    h2{font-size:1.25rem; margin:0 0 10px}
-    ul{margin:0; padding:0 1.1rem}
-    li{margin:.3rem 0}
-    .dl{display:grid; grid-template-columns:140px 1fr; gap:8px 14px}
-    .dl dt{color:var(--muted)}
-    .toc{font-size:.95rem; text-align:center}
-    .toc a{display:inline-block; margin:.15rem .6rem .15rem 0}
-    .print{display:inline-block; padding:.4rem .7rem; border-radius:10px; border:1px solid var(--line); background:#fff}
-    .muted{color:var(--muted)}
-    @media (max-width:640px){
-      .dl{grid-template-columns:1fr}
+    /* ========== Header Card ========== */
+    .hero{
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+      gap:10px; padding-bottom:6px;
     }
+    .avatar{
+      width:160px; height:160px; border-radius:12px; object-fit:cover;
+      border:2px solid var(--line); box-shadow:0 1px 6px rgba(0,0,0,.04)
+    }
+    .subtitle{ color:var(--muted); font-size:15px }
+    .meta{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; color:var(--muted); font-size:14px }
+    .chips{ display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:6px }
+    .chip{
+      background:var(--chip); color:#0b4b75; border:1px solid #d6e8f4;
+      font-size:13px; padding:4px 10px; border-radius:999px;
+    }
+
+    /* Lists */
+    ul{ margin:0; padding-right:18px }
+    li{ margin:.35rem 0 }
+    .dl{ display:grid; grid-template-columns:160px 1fr; gap:8px 14px }
+    .dl dt{ color:var(--muted) }
+
+    /* TOC */
+    .toc{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:10px; font-size:14px }
+    .toc a{ color:#0a466e; text-decoration:none; background:#eef6fb; border:1px solid #d6e8f4; padding:6px 10px; border-radius:8px }
+    .toc a:hover{ background:#e6f2f9 }
+
+    /* Buttons */
+    .btn{
+      display:inline-block; border:1px solid var(--line); background:#fff;
+      padding:7px 12px; border-radius:10px; cursor:pointer;
+    }
+
+    /* Print */
     @media print{
-      body{background:#fff}
-      header.card, section.card, footer.card{box-shadow:none; border-color:#ddd}
-      .print{display:none}
+      body{ background:#fff; padding:0 }
+      .section{ box-shadow:none }
+      .toc, .btn{ display:none }
     }
-    /* تحسين إمكانية الوصول */
-    :focus-visible{outline:3px solid #10b981; outline-offset:2px}
-    .skip-link{position:absolute; inset-inline-start:10px; top:-40px; background:#fff; padding:.4rem .6rem; border-radius:8px; border:1px solid var(--line)}
-    .skip-link:focus{top:10px}
+
+    /* Accessibility */
+    :focus-visible{ outline:3px solid #2eaadc; outline-offset:2px }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
-  <div class="container">
-    <header class="card" aria-labelledby="title">
+  <main class="wrap">
+
+    <!-- ========== Header / Hero ========== -->
+    <section class="section" aria-labelledby="title">
       <div class="hero">
-        <img src="https://www.shakerabuhamour.com/persons/bau/managerahmad1964/abu-moataz.webp" alt="صورة أحمد محمد الحسن أبو حمور (أبو معتز)" loading="lazy" decoding="async">
+        <img class="avatar" src="https://www.shakerabuhamour.com/persons/bau/managerahmad1964/abu-moataz.webp"
+             alt="صورة أحمد محمد الحسن أبو حمور (أبو معتز)" loading="lazy" decoding="async">
         <h1 id="title">السيرة الذاتية – أحمد محمد الحسن أبو حمور <span class="muted">(أبو معتز)</span></h1>
         <div class="subtitle">مدير دائرة اللوازم المركزية – جامعة البلقاء التطبيقية (سابقًا)</div>
-        <div class="meta" aria-label="بيانات موجزة">
+        <div class="meta">
           <span>الميلاد: 26 تموز 1964</span>
           <span>المكان: السلط – الأردن</span>
         </div>
-        <div class="kpis" aria-label="مزايا بارزة">
-          <span class="badge" aria-label="خبرة">خبرة عميقة في اللوازم والعطاءات</span>
-          <span class="badge" aria-label="تأسيس">دور فاعل في تأسيس الجامعة وكلياتها</span>
-          <span class="badge" aria-label="قيادة">حسن إدارة ونزاهة وقدوة</span>
-          <span class="badge" aria-label="تدريب">تأهيل وتدريب كوادر اللوازم</span>
+        <div class="chips" aria-label="مزايا بارزة">
+          <span class="chip">خبرة في اللوازم والعطاءات</span>
+          <span class="chip">دور مؤسس في الجامعة</span>
+          <span class="chip">حسن إدارة ونزاهة</span>
+          <span class="chip">تأهيل وتدريب كوادر</span>
+        </div>
+
+        <nav class="toc" aria-label="فهرس">
+          <a href="#summary">الملخص</a>
+          <a href="#facts">البيانات الأساسية</a>
+          <a href="#work">المسيرة العملية</a>
+          <a href="#training">الدورات والتأهيل</a>
+          <a href="#traits">الصفات</a>
+          <a href="#standards">معايير المدير الناجح</a>
+        </nav>
+
+        <div style="margin-top:8px">
+          <button class="btn" onclick="window.print()" aria-label="طباعة الصفحة">🖨️ طباعة</button>
         </div>
       </div>
-      <nav class="toc" aria-label="فهرس">
-        <a href="#work">المسيرة العملية</a> ·
-        <a href="#training">الدورات والتأهيل</a> ·
-        <a href="#traits">الصفات الشخصية والإدارية والتدريبية</a> ·
-        <a href="#standards">معايير المدير الناجح وتجسيدها</a>
-      </nav>
-      <div style="margin-top:8px; text-align:center">
-        <button class="print" onclick="window.print()" aria-label="طباعة الصفحة">🖨️ طباعة</button>
-      </div>
-    </header>
+    </section>
 
-    <main id="main">
-      <section id="summary" class="card" aria-labelledby="summary-h">
-        <h2 id="summary-h">ملخص</h2>
-        <p>
-          عُرف المرحوم بإذن الله الحاج <strong>أحمد محمد الحسن أبو حمور (أبو معتز)</strong> بكفاءته الإدارية وخبرته الواسعة في إدارة اللوازم والمشتريات والعطاءات، 
-          وكان له دور محوري في مراحل تأسيس <strong>جامعة البلقاء التطبيقية</strong> وكلياتها الداخلية والخارجية. 
-          جمع بين النزاهة وحسن القيادة، والتزامٍ عالٍ بخدمة الجامعة والعاملين والمراجعين، وتميّز بأخلاقه الحميدة وحسن تعامله ولطفه وتواضعه.  
-          أحبّ العمل بإخلاص ونشاط، وكانت ابتسامته الحاضرة لا تفارقه، فكان خير قدوة وأحسن رفيق، كما كان معلماً ومرجعًا موثوقًا لمعلومات نظام اللوازم والأشغال، 
-          تاركًا أثرًا طيبًا وذكرى عطرة في قلوب كل من عرفه.
-        </p>
-      </section>
+    <!-- ========== Summary ========== -->
+    <section id="summary" class="section" aria-labelledby="summary-h">
+      <h2 id="summary-h">ملخص</h2>
+      <p>
+        عُرف المرحوم بإذن الله الحاج <strong>أحمد محمد الحسن أبو حمور (أبو معتز)</strong> بكفاءته الإدارية وخبرته الواسعة في إدارة اللوازم والمشتريات والعطاءات،
+        وكان له دور محوري في مراحل تأسيس <strong>جامعة البلقاء التطبيقية</strong> وكلياتها الداخلية والخارجية.
+        جمع بين النزاهة وحسن القيادة، والتزامٍ عالٍ بخدمة الجامعة والعاملين والمراجعين، وتميّز بأخلاقه الحميدة وحسن تعامله ولطفه وتواضعه.
+        أحبّ العمل بإخلاص ونشاط، وكانت ابتسامته الحاضرة لا تفارقه، فكان خير قدوة وأحسن رفيق، كما كان معلماً ومرجعًا موثوقًا لمعلومات نظام اللوازم والأشغال،
+        تاركًا أثرًا طيبًا وذكرى عطرة في قلوب كل من عرفه.
+      </p>
+    </section>
 
-      <section id="facts" class="card" aria-labelledby="facts-h">
-        <h2 id="facts-h">بيانات أساسية</h2>
-        <dl class="dl">
-          <dt>الاسم الكامل</dt><dd>أحمد محمد الحسن أبو حمور</dd>
-          <dt>الكنية</dt><dd>أبو معتز</dd>
-          <dt>الميلاد</dt><dd>26 تموز 1964 – السلط، الأردن</dd>
-          <dt>الاختصاص</dt><dd>إدارة اللوازم والمشتريات والعطاءات</dd>
-          <dt>الجهة الأبرز</dt><dd>جامعة البلقاء التطبيقية</dd>
-        </dl>
-      </section>
+    <!-- ========== Facts ========== -->
+    <section id="facts" class="section" aria-labelledby="facts-h">
+      <h2 id="facts-h">بيانات أساسية</h2>
+      <dl class="dl">
+        <dt>الاسم الكامل</dt><dd>أحمد محمد الحسن أبو حمور</dd>
+        <dt>الكنية</dt><dd>أبو معتز</dd>
+        <dt>الميلاد</dt><dd>26 تموز 1964 – السلط، الأردن</dd>
+        <dt>الاختصاص</dt><dd>إدارة اللوازم والمشتريات والعطاءات</dd>
+        <dt>الجهة الأبرز</dt><dd>جامعة البلقاء التطبيقية</dd>
+      </dl>
+    </section>
 
-      <section id="work" class="card" aria-labelledby="work-h">
-        <h2 id="work-h">المسيرة العملية</h2>
-        <h3>الجامعة الأردنية – دائرة اللوازم المركزية (1982 – 1997)</h3>
-        <p>خلال خمسة عشر عامًا اكتسب خبرة واسعة في إدارة المشتريات واللوازم وإجراءات التوريد والرقابة.</p>
+    <!-- ========== Work ========== -->
+    <section id="work" class="section" aria-labelledby="work-h">
+      <h2 id="work-h">المسيرة العملية</h2>
 
-        <h3>جامعة البلقاء التطبيقية (1997 – 2020)</h3>
-        <p>
-          مع انطلاقة الجامعة كان له دور بارز وفعّال في <strong>إدارة دائرة اللوازم المركزية</strong> وأسهم مباشرةً في البناء والتأسيس
-          للكليات داخل الجامعة وخارجها من خلال كفاءته في اللوازم والعطاءات.
-        </p>
-        <ul>
-          <li>مساعد عميد كلية الأميرة رحمة للشؤون الإدارية.</li>
-          <li>مدير دائرة العطاءات وأمين سر لجنتها.</li>
-          <li>مدير دائرة اللوازم المركزية.</li>
-        </ul>
-        <p><strong>عضويات اللجان:</strong></p>
-        <ul>
-          <li>عضو لجنة العطاءات المركزية.</li>
-          <li>عضو لجنة الشراء الرئيسية للوازم والخدمات.</li>
-          <li>عضو لجنة الأشغال والخدمات الفنية والاستشارية.</li>
-          <li>عضو لجنة الأشغال الفرعية.</li>
-          <li>ولجان أخرى أسهمت في تطوير العمل المؤسسي.</li>
-        </ul>
-      </section>
+      <h3>الجامعة الأردنية – دائرة اللوازم المركزية (1982 – 1997)</h3>
+      <p>خلال خمسة عشر عامًا اكتسب خبرة واسعة في إدارة المشتريات واللوازم وإجراءات التوريد والرقابة.</p>
 
-      <section id="training" class="card" aria-labelledby="training-h">
-        <h2 id="training-h">الدورات والتأهيل</h2>
-        <p>
-          قدّم العديد من <strong>الدورات التدريبية العامة</strong> في <strong>إدارة اللوازم والمشتريات</strong> لموظفي اللوازم في دوائر وكليات مركز الجامعة،
-          وكذلك لأقسام اللوازم في الكليات الخارجية، مما رفع من كفاءة الفرق وحسّن آليات العمل.
-        </p>
-      </section>
+      <h3>جامعة البلقاء التطبيقية (1997 – 2020)</h3>
+      <p>
+        مع انطلاقة الجامعة كان له دور بارز وفعّال في <strong>إدارة دائرة اللوازم المركزية</strong> وأسهم مباشرةً في البناء والتأسيس
+        للكليات داخل الجامعة وخارجها من خلال كفاءته في اللوازم والعطاءات.
+      </p>
+      <ul>
+        <li>مساعد عميد كلية الأميرة رحمة للشؤون الإدارية.</li>
+        <li>مدير دائرة العطاءات وأمين سر لجنتها.</li>
+        <li>مدير دائرة اللوازم المركزية.</li>
+      </ul>
 
-      <section id="traits" class="card" aria-labelledby="traits-h">
-        <h2 id="traits-h">الصفات الشخصية والإدارية والتدريبية</h2>
-        <ul>
-          <li>نزاهة عالية، التزام بالقيم، وقدوة حسنة في الأداء.</li>
-          <li>قريب من الموظفين والمراجعين؛ يستمع ويحسن التعامل بعدل واحترام.</li>
-          <li>نشاط وتحمل لضغط العمل مع انضباط وحسن تنظيم.</li>
-          <li>مدرّب عملي بالقدوة والممارسة، ينقل الخبرة بروح المسؤولية.</li>
-        </ul>
-      </section>
+      <p><strong>عضويات اللجان:</strong></p>
+      <ul>
+        <li>عضو لجنة العطاءات المركزية.</li>
+        <li>عضو لجنة الشراء الرئيسية للوازم والخدمات.</li>
+        <li>عضو لجنة الأشغال والخدمات الفنية والاستشارية.</li>
+        <li>عضو لجنة الأشغال الفرعية.</li>
+        <li>ولجان أخرى أسهمت في تطوير العمل المؤسسي.</li>
+      </ul>
+    </section>
 
-      <section id="standards" class="card" aria-labelledby="standards-h">
-        <h2 id="standards-h">معايير المدير الناجح وتجسيدها في شخصيته</h2>
-        <ul>
-          <li><strong>الرؤية والتخطيط:</strong> أهداف واضحة وتوازن بين القصير والطويل المدى.</li>
-          <li><strong>القيادة والتحفيز:</strong> إلهام الفريق، توزيع مهام بحسب القدرات، وتقدير الجهود.</li>
-          <li><strong>التواصل الفعّال:</strong> وضوح التوقعات، حسن الإصغاء، وتشجيع تبادل الأفكار.</li>
-          <li><strong>القرار وحل المشكلات:</strong> موضوعية وحسم وروح حلّ لا لوم.</li>
-          <li><strong>إدارة الموارد:</strong> استثمار أمثل للوقت والمال والطاقات البشرية.</li>
-          <li><strong>المرونة:</strong> تكيف مع التغييرات والتحديات.</li>
-          <li><strong>النزاهة والقدوة:</strong> التزام أخلاقي راسخ.</li>
-          <li><strong>تنمية الفريق:</strong> تدريب مستمر وفتح مسارات للنمو المهني.</li>
-        </ul>
-        <p class="muted">🔑 خلاصة: يحقق النتائج مع الناس ومن خلالهم، لا على حسابهم.</p>
-      </section>
-    </main>
+    <!-- ========== Training ========== -->
+    <section id="training" class="section" aria-labelledby="training-h">
+      <h2 id="training-h">الدورات والتأهيل</h2>
+      <p>
+        قدّم العديد من <strong>الدورات التدريبية العامة</strong> في <strong>إدارة اللوازم والمشتريات</strong> لموظفي اللوازم في دوائر وكليات مركز الجامعة،
+        وكذلك لأقسام اللوازم في الكليات الخارجية، مما رفع من كفاءة الفرق وحسّن آليات العمل.
+      </p>
+    </section>
 
-    <footer class="card" aria-label="ملاحظة المصدر">
+    <!-- ========== Traits ========== -->
+    <section id="traits" class="section" aria-labelledby="traits-h">
+      <h2 id="traits-h">الصفات الشخصية والإدارية والتدريبية</h2>
+      <ul>
+        <li>نزاهة عالية، التزام بالقيم، وقدوة حسنة في الأداء.</li>
+        <li>قريب من الموظفين والمراجعين؛ يستمع ويحسن التعامل بعدل واحترام.</li>
+        <li>نشاط وتحمل لضغط العمل مع انضباط وحسن تنظيم.</li>
+        <li>مدرّب عملي بالقدوة والممارسة، ينقل الخبرة بروح المسؤولية.</li>
+      </ul>
+    </section>
+
+    <!-- ========== Standards ========== -->
+    <section id="standards" class="section" aria-labelledby="standards-h">
+      <h2 id="standards-h">معايير المدير الناجح وتجسيدها في شخصيته</h2>
+      <ul>
+        <li><strong>الرؤية والتخطيط:</strong> أهداف واضحة وتوازن بين القصير والطويل المدى.</li>
+        <li><strong>القيادة والتحفيز:</strong> إلهام الفريق، توزيع مهام بحسب القدرات، وتقدير الجهود.</li>
+        <li><strong>التواصل الفعّال:</strong> وضوح التوقعات، حسن الإصغاء، وتشجيع تبادل الأفكار.</li>
+        <li><strong>القرار وحل المشكلات:</strong> موضوعية وحسم وروح حلّ لا لوم.</li>
+        <li><strong>إدارة الموارد:</strong> استثمار أمثل للوقت والمال والطاقات البشرية.</li>
+        <li><strong>المرونة:</strong> تكيف مع التغييرات والتحديات.</li>
+        <li><strong>النزاهة والقدوة:</strong> التزام أخلاقي راسخ.</li>
+        <li><strong>تنمية الفريق:</strong> تدريب مستمر وفتح مسارات للنمو المهني.</li>
+      </ul>
+      <p class="muted">🔑 خلاصة: يحقق النتائج مع الناس ومن خلالهم، لا على حسابهم.</p>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <section class="section" aria-label="ملاحظة المصدر" style="margin-bottom:16px">
       <p class="muted" style="margin:0">
         © جميع الحقوق محفوظة. هذا المحتوى جزء من توثيق عائلة أبو حمور – يمكن إعادة استخدامه مع الإشارة للمصدر.
       </p>
-    </footer>
-  </div>
+    </section>
+
+  </main>
 </body>
 </html>
