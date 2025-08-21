@@ -121,6 +121,27 @@
     .dl{ display:grid; grid-template-columns:160px 1fr; gap:8px 14px }
     .dl dt{ color:var(--muted) }
 
+    /* ========== تعديل عرض بيانات أساسية مثل الصورة ========== */
+    #facts .dl{ margin:0; padding:0; display:block }
+    #facts .dl dt{
+      display:inline;
+      font-weight:700;
+      color:var(--brand);
+      word-break:keep-all;
+    }
+    #facts .dl dt::after{ content: ":\00A0"; }
+    #facts .dl dd{
+      display:inline;
+      margin:0;
+      color:#222;
+      word-break:keep-all;
+    }
+    #facts .dl dd::after{
+      content:"";
+      display:block;
+      margin-bottom:10px;
+    }
+
     /* TOC */
     .toc{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:10px; font-size:14px }
     .toc a{ color:#0a466e; text-decoration:none; background:#eef6fb; border:1px solid #d6e8f4; padding:6px 10px; border-radius:8px }
@@ -277,3 +298,4 @@
   </main>
 </body>
 </html>
+```0
