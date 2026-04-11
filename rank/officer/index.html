@@ -1071,5 +1071,97 @@
     <a href="#top"><span style="font-size: 20px;">🔝</span> العودة إلى الأعلى</a>
   </div>
 
+<audio id="bg-music" loop>
+  <source src="https://www.shakerabuhamour.com/music/Shaker.mohncez.mp3" type="audio/mpeg">
+</audio>
+
+<!-- أيقونة التحكم بالصوت + شريط التحكم -->
+<div id="audio-control-container" style="
+  position: fixed;
+  bottom: 30px;
+  right: 6px;
+  display: flex; /* تظهر مباشرة */
+  align-items: center;
+  gap: 8px;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+">
+  <!-- أيقونة التشغيل/الإيقاف -->
+  <div id="audio-control" style="
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+    background: #005eff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  ">
+    <span id="audio-icon" style="color:#fff; font-size:22px;">🔊</span>
+  </div>
+
+  <!-- شريط الصوت -->
+  <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.1" style="
+    width: 100px;
+    cursor: pointer;
+  ">
+</div>
+
+<script>
+  const audio = document.getElementById('bg-music');
+  const container = document.getElementById('audio-control-container');
+  const audioControl = document.getElementById('audio-control');
+  const audioIcon = document.getElementById('audio-icon');
+  const volumeSlider = document.getElementById('volume-slider');
+
+  let isPlaying = false;
+
+  // مستوى الصوت 10% عند البداية
+  audio.volume = 0.1;
+
+  // تشغيل تلقائي عند تحميل الصفحة
+  window.addEventListener('load', () => {
+    audio.play().then(() => {
+      isPlaying = true;
+      audioIcon.textContent = "🔊";
+    }).catch(() => {
+      // التشغيل التلقائي مرفوض من المتصفح - ننتظر تفاعل المستخدم
+      document.addEventListener('click', autoStart);
+      document.addEventListener('scroll', autoStart);
+    });
+  });
+
+  // تشغيل الصوت عند أول تفاعل إذا منعه المتصفح
+  function autoStart() {
+    audio.play().then(() => {
+      isPlaying = true;
+      audioIcon.textContent = "🔊";
+      document.removeEventListener('click', autoStart);
+      document.removeEventListener('scroll', autoStart);
+    });
+  }
+
+  // تشغيل/إيقاف الصوت عند الضغط على الأيقونة
+  audioControl.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      audioIcon.textContent = "🔇";
+    } else {
+      audio.play();
+      isPlaying = true;
+      audioIcon.textContent = "🔊";
+    }
+  });
+
+  // التحكم بالصوت من الشريط
+  volumeSlider.addEventListener('input', () => {
+    audio.volume = volumeSlider.value;
+  });
+</script>
+
+  
 </body>
   </html>
