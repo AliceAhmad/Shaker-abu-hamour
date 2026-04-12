@@ -310,71 +310,43 @@
     }
 
     @media (max-width: 800px){
-      .terms-grid,
-      .toc{
-        grid-template-columns:1fr;
-      }
+@media (max-width: 800px){
 
-      .section{
-        padding:24px 18px;
-      }
+  .terms-grid,
+  .toc{
+    grid-template-columns:1fr;
+  }
 
-      .section h2{
-        font-size:25px;
-      }
+  .section{
+    padding:24px 18px;
+  }
 
-      .section h3{
-        font-size:21px;
-      }
+  .section h2{
+    font-size:25px;
+  }
 
-      .section p,
-      .styled-list li{
-        font-size:17px;
-      }
+  .section h3{
+    font-size:21px;
+  }
 
-      .table-wrap{
-        border:none;
-        overflow:visible;
-      }
+  .section p,
+  .styled-list li{
+    font-size:17px;
+  }
 
-      table, thead, tbody, th, td, tr{
-        display:block;
-        width:100%;
-      }
+  /* ✅ الجدول المتحرك */
+  .table-wrap{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #dbe3ef;
+    border-radius: 14px;
+  }
 
-      thead{
-        display:none;
-      }
-
-      tr{
-        margin-bottom:14px;
-        background:#fff;
-        border:1px solid var(--line);
-        border-radius:14px;
-        overflow:hidden;
-        box-shadow:var(--shadow);
-      }
-
-      td{
-        min-width:unset;
-        border:none;
-        border-bottom:1px solid #edf2f7;
-        position:relative;
-        padding:12px 14px 12px;
-      }
-
-      td:last-child{
-        border-bottom:none;
-      }
-
-      td::before{
-        content:attr(data-label);
-        display:block;
-        font-weight:800;
-        color:var(--primary-dark);
-        margin-bottom:6px;
-      }
-    }
+  table{
+    min-width: 700px; /* مهم جدًا */
+    width: 100%;
+  }
+}
   </style>
 
   <script type="application/ld+json">
