@@ -6,19 +6,16 @@
   <title>جميع المواضيع</title>
 
   <style>
-    body {
-      font-family: 'Cairo', sans-serif;
+    body { font-family: 'Cairo', sans-serif;
       direction: rtl;
       background: #f4f4f9;
-      padding: 20px;
-    }
+      padding: 20px; }
 
     .section-title {
       text-align: center;
       color: #003366;
       font-size: clamp(20px, 2.5vw, 24px);
-      margin-bottom: 15px;
-    }
+      margin-bottom: 15px;  }
 
     /* 🔎 مربع البحث */
     #searchInput {
@@ -28,18 +25,15 @@
       border-radius: 10px;
       border: 1px solid #ccc;
       font-size: 16px;
-      outline: none;
-    }
+      outline: none;  }
 
     #searchInput:focus {
-      border-color: #003366;
-    }
+      border-color: #003366;   }
 
     .topics-list {
       list-style: none;
       padding: 0;
-      margin: 0;
-    }
+      margin: 0; }
 
     .topic-link {
       display: block;
@@ -53,20 +47,16 @@
       line-height: 1.7;
       font-size: clamp(14px, 2vw, 18px);
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: 0.25s ease;
-    }
+      transition: 0.25s ease; }
 
     .topic-link:hover {
       background: #003366;
-      color: #fff;
-    }
+      color: #fff; }
 
     @media (max-width: 768px) {
       .topic-link {
         font-size: 15px;
-        padding: 10px 12px;
-      }
-    }
+        padding: 10px 12px;  } }
   </style>
 </head>
 
@@ -77,17 +67,13 @@
     type="text" 
     id="searchInput" 
     placeholder="🔎 ابحث عن موضوع..." 
-    onkeyup="searchTopics()"
-  >
+    onkeyup="searchTopics()" >
 
   <h2 class="section-title">🌐 مواضيع رقمية وتقنية</h2>
 
   <ul class="topics-list" id="topicsList">
-    <li>
-      <a href="/subject9541/electronic-flies" class="topic-link">
-        الذباب الإلكتروني: سلاح الحروب الرقمية وتأثيره على الرأي العام
-      </a>
-    </li>
+    <li> <a href="/subject9541/electronic-flies" class="topic-link">
+        الذباب الإلكتروني: سلاح الحروب الرقمية وتأثيره على الرأي العام  </a> </li>
   </ul>
 
   <!-- 🔥 كود البحث -->
@@ -105,11 +91,7 @@
         if (text.toLowerCase().includes(filter)) {
           li[i].style.display = "";
         } else {
-          li[i].style.display = "none";
-        }
-      }
-    }
+          li[i].style.display = "none";  } }}
   </script>
-
 </body>
 </html>
