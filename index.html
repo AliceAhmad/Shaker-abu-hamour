@@ -128,37 +128,43 @@
 
 .main-nav ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
   padding: 0;
   margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🔥 زرين جنب بعض */
+  gap: 8px;
+}
+
+.main-nav li {
+  width: 100%;
 }
 
 .main-nav a {
   display: block;
   width: 100%;
-  margin: 0;
-  padding: 10px 8px;
+
+  padding: 10px 6px;
+  font-size: 13px;
+  font-weight: 700;
 
   text-align: center;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.4;
-
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 
-  border-radius: 16px;
+  border-radius: 14px;
   background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(6px);
   border: 1px solid rgba(255,255,255,0.15);
 
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.18),
-    inset 0 1px 0 rgba(255,255,255,0.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
-  transition: all 0.3s ease;
+/* موبايل أصغر */
+@media (max-width: 500px) {
+  .main-nav a {
+    font-size: 12px;
+    padding: 8px 5px;
+  }
 }
 
 .main-nav a:hover {
