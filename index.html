@@ -161,73 +161,7 @@
   font-weight: 700; /* 🔥 تعريض الخط */
 }
 
-.main-nav {
-  margin-top: 22px;
-}
 
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 🔥 3 أزرار */
-  gap: 8px;
-}
-
-.main-nav li {
-  margin: 0;
-  width: 100%;
-}
-
-.main-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  min-height: 44px;
-
-  padding: 10px 8px;
-
-  font-size: clamp(11px, 2.5vw, 14px); /* 🔥 تحكم ذكي بالحجم */
-  font-weight: 700;
-
-  color: #f5e7a1; /* 🔥 غير اللون من هنا */
-
-  line-height: 1.45;
-  text-align: center;
-  text-decoration: none;
-
-  border-radius: 14px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.15);
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-
-  transition: all 0.3s ease;
-}
-
-/* تأثير عند المرور */
-.main-nav a:hover {
-  background: rgba(255,255,255,.18);
-  transform: translateY(-1px);
-  text-decoration: none;
-}
-
-/* تأثير عند الضغط */
-.main-nav a:active {
-  transform: scale(0.97);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
-
-/* 📱 تحسين للموبايل */
-@media (max-width: 500px) {
-  .main-nav a {
-    font-size: 12px;
-    padding: 8px 6px;
-  }
-}
 
   @keyframes float {
     0%, 100% { transform: translateY(0); }
