@@ -175,15 +175,31 @@
     }
 
     .main-nav a {
-      display: inline-block;
-      color: #fff;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.15);
-      padding: 9px 14px;
-      border-radius: 999px;
-      font-size: .95rem;
-      transition: .25s ease;
-    }
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 10px auto;
+  padding: 14px 16px;
+  
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  
+  color: #ffffff;
+  
+  border-radius: 18px;
+  
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  
+  border: 1px solid rgba(255,255,255,0.15);
+  
+  box-shadow: 
+    0 6px 16px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+  
+  transition: all 0.3s ease;
+}
 
     .main-nav a:hover {
       background: rgba(255,255,255,.18);
