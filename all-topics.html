@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جميع المواضيع</title>
 
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      background: #f4f4f9;
+      padding: 20px;
+      margin: 0;
+      color: #111;
+    }
+
+    .page-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .main-title {
+      text-align: center;
+      color: #003366;
+      font-size: clamp(24px, 3vw, 32px);
+      margin: 10px 0 20px;
+      font-weight: 800;
+    }
+
+    /* مربع البحث */
+    #searchInput {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    #searchInput:focus {
+      border-color: #003366;
+      box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.08);
+    }
+
+    /* عنوان القسم */
+    .section-title {
+      text-align: center;
+      color: #ffffff;
+      background: linear-gradient(135deg, #003366, #0b4d8a);
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-size: clamp(20px, 2.5vw, 24px);
+      font-weight: 800;
+      margin: 28px 0 15px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .topics-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .topics-list li {
+      margin-bottom: 12px;
+    }
+
+    /* بطاقة الموضوع */
+    .topic-link {
+      display: block;
+      background: #ffffff;
+      color: #111;
+      padding: 14px 16px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      line-height: 1.8;
+      font-size: clamp(14px, 2vw, 17px);
+      border-right: 5px solid #d4af37;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      transition: all 0.25s ease;
+    }
+
+    .topic-link:hover {
+      background: #003366;
+      color: #ffffff;
+      transform: translateY(-3px);
+      border-right-color: #ffd700;
+    }
+
+    .note {
+      text-align: center;
+      color: #555;
+      font-size: 14px;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
+      .topic-link {
+        padding: 12px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrap">
+
+    <h1 class="main-title">استعراض جميع المواضيع</h1>
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="🔎 ابحث عن موضوع..."
+      onkeyup="searchTopics()"
+    >
+
+    <h2 class="section-title">🌐 مواضيع رقمية وتقنية</h2>
+    <ul class="topics-list">
+      <li>
+        <a href="/subject9541/electronic-flies" class="topic-link">
+          الذباب الإلكتروني: سلاح الحروب الرقمية وتأثيره على الرأي العام
+        </a>
+      </li>
+    </ul>
+
+    <h2 class="section-title">🌊 مواضيع بحرية واستراتيجية</h2>
+    <ul class="topics-list">
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/maritime-navigation/" class="topic-link" target="_blank" rel="noopener">
+          الملاحة البحرية – المفهوم، الأنظمة، وأهميتها في التجارة العالمية
+        </a>
+      </li>
+
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/point-nemo/" class="topic-link" target="_blank" rel="noopener">
+          نقطة نيمو – أبعد نقطة في المحيطات وأسرارها الجغرافية
+        </a>
+      </li>
+
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/ocean-seas/" class="topic-link" target="_blank" rel="noopener">
+          المحيطات والبحار – دراسة علمية وجغرافية شاملة
+        </a>
+      </li>
+
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/marine-straits-overview/" class="topic-link" target="_blank" rel="noopener">
+          المضائق البحرية – الأهمية الاستراتيجية والاقتصادية العالمية
+        </a>
+      </li>
+
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/strait-of-hormuz/" class="topic-link" target="_blank" rel="noopener">
+          مضيق هرمز – الموقع، الأهمية، والتأثير على أمن الطاقة العالمي
+        </a>
+      </li>
+
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/maritime-economic-impact/" class="topic-link" target="_blank" rel="noopener">
+          الأثر الاقتصادي للنقل البحري – التحولات والتحديات العالمية
+        </a>
+      </li>
+
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/maritime-digital-leadership/" class="topic-link" target="_blank" rel="noopener">
+          القيادة الرقمية في النقل البحري – الابتكار والتحول الذكي
+        </a>
+      </li>
+
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/maritime-technology/" class="topic-link" target="_blank" rel="noopener">
+          تكنولوجيا النقل البحري – الأنظمة الحديثة والتطور التقني
+        </a>
+      </li>
+    </ul>
+
+    <p class="note">يتم تحديث هذه الصفحة وإضافة مواضيع جديدة باستمرار.</p>
+  </div>
+
+  <script>
+    function searchTopics() {
+      let input = document.getElementById("searchInput");
+      let filter = input.value.toLowerCase();
+      let lists = document.querySelectorAll(".topics-list");
+
+      lists.forEach(function(ul) {
+        let li = ul.getElementsByTagName("li");
+
+        for (let i = 0; i < li.length; i++) {
+          let a = li[i].getElementsByTagName("a")[0];
+          let text = a.textContent || a.innerText;
+
+          if (text.toLowerCase().includes(filter)) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
