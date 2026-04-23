@@ -6,92 +6,158 @@
   <title>جميع المواضيع</title>
 
   <style>
-    body { font-family: 'Cairo', sans-serif;
+    body {
+      font-family: 'Cairo', sans-serif;
       direction: rtl;
       background: #f4f4f9;
-      padding: 20px; }
+      padding: 20px;
+      margin: 0;
+      color: #111;
+    }
+
+    .page-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .main-title {
+      text-align: center;
+      color: #003366;
+      font-size: clamp(24px, 3vw, 32px);
+      margin: 10px 0 20px;
+    }
 
     .section-title {
       text-align: center;
       color: #003366;
       font-size: clamp(20px, 2.5vw, 24px);
-      margin-bottom: 15px;  }
+      margin: 30px 0 15px;
+      background: #fff;
+      padding: 10px 14px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
 
-    /* 🔎 مربع البحث */
     #searchInput {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      border-radius: 12px;
       border: 1px solid #ccc;
       font-size: 16px;
-      outline: none;  }
+      outline: none;
+      box-sizing: border-box;
+      background: #fff;
+    }
 
     #searchInput:focus {
-      border-color: #003366;   }
+      border-color: #003366;
+      box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.08);
+    }
 
     .topics-list {
       list-style: none;
       padding: 0;
-      margin: 0; }
+      margin: 0;
+    }
+
+    .topics-list li {
+      margin-bottom: 10px;
+    }
 
     .topic-link {
       display: block;
       background: #ffffff;
       color: #003366;
       padding: 12px 16px;
-      margin-bottom: 10px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 700;
       line-height: 1.7;
       font-size: clamp(14px, 2vw, 18px);
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: 0.25s ease; }
+      transition: 0.25s ease;
+    }
 
     .topic-link:hover {
       background: #003366;
-      color: #fff; }
+      color: #fff;
+    }
+
+    .note {
+      text-align: center;
+      color: #555;
+      font-size: 14px;
+      margin-top: 25px;
+    }
 
     @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
       .topic-link {
         font-size: 15px;
-        padding: 10px 12px;  } }
+        padding: 10px 12px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <div class="page-wrap">
 
-  <!-- 🔎 مربع البحث -->
-  <input 
-    type="text" 
-    id="searchInput" 
-    placeholder="🔎 ابحث عن موضوع..." 
-    onkeyup="searchTopics()" >
+    <h1 class="main-title">استعراض جميع المواضيع</h1>
 
-  <h2 class="section-title">🌐 مواضيع رقمية وتقنية</h2>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="🔎 ابحث عن موضوع..."
+      onkeyup="searchTopics()"
+    >
 
-  <ul class="topics-list" id="topicsList">
-    <li> <a href="/subject9541/electronic-flies" class="topic-link">
-        الذباب الإلكتروني: سلاح الحروب الرقمية وتأثيره على الرأي العام  </a> </li>
-  </ul>
+    <h2 class="section-title">🌐 مواضيع رقمية وتقنية</h2>
+    <ul class="topics-list" id="topicsList">
+      <li>
+        <a href="/subject9541/electronic-flies" class="topic-link">
+          الذباب الإلكتروني: سلاح الحروب الرقمية وتأثيره على الرأي العام
+        </a>
+      </li>
+    </ul>
 
-  <!-- 🔥 كود البحث -->
+    <h2 class="section-title">🌊 مواضيع بحرية واقتصادية</h2>
+    <ul class="topics-list">
+      <li>
+        <a href="https://drzaid.shakerabuhamour.com/ships/blue-economy/" class="topic-link" target="_blank" rel="noopener">
+          الاقتصاد الأزرق – المفهوم، الأهمية، ودوره في التنمية المستدامة
+        </a>
+      </li>
+    </ul>
+
+    <p class="note">يتم تحديث هذه الصفحة وإضافة مواضيع جديدة باستمرار.</p>
+  </div>
+
   <script>
     function searchTopics() {
       let input = document.getElementById("searchInput");
       let filter = input.value.toLowerCase();
-      let ul = document.getElementById("topicsList");
-      let li = ul.getElementsByTagName("li");
+      let lists = document.querySelectorAll(".topics-list");
 
-      for (let i = 0; i < li.length; i++) {
-        let a = li[i].getElementsByTagName("a")[0];
-        let text = a.textContent || a.innerText;
+      lists.forEach(function(ul) {
+        let li = ul.getElementsByTagName("li");
 
-        if (text.toLowerCase().includes(filter)) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";  } }}
+        for (let i = 0; i < li.length; i++) {
+          let a = li[i].getElementsByTagName("a")[0];
+          let text = a.textContent || a.innerText;
+
+          if (text.toLowerCase().includes(filter)) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      });
+    }
   </script>
 </body>
 </html>
