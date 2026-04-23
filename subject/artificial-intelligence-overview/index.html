@@ -1,1 +1,606 @@
-  
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="prepared-by" content="أحمد شاكر أحمد أبو حمور - إعداد شامل للصور والمحتوى والمواد التعريفية والمقالات، إهداء لوالدي العميد الركن المتقاعد شاكر أحمد حسن أبو حمور">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>الذكاء الاصطناعي – تعريفه وأنواعه واستخداماته وفوائده ومخاطره</title>
+
+  <meta name="description" content="مقال شامل يشرح الذكاء الاصطناعي، أنواعه، تاريخه، استخداماته، فوائده ومخاطره، واستعراض تطبيقاته في التعليم، الصحة، والمجال العسكري، مدعومًا بمصادر إلكترونية موثوقة.">
+  <meta name="keywords" content="الذكاء الاصطناعي, AI, الذكاء الاصطناعي في التعليم, الذكاء الاصطناعي في الصحة, الذكاء الاصطناعي في الأردن, ChatGPT, الذكاء الاصطناعي العسكري, الذكاء التوليدي">
+  <meta name="author" content="shakerabuhamour.com">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.shakerabuhamour.com/subject/artificial-intelligence-overview">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.shakerabuhamour.com/subject/artificial-intelligence-overview">
+  <meta property="og:title" content="الذكاء الاصطناعي – تعريفه وأنواعه واستخداماته وفوائده ومخاطره">
+  <meta property="og:description" content="مقال شامل يشرح الذكاء الاصطناعي، أنواعه، تاريخه، استخداماته، فوائده ومخاطره، واستعراض تطبيقاته في التعليم، الصحة، والمجال العسكري.">
+  <meta property="og:image" content="https://www.shakerabuhamour.com/subject/artificial-intelligence-overview/artificial-intelligence-overview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="الذكاء الاصطناعي – تعريفه وأنواعه واستخداماته وفوائده ومخاطره">
+  <meta name="twitter:description" content="مقال شامل يشرح الذكاء الاصطناعي، أنواعه، تاريخه، استخداماته، فوائده ومخاطره، واستعراض تطبيقاته في التعليم، الصحة، والمجال العسكري.">
+  <meta name="twitter:image" content="https://www.shakerabuhamour.com/subject/artificial-intelligence-overview/artificial-intelligence-overview.png">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 2;
+      font-size: 16px;
+      padding: 12px;
+      text-align: justify;
+      margin: 0;
+    }
+
+    .page-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      color: #2d4b3a;
+      margin: 15px 0 10px;
+    }
+
+    h2 {
+      color: #2d4b3a;
+      font-size: 21px;
+      text-align: center;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    h3, h4 {
+      color: #2d4b3a;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 16px;
+    }
+
+    ul, ol {
+      padding-right: 18px;
+      margin-top: 0;
+    }
+
+    a {
+      color: #1a0dab;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #003366;
+    }
+
+    .note {
+      background-color: #fff8dc;
+      border-right: 6px solid #ffcc00;
+      padding: 12px;
+      margin: 20px 0;
+      font-size: 15px;
+      border-radius: 8px;
+    }
+
+    blockquote {
+      background: #f2f2f2;
+      padding: 12px;
+      border-right: 4px solid #ffcc00;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .share-wrap {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .share-btn {
+      display: inline-block;
+      color: white;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn-wa { background-color: #25D366; }
+    .btn-fb { background-color: #4267B2; }
+    .btn-ms { background-color: #0084ff; }
+
+    .action-btn {
+      background-color: #f0f0f0;
+      border: none;
+      color: #333;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .signature-box {
+      margin-top: 50px;
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-right: 4px solid #007B5E;
+      border-radius: 8px;
+    }
+
+    .mini-signature {
+      font-size: 13px;
+      text-align: center;
+      background-color: #f2f2f2;
+      margin-top: 40px;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      color: #666;
+      background-color: #f2f2f2;
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .back-top {
+      text-align: center;
+      background-color: #f2f2f2;
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 8px;
+      }
+
+      .page-wrap {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 19px;
+      }
+
+      h3, h4 {
+        font-size: 17px;
+      }
+    }
+  </style>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6395569207699454" crossorigin="anonymous"></script>
+</head>
+
+<body id="top">
+  <div class="page-wrap">
+
+    <header style="text-align: center; padding: 20px 0;">
+      <img 
+        src="https://www.shakerabuhamour.com/subject/artificial-intelligence-overview/artificial-intelligence-overview.png" 
+        alt="صورة الذكاء الاصطناعي" 
+        style="width: 320px; max-width: 100%; border-radius: 8px;">
+    </header>
+
+    <h1>الذكاء الاصطناعي – تعريفه وأنواعه واستخداماته وفوائده ومخاطره</h1>
+
+    <h2>🤖 الذكاء الاصطناعي: الثورة الرقمية التي تغيّر العالم</h2>
+
+    <h3>📌 تعريف عام</h3>
+    <p><strong>الذكاء الاصطناعي (Artificial Intelligence - AI)</strong> هو فرع من علوم الحاسوب يُعنى بتصميم وتطوير أنظمة قادرة على أداء مهام تتطلب عادةً قدرات ذهنية بشرية، مثل الفهم، التعلم، التفكير، التنبؤ، اتخاذ القرار، وحل المشكلات. ويشمل ذلك تقنيات متعددة كالتعلم الآلي، ومعالجة اللغة الطبيعية، والرؤية الحاسوبية، والأنظمة الخبيرة.</p>
+
+    <blockquote>تعريف منظمة اليونسكو: "الذكاء الاصطناعي هو قدرة الآلات والأنظمة الرقمية على محاكاة الذكاء البشري لأداء مهام تتعلق بالإدراك، الفهم، الفعل، والتفاعل."</blockquote>
+
+    <h3>🧠 الفرق بين الذكاء الاصطناعي والذكاء البشري</h3>
+    <ul>
+      <li><strong>الأساس في الأداء:</strong> الذكاء البشري يعتمد على الوعي، العاطفة، الحدس، والخبرة المتراكمة، بينما الذكاء الاصطناعي يعتمد على الخوارزميات وتحليل البيانات بشكل مبرمج ودقيق.</li>
+      <li><strong>طريقة التعلم:</strong> الإنسان يتعلم من التجارب الحياتية والسياقات الاجتماعية، أما الذكاء الاصطناعي فيتعلم من البيانات والمعلومات المنظمة أو غير المنظمة.</li>
+      <li><strong>المرونة والتكيف:</strong> البشر قادرون على التكيف مع مواقف جديدة وغير مألوفة، بينما الذكاء الاصطناعي يواجه صعوبة في التعامل مع سيناريوهات خارج نطاق تدريبه أو برمجته.</li>
+      <li><strong>الإبداع والابتكار:</strong> الإنسان يمكنه الابتكار والتخيل وتوليد أفكار جديدة، أما الذكاء الاصطناعي فيعتمد على أنماط سابقة ولا يمتلك إبداعاً فطرياً.</li>
+      <li><strong>المشاعر والأخلاق:</strong> يمتلك البشر مشاعر وقيم أخلاقية تؤثر على قراراتهم، بينما يفتقر الذكاء الاصطناعي إلى الإدراك العاطفي أو الحس الأخلاقي ما لم يُبرمج بذلك.</li>
+    </ul>
+
+    <h3>🕰️ متى ظهر ومن اخترعه؟</h3>
+    <ul>
+      <li>1950: آلان تورينغ وضع اختبار "تورينغ".</li>
+      <li>1956: جون مكارثي استخدم مصطلح AI في مؤتمر دارتموث.</li>
+    </ul>
+
+    <h2>📈 مراحل تطور الذكاء الاصطناعي</h2>
+    <ol>
+      <li><strong>المرحلة الأولى: الذكاء الرمزي والقائم على القواعد (1950s – 1970s)</strong>
+        <ul>
+          <li>الاعتماد على منطق "إذا حدث كذا، فافعل كذا".</li>
+          <li>تطور نظم خبيره تعتمد على قواعد ثابتة مثل MYCIN وELIZA.</li>
+        </ul>
+      </li>
+
+      <li><strong>المرحلة الثانية: أنظمة المعرفة والخبير المتقدم (1980s – 1990s)</strong>
+        <ul>
+          <li>توسعت النظم الخبيرة في الطب، الهندسة، الاقتصاد.</li>
+          <li>اعتماد الاستدلال غير الحتمي والتعامل مع الاحتمالات.</li>
+        </ul>
+      </li>
+
+      <li><strong>المرحلة الثالثة: التعلم الآلي والشبكات العصبية (1990s – 2010s)</strong>
+        <ul>
+          <li>ظهور التعلم الآلي (Machine Learning) والشبكات العصبية الاصطناعية (ANN).</li>
+          <li>تحسن دقة التصنيف والتنبؤ، والتعرف على الصور والصوت.</li>
+        </ul>
+      </li>
+
+      <li><strong>المرحلة الرابعة: الذكاء التوليدي والنماذج الضخمة (2017 – الآن)</strong>
+        <ul>
+          <li>تطور نماذج لغوية ضخمة مثل GPT من OpenAI، وClaude من Anthropic، وGemini من Google DeepMind.</li>
+          <li>توليد النصوص، الصور، الصوت، والفيديو بذكاء عالي.</li>
+          <li>التركيز على التفاعل متعدد الوسائط وسلامة الاستخدام.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <section id="neural-networks" dir="rtl" style="line-height:1.9; font-size:16px; margin-top:30px;">
+      <h3 style="color:#4CAF50;">🧠 الشبكات العصبية الاصطناعية (Artificial Neural Networks – ANN)</h3>
+      <p>
+        الشبكات العصبية الاصطناعية هي نماذج رياضية وخوارزميات حاسوبية مستوحاة من 
+        <strong>آلية عمل الدماغ البشري</strong>، تهدف إلى محاكاة طريقة معالجة المعلومات 
+        والتعلّم من البيانات. وتُعد أحد أهم ركائز <strong>التعلّم العميق</strong> (Deep Learning)، 
+        الذي يُعتبر بدوره فرعًا من <strong>التعلّم الآلي</strong> (Machine Learning).
+      </p>
+
+      <h4 style="color:#2196F3;">📌 بنية الشبكة العصبية</h4>
+      <ul style="padding-right:20px;">
+        <li><strong>طبقة المدخلات (Input Layer):</strong> تستقبل البيانات الخام مثل النصوص أو الصور أو الأصوات.</li>
+        <li><strong>الطبقات المخفية (Hidden Layers):</strong> تقوم بمعالجة المعلومات باستخدام الأوزان والانحياز ودوال التفعيل.</li>
+        <li><strong>طبقة المخرجات (Output Layer):</strong> تنتج النتيجة النهائية مثل التصنيف أو التنبؤ.</li>
+      </ul>
+
+      <h4 style="color:#2196F3;">⚙️ آلية التعلم</h4>
+      <p>
+        يتم تدريب الشبكة باستخدام خوارزمية <strong>الانتشار العكسي</strong> (Backpropagation)، 
+        حيث تُقارن النتيجة المتوقعة بالنتيجة الفعلية، وتحسب قيمة <strong>الخطأ</strong>، 
+        ثم تُعدل الأوزان لتقليل هذا الخطأ تدريجيًا عبر آلاف أو ملايين التكرارات حتى تصل إلى دقة عالية.
+      </p>
+
+      <h4 style="color:#2196F3;">📊 أنواع الشبكات العصبية</h4>
+      <ul style="padding-right:20px;">
+        <li><strong>Feedforward Neural Networks (FNN):</strong> أبسط الأنواع، تتدفق البيانات من المدخلات إلى المخرجات باتجاه واحد.</li>
+        <li><strong>Convolutional Neural Networks (CNN):</strong> متخصصة في معالجة الصور والفيديو.</li>
+        <li><strong>Recurrent Neural Networks (RNN):</strong> متخصصة في البيانات المتسلسلة مثل النصوص والصوت.</li>
+        <li><strong>Transformers:</strong> أحدث الأساليب، تُستخدم في النماذج اللغوية الضخمة مثل ChatGPT وGemini.</li>
+      </ul>
+
+      <h4 style="color:#2196F3;">🎯 أمثلة على الاستخدامات</h4>
+      <ul style="padding-right:20px;">
+        <li><strong>الرؤية الحاسوبية:</strong> التعرف على الوجوه، اكتشاف الأجسام.</li>
+        <li><strong>معالجة اللغة الطبيعية (NLP):</strong> الترجمة، التلخيص، الإجابة على الأسئلة.</li>
+        <li><strong>التنبؤات:</strong> التنبؤ بالطقس أو الأسواق المالية.</li>
+        <li><strong>الألعاب:</strong> التحكم بالروبوتات أو اللاعبين الافتراضيين.</li>
+      </ul>
+    </section>
+
+    <h2>أنواع الذكاء الاصطناعي</h2>
+    <ul>
+      <li>ضيق (Narrow AI)</li>
+      <li>عام (General AI)</li>
+      <li>فائق (Super AI)</li>
+    </ul>
+
+    <h3>أمثلة على تقنيات الذكاء الاصطناعي</h3>
+    <ul>
+      <li>الذكاء التوليدي</li>
+      <li>التعلم الآلي</li>
+      <li>الرؤية الحاسوبية</li>
+      <li>معالجة اللغة الطبيعية</li>
+    </ul>
+
+    <h3>🔹 كيف يتكامل الواقعان الافتراضي والمعزز مع الذكاء الاصطناعي</h3>
+    <p>
+      يلعب الذكاء الاصطناعي دورًا جوهريًا في تطوير تقنيات <strong>الواقع الافتراضي (VR)</strong> و<strong>الواقع المعزز (AR)</strong>، حيث يُضفي عليهما طبقة من "الذكاء التفاعلي" الذي يسمح بفهم السياق، التفاعل مع المستخدم، وتحسين جودة التجربة.
+    </p>
+
+    <p>
+      في تطبيقات الواقع المعزز، يُستخدم الذكاء الاصطناعي في <strong>تحليل البيئة الحقيقية</strong> عبر الكاميرا، والتعرّف على الأشياء أو الأشخاص، ثم <strong>إدراج العناصر الرقمية</strong> بشكل متناسق وديناميكي. أما في الواقع الافتراضي، فيُسهم الذكاء الاصطناعي في <strong>إنشاء عوالم تفاعلية</strong> تتكيّف مع سلوك المستخدم وتقدّم استجابات واقعية.
+    </p>
+
+    <p>تشمل أبرز صور التكامل بين التقنيات:</p>
+    <ul>
+      <li>👁️ التعرف على الإيماءات وتعبيرات الوجه باستخدام <strong>الرؤية الحاسوبية</strong>.</li>
+      <li>🧠 تخصيص التجربة التفاعلية للمستخدم من خلال <strong>التعلم الآلي</strong>.</li>
+      <li>🎙️ استخدام <strong>معالجة اللغة الطبيعية (NLP)</strong> لفهم الأوامر الصوتية أو الحوارات داخل البيئة الافتراضية.</li>
+      <li>🔊 توليد أصوات واقعية أو شخصيات افتراضية ذكية تتفاعل بالصوت والصورة.</li>
+      <li>📊 تحليل البيانات السلوكية لتحسين المحتوى أو التدريب داخل البيئات الافتراضية.</li>
+    </ul>
+
+    <p>
+      ومع توسع استخدام هذه التقنيات في مجالات مثل التعليم، والطب، والأمن، فإن التكامل مع الذكاء الاصطناعي يُمثّل ثورة حقيقية في تصميم التجارب التفاعلية الذكية.
+    </p>
+
+    <h3>🤝 العلاقة بين الذكاء الاصطناعي وChatGPT والنماذج المشابهة</h3>
+    <p>
+      تُعد أدوات مثل <strong>ChatGPT</strong> و<strong>Gemini</strong> و<strong>Claude</strong> من أبرز التطبيقات العملية لتقنيات الذكاء الاصطناعي الحديثة، وتحديدًا في مجال <strong>الذكاء التوليدي (Generative AI)</strong> ومعالجة اللغة الطبيعية (NLP). تعتمد هذه النماذج على <strong>التعلم العميق</strong> من خلال شبكات عصبية ضخمة تُدرّب على كميات هائلة من البيانات النصية، مما يتيح لها فهم اللغة البشرية، توليد ردود منطقية، كتابة مقالات، ترجمة، تلخيص، وحتى توليد أكواد برمجية.
+    </p>
+
+    <p>
+      ChatGPT، على سبيل المثال، مبني على نموذج GPT من شركة OpenAI، ويُستخدم اليوم في مجالات متعددة مثل التعليم، خدمة العملاء، التسويق، البرمجة، والمجال الطبي. يمثل هذا النوع من الذكاء الاصطناعي قفزة نوعية في تفاعل الإنسان مع الحاسوب.
+    </p>
+
+    <h3>📚 شرح مبسط لأهم تقنيات الذكاء الاصطناعي</h3>
+    <ul>
+      <li><strong>التعلم الآلي (Machine Learning):</strong> تمكين الآلات من التعلم من البيانات دون برمجة صريحة.</li>
+      <li><strong>التعلم العميق (Deep Learning):</strong> نوع متقدم من التعلم الآلي يستخدم الشبكات العصبية لتمثيل البيانات وتحليلها.</li>
+      <li><strong>معالجة اللغة الطبيعية (NLP):</strong> تمكين الآلات من فهم اللغة البشرية والتفاعل معها.</li>
+      <li><strong>الرؤية الحاسوبية (Computer Vision):</strong> السماح للآلات "برؤية" العالم وتحليل الصور والفيديوهات.</li>
+      <li><strong>الأنظمة الخبيرة (Expert Systems):</strong> تقليد قرارات الخبراء في مجالات محددة مثل الطب أو الهندسة.</li>
+    </ul>
+
+    <h3>🌍 أول من استخدم الذكاء الاصطناعي</h3>
+    <p>المؤسسات العسكرية الأمريكية (DARPA)، وجامعات مثل MIT وStanford.</p>
+
+    <h3>🛠️ استخداماته في الحياة اليومية</h3>
+    <ul>
+      <li>القيادة الذاتية</li>
+      <li>التطبيقات الطبية</li>
+      <li>تحليل السوق</li>
+      <li>التعليم الذكي</li>
+    </ul>
+
+    <h3>📱 في وسائل التواصل الاجتماعي</h3>
+    <ul>
+      <li>التوصيات الذكية</li>
+      <li>الكشف عن المحتوى المسيء</li>
+      <li>روبوتات المحادثة</li>
+    </ul>
+
+    <h3>🧑‍🏫 في التعليم</h3>
+    <ul>
+      <li>تخصيص المحتوى</li>
+      <li>تصحيح آلي</li>
+      <li>أنظمة تدريس ذكية</li>
+    </ul>
+
+    <h3>🏥 في الرعاية الصحية</h3>
+    <ul>
+      <li>تحليل صور الأشعة</li>
+      <li>تشخيص طبي مدعوم بالذكاء</li>
+      <li>تتبع حالة المرضى</li>
+    </ul>
+
+    <h3>⚔️ في المجال العسكري</h3>
+    <ul>
+      <li>الطائرات بدون طيار</li>
+      <li>روبوتات قتالية</li>
+      <li>محاكاة المعارك</li>
+      <li>تحليلات استخباراتية</li>
+    </ul>
+
+    <h3>✅ فوائده</h3>
+    <ul>
+      <li>تحسين الكفاءة</li>
+      <li>تقليل الأخطاء البشرية</li>
+      <li>تسريع القرارات</li>
+    </ul>
+
+    <h3>❌ مخاطره</h3>
+    <ul>
+      <li>الخصوصية</li>
+      <li>فقدان الوظائف</li>
+      <li>التحيز الخوارزمي</li>
+      <li>التزييف العميق</li>
+    </ul>
+
+    <h2>🎭 حقيقة أم تزييف؟</h2>
+    <p>
+      في عصر الذكاء الاصطناعي، أصبحت قدرتنا على تمييز الحقيقة من التزييف أمرًا بالغ الصعوبة. تقنيات الذكاء الاصطناعي الحديثة جعلت من الممكن إنشاء مقاطع فيديو، صور، وحتى أصوات لا يمكن تمييزها عن الواقع.
+    </p>
+
+    <h3>🤖 لماذا لم نعد نميّز بين الواقع والذكاء الاصطناعي؟</h3>
+    <ul>
+      <li><strong>تقنيات التزييف العميق (Deepfake):</strong> تركيب وجوه حقيقية على فيديوهات مزيفة، تُستخدم لتمثيل أفعال لم تحدث.</li>
+      <li><strong>الذكاء الاصطناعي التوليدي (Generative AI Video):</strong> أدوات مثل Runway, Sora, Pika، تُنتج مشاهد كاملة بتقنيات خيالية.</li>
+      <li><strong>دمج الواقع بالواقع المعزز (Augmented Reality):</strong> تأثيرات رقمية تندمج بسلاسة مع العالم الحقيقي، كما في TikTok وSnapchat.</li>
+    </ul>
+
+    <h3>⚠️ النتيجة: نعيش في مرحلة “ضباب الحقيقة”</h3>
+    <p>
+      لم نعد نعرف: هل الفيديو الذي نشاهده حقيقي؟ هل هذه الشخصية موجودة فعلًا؟ هل هذا السلوك طبيعي أم توليدي؟
+    </p>
+
+    <h3>🎯 لماذا هذا خطير؟</h3>
+    <ul>
+      <li><strong>تزييف الأخبار والفضائح:</strong> قد يتهم شخص بفعل لم يقم به أبدًا.</li>
+      <li><strong>صناعة محتوى خطير أو مرعب:</strong> لجذب الانتباه أو التأثير على الرأي العام.</li>
+      <li><strong>ضياع الثقة بالمصادر:</strong> حتى المحتوى الحقيقي قد يُشكك به.</li>
+    </ul>
+
+    <h3>✅ كيف نتعامل مع ذلك؟</h3>
+    <ul>
+      <li><strong>كن شكاكًا إيجابيًا:</strong> لا تصدق كل ما تراه.</li>
+      <li><strong>تحقق من المصدر:</strong> من نشره؟ ما خلفيته؟</li>
+      <li><strong>استخدم أدوات كشف التزييف:</strong> مثل <a href="https://www.invid-project.eu/tools-and-services/invid-verification-plugin/" target="_blank" rel="noopener">InVID</a> و <a href="https://www.deepware.ai/" target="_blank" rel="noopener">Deepware Scanner</a>.</li>
+    </ul>
+
+    <blockquote>
+      💡 <strong>الخلاصة:</strong> لم نعد فقط بحاجة إلى “عيون ترى”، بل إلى “عقل يتحقق”.
+    </blockquote>
+
+    <h3>📊 الذكاء الاصطناعي في الأردن</h3>
+    <ul>
+      <li>استراتيجية وطنية عبر وزارة الاقتصاد الرقمي</li>
+      <li>برامج جامعية متخصصة</li>
+      <li>تطبيقات حكومية تعتمد على AI</li>
+      <li>مركز الملك عبدالله الثاني للتصميم والتطوير (KADDB)</li>
+    </ul>
+
+    <section style="background-color: #ffffff; padding: 20px; margin: 30px 0; border-right: 5px solid #4A90E2; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.08);">
+      <h2 style="color: #004080; text-align: center;">🤖 أفضل تطبيقات الذكاء الاصطناعي</h2>
+      <p style="text-align: center; color: #555;">تعرف على أبرز التطبيقات العملية التي يستخدم فيها الذكاء الاصطناعي اليوم في مختلف القطاعات:</p>
+
+      <ul style="padding-right: 25px; font-size: 16px; color: #333; line-height: 2;">
+        <li><strong>ChatGPT:</strong> مساعد ذكي لإنتاج النصوص، البرمجة، التعليم، وإجابات الأسئلة.</li>
+        <li><strong>Google Lens:</strong> التعرف على الصور والكائنات وترجمتها فورياً من الكاميرا.</li>
+        <li><strong>Grammarly:</strong> تصحيح القواعد والنحو والكتابة باستخدام الذكاء اللغوي.</li>
+        <li><strong>DALL·E / Midjourney:</strong> توليد صور من وصف نصي (Text to Image).</li>
+        <li><strong>Notion AI:</strong> إدارة المهام وتنظيم الملاحظات تلقائيًا.</li>
+        <li><strong>Descript:</strong> تعديل ملفات الصوت والفيديو بذكاء (مثل إزالة الخلفية أو الكلمات).</li>
+        <li><strong>AI Duet:</strong> موسيقى تفاعلية بين الإنسان والآلة (من Google).</li>
+        <li><strong>Runway ML:</strong> أدوات تحرير فيديو وصور احترافية باستخدام AI.</li>
+        <li><strong>Quillbot:</strong> إعادة صياغة وتحسين الكتابة الأكاديمية والبحثية.</li>
+        <li><strong>AI في الصحة:</strong> مثل IBM Watson في تحليل الأشعة وتشخيص الأمراض.</li>
+      </ul>
+
+      <h3 style="color:#004080; margin-top:30px;">📘 تطبيقات علمية متقدمة</h3>
+      <ul style="padding-right: 25px; font-size: 16px; color: #333; line-height: 2;">
+        <li><strong>Wolfram Alpha:</strong> محرك معرفة ذكي لحل المسائل الرياضية والفيزيائية والتحليل الإحصائي.</li>
+        <li><strong>Semantic Scholar:</strong> محرك بحث أكاديمي يعتمد على الذكاء الاصطناعي لفهم الأبحاث العلمية وتلخيصها.</li>
+        <li><strong>Galileo AI:</strong> أداة تساعد الباحثين على تحليل البيانات البيولوجية والطبية واكتشاف أنماط جديدة باستخدام تعلم الآلة.</li>
+        <li><strong>Scite.ai:</strong> منصة بحث علمي ذكية تساعد في تحليل الاستشهادات وفهم ما إذا كانت تؤيد أو تعارض فرضية البحث.</li>
+        <li><strong>Elicit by Ought:</strong> مساعد بحثي يستخدم الذكاء الاصطناعي لمساعدتك في صياغة الأسئلة، مراجعة الأدبيات، وتلخيص نتائج الأبحاث.</li>
+      </ul>
+
+      <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #888;">
+        📌 يتم تحديث القائمة باستمرار حسب تطورات الذكاء الاصطناعي وتطبيقاته العملية في الحياة اليومية.
+      </p>
+    </section>
+
+    <div class="note">
+      📘 للمزيد حول هذه التقنيات، راجع صفحة <a href="https://www.shakerabuhamour.com/subject/vr-ar-overview" target="_blank" rel="noopener">الواقع الافتراضي والواقع المعزز</a>
+    </div>
+
+    <div class="note">
+      📘 هل تريد التعمق أكثر؟ اطلع على صفحة مخصصة لـ <a href="https://www.shakerabuhamour.com/subject/ai-tools-and-chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT</a> وتعرّف على آلية عمله، مزاياه، وتطبيقاته
+    </div>
+
+    <h2>🌐 مصادر موثوقة</h2>
+    <ul>
+      <li><a href="https://modee.gov.jo" target="_blank" rel="noopener">وزارة الاقتصاد الرقمي الأردنية</a></li>
+      <li><a href="https://www.unesco.org/en/artificial-intelligence/recommendation" target="_blank" rel="noopener">اليونسكو – أخلاقيات الذكاء الاصطناعي</a></li>
+      <li><a href="https://aiindex.stanford.edu" target="_blank" rel="noopener">Stanford AI Index</a></li>
+      <li><a href="https://platform.openai.com/docs" target="_blank" rel="noopener">OpenAI Documentation</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Deepfake" target="_blank" rel="noopener">ويكيبيديا – Deepfake (مراجعة شاملة لتعريفها، آثارها القانونية والاجتماعية)</a></li>
+      <li><a href="https://www.kaddb.com" target="_blank" rel="noopener">مركز الملك عبدالله الثاني للتصميم والتطوير</a></li>
+    </ul>
+
+    <div class="signature-box">
+      <p style="font-size: 13px; font-weight: bold; text-align: justify; color: #555; line-height: 1.8; margin: 0;">
+        🔹 بعض أجزاء هذا المحتوى أُعدّت بمساعدة أدوات الذكاء الاصطناعي، مع مراجعة دقيقة وتوثيق من مصادر موثوقة.<br>
+        <span style="font-family: 'Georgia', 'Times New Roman', serif; font-weight: bold; font-size: 12px;">
+          إعداد:
+          <a href="https://www.shakerabuhamour.com/#Military-culture" target="_blank" rel="noopener" style="color: #007B5E; text-decoration: none;">
+            <strong>أحمد شاكر أبو حمّور</strong>
+          </a> – رقم الوثيقة:
+          <span style="color: #8B0000; font-family: 'Courier New', monospace;">KN-9541-SBJ-250</span> ✔️
+          محتوى معرفي أصيل خالٍ من التكرار أو النسخ، مبني على مصادر علمية وتقنية موثوقة ومراجع متعددة معتمدة، وقابل للتطوير والتحديث المستمر.
+          – إعداد خاص لموقع
+          <a href="https://www.shakerabuhamour.com" target="_blank" rel="noopener" style="color: #007B5E; text-decoration: none;">
+            🌐 shakerabuhamour.com
+          </a>
+        </span>
+      </p>
+    </div>
+
+    <div class="share-wrap">
+      <a href="https://wa.me/?text=https://www.shakerabuhamour.com/subject/artificial-intelligence-overview" target="_blank" rel="noopener" aria-label="مشاركة عبر واتساب" class="share-btn btn-wa">واتساب</a>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.shakerabuhamour.com/subject/artificial-intelligence-overview" target="_blank" rel="noopener" aria-label="مشاركة عبر فيس بوك" class="share-btn btn-fb">فيسبوك</a>
+
+      <a href="fb-messenger://share?link=https://www.shakerabuhamour.com/subject/artificial-intelligence-overview" target="_blank" rel="noopener" aria-label="مشاركة عبر ماسنجر" class="share-btn btn-ms">ماسنجر</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 15px;">
+      <button onclick="copyLink()" class="action-btn">📋 نسخ الرابط</button>
+      <button onclick="window.print()" class="action-btn">🖨️ طباعة</button>
+    </div>
+
+    <script>
+      function copyLink() {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+          alert("✅ تم نسخ الرابط بنجاح");
+        }).catch(() => {
+          alert("❌ لم يتم النسخ، يرجى المحاولة يدويًا");
+        });
+      }
+    </script>
+
+    <hr>
+
+    <div class="mini-signature">
+      <div style="color: #003366; font-weight: bold; margin-bottom: 4px;">
+        للمزيد من المعلومات أنقر هنا ⬇️
+      </div>
+      <a href="https://www.shakerabuhamour.com/#Military-culture"
+         target="_blank"
+         rel="noopener"
+         style="color: #bfa034; text-decoration: none; font-size: 14px; font-weight: bold; line-height: 2.5;">
+         صفحة العميد الركن المتقاعد شاكر أبو حمّور
+      </a>
+    </div>
+
+    <footer>
+      <p>
+        <a href="https://www.shakerabuhamour.com" target="_blank" rel="noopener" style="color: #003366; text-decoration: none; font-weight: bold;">
+          🌐 shakerabuhamour.com
+        </a>
+      </p>
+
+      <p style="margin: 2px 0; font-size: 13px; color: #444;">
+        جميع الحقوق محفوظة &copy; 2018–2025
+      </p>
+
+      <p style="margin-top: 6px;">
+        <a href="https://www.shakerabuhamour.com/terms" target="_blank" rel="noopener" style="color: #003366; text-decoration: none; margin: 0 8px; font-weight: bold; font-size: 13px;">
+          الشروط والأحكام
+        </a> |
+        <a href="https://www.shakerabuhamour.com/privacy" target="_blank" rel="noopener" style="color: #003366; text-decoration: none; margin: 0 8px; font-weight: bold; font-size: 13px;">
+          سياسة الخصوصية
+        </a>
+      </p>
+
+      <p style="font-size: 13px; color: #555; text-align: center; margin-top: 15px;">
+        هذا العمل مرخص بموجب رخصة
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" style="color: #003366; text-decoration: underline; font-weight: bold; font-size: 12px;">
+          المشاع الإبداعي – النسب - غير تجاري (CC BY-NC 4.0)
+        </a>. يُسمح باستخدام هذا المحتوى لأغراض التعليم والتعريف والنشر غير التجاري مع الإشارة إلى المصدر: <strong>shakerabuhamour.com</strong>.
+      </p>
+    </footer>
+
+    <div class="back-top">
+      <a href="#top" style="font-size: 13px; text-decoration: none; color: #003366; font-weight: bold;">
+        <span style="font-size: 20px;">🔝</span> العودة إلى الأعلى
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>  
