@@ -26,6 +26,12 @@
 <meta name="twitter:description" content="صفحة تعريفية عن بلدة الوسية في السلط بمحافظة البلقاء.">
 <meta name="twitter:image" content="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa01.webp">
 
+
+<body>
+  ...
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+  
 <style>
 :root {
   --main:#0f5132;
@@ -493,6 +499,17 @@ function showImg(img) {
 </section>
 
 <section class="section">
+  <h2>مخطط تطور السكان</h2>
+
+  <canvas id="popChart" style="max-width:700px; margin:auto;"></canvas>
+
+  <p style="text-align:center; font-size:13px; color:#666;">
+    يوضح المخطط النمو السكاني التقريبي لبلدة الوسية بين عامي 2015 و2025
+  </p>
+</section>
+  
+
+<section class="section">
 <h2>الطابع العمراني</h2>
 <p>
 يميل الطابع العمراني في بلدة الوسية إلى النمط السكني الحديث، حيث تنتشر الفلل والمنازل المستقلة التي تستفيد من طبيعة المنطقة وهدوئها. كما تضم البلدة عددًا من المزارع الخاصة لبعض الشخصيات الأردنية والدبلوماسية، إضافة إلى مزارع مملوكة لأشقاء من الدول العربية، مما يعكس مكانتها كوجهة هادئة للسكن والاستجمام.
@@ -545,5 +562,35 @@ function showImg(img) {
 <p>إعداد: أحمد شاكر أبو حمور</p>
 </footer>
 
+ <script>
+const ctx = document.getElementById('popChart').getContext('2d');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['2015', '2020', '2025'],
+    datasets: [{
+      label: 'عدد السكان',
+      data: [467, 520, 583],
+      borderWidth: 3,
+      tension: 0.4,
+      fill: true
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: false
+      }
+    }
+  }
+});
+</script> 
 </body>
 </html>
