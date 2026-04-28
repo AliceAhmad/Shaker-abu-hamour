@@ -561,7 +561,7 @@ function showImg(img) {
 <p>إعداد: أحمد شاكر أبو حمور</p>
 </footer>
 
- <script>
+<script>
 const ctx = document.getElementById('popChart').getContext('2d');
 
 new Chart(ctx, {
@@ -571,13 +571,18 @@ new Chart(ctx, {
     datasets: [{
       label: 'عدد السكان',
       data: [467, 520, 583],
+      borderColor: '#0f5132',
+      backgroundColor: 'rgba(15,81,50,0.18)',
       borderWidth: 3,
       tension: 0.4,
-      fill: true
+      fill: true,
+      pointBackgroundColor: '#0f5132',
+      pointRadius: 4
     }]
   },
   options: {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: true
@@ -590,6 +595,6 @@ new Chart(ctx, {
     }
   }
 });
-</script> 
+</script>
 </body>
 </html>
