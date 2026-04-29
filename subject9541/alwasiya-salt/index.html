@@ -611,6 +611,80 @@ function showImg(img) {
 </div>
 
 </section>
+
+<section class="section" id="gallery">
+  <h2>معرض صور بلدة الوسية</h2>
+
+  <p style="text-align:center; color:#666; margin-bottom:25px;">
+    لقطات من بلدة الوسية ومسجد الوسية والطبيعة المحيطة.
+  </p>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+
+    <figure style="text-align:center; margin:0;">
+      <img src="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa9.webp"
+           alt="إطلالة جوية لشرق مسجد الوسية والطبيعة المحيطة"
+           loading="lazy"
+           onclick="showImg(this)"
+           style="width:320px; max-width:100%; height:auto; border-radius:10px; cursor:pointer;">
+      <figcaption style="margin-top:8px; font-size:12px; color:#666;">
+        إطلالة جوية لشرق مسجد الوسية والطبيعة المحيطة
+      </figcaption>
+    </figure>
+
+    <figure style="text-align:center; margin:0;">
+      <img src="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa8.webp"
+           alt="إطلالة جوية لغرب مسجد الوسية والطبيعة المحيطة"
+           loading="lazy"
+           onclick="showImg(this)"
+           style="width:320px; max-width:100%; height:auto; border-radius:10px; cursor:pointer;">
+      <figcaption style="margin-top:8px; font-size:12px; color:#666;">
+        إطلالة جوية لغرب مسجد الوسية والطبيعة المحيطة
+      </figcaption>
+    </figure>
+
+    <figure style="text-align:center; margin:0;">
+      <img src="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa2.webp"
+           alt="إطلالة جوية لشمال مسجد الوسية والطبيعة المحيطة"
+           loading="lazy"
+           onclick="showImg(this)"
+           style="width:320px; max-width:100%; height:auto; border-radius:10px; cursor:pointer;">
+      <figcaption style="margin-top:8px; font-size:12px; color:#666;">
+        إطلالة جوية لشمال مسجد الوسية والطبيعة المحيطة
+      </figcaption>
+    </figure>
+
+    <figure style="text-align:center; margin:0;">
+      <img src="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa5.webp"
+           alt="إطلالة جوية لجنوب مسجد الوسية والطبيعة المحيطة"
+           loading="lazy"
+           onclick="showImg(this)"
+           style="width:320px; max-width:100%; height:auto; border-radius:10px; cursor:pointer;">
+      <figcaption style="margin-top:8px; font-size:12px; color:#666;">
+        إطلالة جوية لجنوب مسجد الوسية والطبيعة المحيطة
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <div id="popup" onclick="this.style.display='none'"
+       style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999; padding:20px;">
+
+    <span style="position:absolute; top:18px; right:28px; font-size:42px; color:#fff; cursor:pointer;">×</span>
+
+    <img id="popupImg"
+         alt="صورة مكبرة من معرض بلدة الوسية"
+         style="max-width:95%; max-height:90%; border-radius:12px;">
+  </div>
+
+  <script>
+    function showImg(img) {
+      document.getElementById("popup").style.display = "flex";
+      document.getElementById("popupImg").src = img.src;
+    }
+  </script>
+
+</section>
   
 
 <section class="section">
