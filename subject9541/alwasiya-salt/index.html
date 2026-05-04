@@ -293,41 +293,44 @@ footer a { color:#f7d77a; }
 
 
     
- .timeline-gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-  margin-top:25px;
-}
-
-.timeline-gallery figure{
-  margin:0;
-  background:#fff;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 4px 14px rgba(0,0,0,.12);
-  border:1px solid #e6e6e6;
-}
-
-.timeline-gallery img{
+.before-after{
+  position:relative;
   width:100%;
-  height:220px;
-  object-fit:cover;
+  max-width:850px;
+  margin:25px auto;
+  overflow:hidden;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
 }
 
-@media (min-width:768px){
-  .timeline-gallery img{
-    height:300px;
-  }
+.before-after img{
+  width:100%;
+  height:auto;
+  display:block;
 }
 
-.timeline-gallery figcaption{
-  padding:12px;
-  text-align:center;
-  font-size:15px;
-  color:#444;
-  background:#f7f7f7;
-}   
+.before-layer{
+  position:absolute;
+  top:0;
+  right:0;
+  width:50%;
+  height:100%;
+  overflow:hidden;
+}
+
+.before-layer img{
+  height:100%;
+  width:auto;
+  max-width:none;
+}
+
+.before-after-slider{
+  position:absolute;
+  left:0;
+  bottom:15px;
+  width:100%;
+  z-index:5;
+}
 </style>
   
   <script type="application/ld+json">  
@@ -406,20 +409,17 @@ footer a { color:#f7d77a; }
     وانتشار للمزارع والبيوت الحديثة.
   </p>
 
-  <div class="timeline-gallery">
-    <figure>
-      <img src="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa61.webp"
-           alt="بلدة الوسية السلط صورة جوية قديمة من ستينيات القرن الماضي"
-           loading="lazy">
-      <figcaption>بلدة الوسية في ستينيات القرن الماضي</figcaption>
-    </figure>
+  <div class="before-after">
+    <img src="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa60.webp"
+         alt="بلدة الوسية السلط صورة جوية حديثة عام 2025">
 
-    <figure>
-      <img src="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa60.webp"
-           alt="بلدة الوسية السلط صورة جوية حديثة عام 2025"
-           loading="lazy">
-      <figcaption>بلدة الوسية عام 2025</figcaption>
-    </figure>
+    <div class="before-layer">
+      <img src="https://www.shakerabuhamour.com/subject9541/alwasiya-salt/wa61.webp"
+           alt="بلدة الوسية السلط صورة جوية قديمة من ستينيات القرن الماضي">
+    </div>
+
+    <input type="range" min="0" max="100" value="50" class="before-after-slider"
+           oninput="this.previousElementSibling.style.width = this.value + '%'">
   </div>
 </section>
     
