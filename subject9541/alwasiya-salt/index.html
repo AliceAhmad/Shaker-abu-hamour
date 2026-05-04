@@ -311,8 +311,14 @@ footer a { color:#f7d77a; }
 
 .timeline-gallery img{
   width:100%;
-  height:auto;
-  display:block;
+  height:220px;
+  object-fit:cover;
+}
+
+@media (min-width:768px){
+  .timeline-gallery img{
+    height:300px;
+  }
 }
 
 .timeline-gallery figcaption{
