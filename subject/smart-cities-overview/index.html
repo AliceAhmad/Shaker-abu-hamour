@@ -206,7 +206,24 @@
   border-radius:8px;
 }
 
+.toc-link{
+  display:block;
+  background:#ffffff;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  color:#003366;
+  font-weight:700;
+  border-right:4px solid #0b4d8a;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+  transition:0.25s ease;
+}
 
+.toc-link:hover{
+  background:#003366;
+  color:#ffffff;
+  transform:translateY(-2px);
+}
     
     footer{
       text-align:center;
@@ -306,51 +323,55 @@
         alt="المدن الذكية" loading="eager"
         style="width:100%; max-width:1000px; height:auto; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.18);">
     </header>
-
 <div class="info-box">
   <h3 style="margin-top:0; color:#003366;">📑 محتويات الصفحة</h3>
 
-  <ul style="line-height:2; padding-right:20px;">
+  <div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:12px;
+    margin-top:20px;
+  ">
 
-    <li><a href="#intro">🌐 مدخل إلى المدن الذكية</a></li>
+    <a href="#intro" class="toc-link">🌐 مدخل إلى المدن الذكية</a>
 
-    <li><a href="#definition">🏙️ ما هي المدينة الذكية؟</a></li>
+    <a href="#definition" class="toc-link">🏙️ ما هي المدينة الذكية؟</a>
 
-    <li><a href="#comparison">🏙️ الفرق بين المدن التقليدية والمدن الذكية</a></li>
+    <a href="#comparison" class="toc-link">🏙️ الفرق بين المدن التقليدية والمدن الذكية</a>
 
-    <li><a href="#how-work">⚙️ كيف تعمل المدن الذكية؟</a></li>
+    <a href="#how-work" class="toc-link">⚙️ كيف تعمل المدن الذكية؟</a>
 
-    <li><a href="#technologies">🧠 التقنيات الأساسية في المدن الذكية</a></li>
+    <a href="#technologies" class="toc-link">🧠 التقنيات الأساسية في المدن الذكية</a>
 
-    <li><a href="#transport">🚦 النقل الذكي في المدن الذكية</a></li>
+    <a href="#transport" class="toc-link">🚦 النقل الذكي في المدن الذكية</a>
 
-    <li><a href="#energy">⚡ الطاقة الذكية والاستدامة</a></li>
+    <a href="#energy" class="toc-link">⚡ الطاقة الذكية والاستدامة</a>
 
-    <li><a href="#water">💧 إدارة المياه والنفايات</a></li>
+    <a href="#water" class="toc-link">💧 إدارة المياه والنفايات</a>
 
-    <li><a href="#services">🏥 الخدمات الذكية في المدن الحديثة</a></li>
+    <a href="#services" class="toc-link">🏥 الخدمات الذكية في المدن الحديثة</a>
 
-    <li><a href="#goals">🌍 أهداف المدن الذكية</a></li>
+    <a href="#goals" class="toc-link">🌍 أهداف المدن الذكية</a>
 
-    <li><a href="#economy">💰 الأثر الاقتصادي للمدن الذكية</a></li>
+    <a href="#economy" class="toc-link">💰 الأثر الاقتصادي للمدن الذكية</a>
 
-    <li><a href="#examples">🏙️ أشهر المدن الذكية في العالم</a></li>
+    <a href="#examples" class="toc-link">🏙️ أشهر المدن الذكية في العالم</a>
 
-    <li><a href="#challenges">⚠️ التحديات التي تواجه المدن الذكية</a></li>
+    <a href="#challenges" class="toc-link">⚠️ التحديات التي تواجه المدن الذكية</a>
 
-    <li><a href="#human">🏛️ هل ستستبدل المدن الذكية الإنسان؟</a></li>
+    <a href="#human" class="toc-link">🏛️ هل ستستبدل المدن الذكية الإنسان؟</a>
 
-    <li><a href="#cybersecurity">🔐 الأمن السيبراني في المدن الذكية</a></li>
+    <a href="#cybersecurity" class="toc-link">🔐 الأمن السيبراني في المدن الذكية</a>
 
-    <li><a href="#ai">🤖 الذكاء الاصطناعي ومدن المستقبل</a></li>
+    <a href="#ai" class="toc-link">🤖 الذكاء الاصطناعي ومدن المستقبل</a>
 
-    <li><a href="#carbon">🌱 المدن الذكية والحياد الكربوني</a></li>
+    <a href="#carbon" class="toc-link">🌱 المدن الذكية والحياد الكربوني</a>
 
-    <li><a href="#future">📈 مستقبل المدن الذكية</a></li>
+    <a href="#future" class="toc-link">📈 مستقبل المدن الذكية</a>
 
-    <li><a href="#sources">📚 مصادر ومراجع موثوقة</a></li>
+    <a href="#sources" class="toc-link">📚 مصادر ومراجع موثوقة</a>
 
-  </ul>
+  </div>
 </div>
 
     
