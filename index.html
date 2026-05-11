@@ -615,6 +615,33 @@
     transform: translateY(-6px);
   }
 }
+
+.flag-float{
+  animation: jordanFlag 6s ease-in-out infinite;
+  display:inline-block;
+  transform-origin:left center;
+}
+
+@keyframes jordanFlag{
+
+  0%,100%{
+    transform:translateY(0) rotate(0deg);
+  }
+
+  25%{
+    transform:translateY(-2px) rotate(0.6deg);
+  }
+
+  50%{
+    transform:translateY(-4px) rotate(0deg);
+  }
+
+  75%{
+    transform:translateY(-2px) rotate(-0.6deg);
+  }
+
+}
+   
 </style>
 
   <!-- Google tag (gtag.js) -->
