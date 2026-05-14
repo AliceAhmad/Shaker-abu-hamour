@@ -25,197 +25,62 @@
   --card:#ffffff;
   --text:#1f2937;
   --border:#d7e2ec;
-  --shadow:0 10px 28px rgba(0,0,0,.08);
-}
+  --shadow:0 10px 28px rgba(0,0,0,.08); }
 
 *{box-sizing:border-box;}
-
 html{scroll-behavior:smooth;}
-
-body{
-  margin:0;
-  font-family:"Cairo",sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:2;
-  text-align:justify;
-}
-
-.hero{
-  padding:90px 20px;
-  text-align:center;
-  color:#fff;
-  background:
-  linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-  url("https://www.shakerabuhamour.com/subject/ozone-layer/atm1.webp") center/cover no-repeat;
-}
-
-.hero h1{
-  font-size:clamp(30px,5vw,52px);
-  margin-bottom:18px;
-}
-
-.hero p{
-  max-width:900px;
-  margin:auto;
-  font-size:20px;
-  color:#f3f4f6;
-}
-
-.container{
-  max-width:1300px;
-  margin:auto;
-  padding:25px 8px;
-}
-
-.section{
-  background:var(--card);
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:24px;
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-
-.section h2{
-  color:var(--main);
-  border-right:6px solid var(--sky);
-  padding-right:12px;
-  margin-top:0;
-  font-size:22px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:18px;
-  margin-top:20px;
-}
-
-.card{
-  background:#f9fbfd;
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:14px;
-}
-
-.card strong{
-  color:var(--sky);
-  font-size:18px;
-}
-
-.note{
-  background:#eef6ff;
-  border-right:5px solid var(--sky);
-  padding:16px;
-  border-radius:12px;
-  margin-top:20px;
-}
-
-figure{
-  text-align:center;
-  margin:30px 0;
-}
-
-figure img{
-  width:100%;
-  max-width:550px;
-  height:auto;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.12);
-}
-
-.toc{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;
-}
-
-.toc a{
-  background:#fff;
-  padding:12px;
-  border-radius:12px;
-  text-decoration:none;
-  color:var(--main);
-  font-weight:700;
-  border-right:4px solid var(--sky);
-  transition:.25s;
-}
-
-.toc a:hover{
-  background:var(--main);
-  color:#fff;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:20px;
-  display:block;
-  overflow-x:auto;
-  white-space:nowrap;
-}
-
-th,td{
-  border:1px solid var(--border);
-  padding:12px;
-  text-align:center;
-}
-
-th{
-  background:var(--main);
-  color:#fff;
-}
-
+body{ margin:0; font-family:"Cairo",sans-serif; background:var(--bg); color:var(--text); line-height:2; text-align:justify;}
+.hero{ padding:90px 20px; text-align:center; color:#fff; background:
+ linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+  url("https://www.shakerabuhamour.com/subject/ozone-layer/atm1.webp") center/cover no-repeat;}
+.hero h1{ font-size:clamp(30px,5vw,52px); margin-bottom:18px;}
+.hero p{ max-width:900px; margin:auto; font-size:20px; color:#f3f4f6;}
+.container{ max-width:1300px; margin:auto; padding:25px 8px;}
+.section{ background:var(--card); border-radius:18px; padding:18px; margin-bottom:24px; border:1px solid var(--border); box-shadow:var(--shadow);}
+.section h2{ color:var(--main); border-right:6px solid var(--sky); padding-right:12px; margin-top:0; font-size:22px;}
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-top:20px;}
+.card{ background:#f9fbfd; border:1px solid var(--border); border-radius:16px; padding:14px;}
+.card strong{ color:var(--sky); font-size:18px;}
+.note{ background:#eef6ff; border-right:5px solid var(--sky); padding:16px; border-radius:12px; margin-top:20px;}
+figure{ text-align:center; margin:30px 0;}
+figure img{ width:100%; max-width:550px; height:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.12);}
+.toc{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px;}
+.toc a{ background:#fff; padding:12px; border-radius:12px; text-decoration:none; color:var(--main); font-weight:700; border-right:4px solid var(--sky); transition:.25s;}
+.toc a:hover{ background:var(--main); color:#fff;}
+table{ width:100%; border-collapse:collapse; margin-top:20px; display:block; overflow-x:auto; white-space:nowrap;}
+th,td{  border:1px solid var(--border); padding:12px;  text-align:center;}
+th{ background:var(--main);  color:#fff;}
 
 @media(max-width:768px){
   .hero{padding:70px 18px;}
   .section{padding:18px;}
-  table{font-size:14px;}
-}
+  table{font-size:14px;}}
 .share-wrap, .action-box, .mini-signature, .back-top{ text-align:center; }
-
 .share-wrap{  margin-top:30px; }
-
 .share-btn{ display:inline-block; color:#fff; padding:10px 15px; margin:5px; border-radius:6px; text-decoration:none; font-size:14px; }
-
 .btn-wa{background:#25D366;}
 .btn-fb{background:#4267B2;}
 .btn-ms{background:#0084ff;}
 
 .action-box{ margin-top:15px; }
-
 .action-btn{ background:#f0f0f0; border:none; color:#333; padding:10px 20px; margin:5px; font-size:14px; border-radius:8px; cursor:pointer; }
-
 .back-top{ background:#f2f2f2; margin-top:15px; padding:10px; border-radius:8px; }
-
 .signature-box { margin-top: 30px; background-color: #f4f4f4; padding: 15px; border-right: 4px solid #007B5E; border-radius: 8px; }  
-  
-  footer { text-align:center; padding:20px 10px; font-size:14px; color:#666; background:#f2f2f2;
-    margin-top:30px; border-top:1px solid #ddd; border-radius:8px; }
+ footer { text-align:center; padding:20px 10px; font-size:14px; color:#666; background:#f2f2f2;
+   margin-top:30px; border-top:1px solid #ddd; border-radius:8px; }
   
 </style>
 
  <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Article",
+{ "@context":"https://schema.org", "@type":"Article",
   "headline":"طبقة الأوزون | درع الأرض الطبيعي ضد الأشعة فوق البنفسجية",
   "description":"شرح شامل عن طبقة الأوزون وأهميتها وثقب الأوزون والتغير المناخي.",
-  "author":{
-    "@type":"Person",
-    "name":"أحمد شاكر أحمد أبو حمور"
-  },
-  "publisher":{
-    "@type":"Organization",
-    "name":"shakerabuhamour.com"
-  },
-  "mainEntityOfPage":{
-    "@type":"WebPage",
-    "@id":"https://www.shakerabuhamour.com/subject/ozone-layer"
-  }
-}
+  "author":{ "@type":"Person", "name":"أحمد شاكر أحمد أبو حمور"  },
+  "publisher":{  "@type":"Organization",  "name":"shakerabuhamour.com"  },
+  "mainEntityOfPage":{ "@type":"WebPage", "@id":"https://www.shakerabuhamour.com/subject/ozone-layer" }}
 </script> 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6395569207699454"
+     crossorigin="anonymous"></script>
 </head>
 
 <body id="top">
@@ -255,12 +120,9 @@ th{
 <section class="section" id="intro">
 <h2>مقدمة</h2>
 <p>
-تُعد طبقة الأوزون من أهم مكوّنات الغلاف الجوي للأرض، فهي تعمل كدرع طبيعي يمتص جزءًا كبيرًا من الأشعة فوق البنفسجية الضارة القادمة من الشمس، مما يساعد على حماية الإنسان والحيوان والنبات والأنظمة البيئية.
-</p>
-
+تُعد طبقة الأوزون من أهم مكوّنات الغلاف الجوي للأرض، فهي تعمل كدرع طبيعي يمتص جزءًا كبيرًا من الأشعة فوق البنفسجية الضارة القادمة من الشمس، مما يساعد على حماية الإنسان والحيوان والنبات والأنظمة البيئية.</p>
 <p>
-وعلى الرغم من أن الأوزون يوجد بكميات قليلة مقارنة ببقية غازات الغلاف الجوي، إلا أن دوره بالغ الأهمية في استمرار الحياة، إذ إن ضعف هذه الطبقة أو تآكلها قد يؤدي إلى زيادة وصول الأشعة الضارة إلى سطح الأرض.
-</p>
+وعلى الرغم من أن الأوزون يوجد بكميات قليلة مقارنة ببقية غازات الغلاف الجوي، إلا أن دوره بالغ الأهمية في استمرار الحياة، إذ إن ضعف هذه الطبقة أو تآكلها قد يؤدي إلى زيادة وصول الأشعة الضارة إلى سطح الأرض.</p>
 
 <figure>
   <img src="https://www.shakerabuhamour.com/subject/ozone-layer/ozone1.webp" alt="طبقة الأوزون حول الأرض" loading="lazy">
@@ -270,12 +132,9 @@ th{
 <section class="section" id="definition">
 <h2>ما هي طبقة الأوزون؟</h2>
 <p>
-طبقة الأوزون هي منطقة من الغلاف الجوي تحتوي على تركيز أعلى نسبيًا من غاز الأوزون، وهو غاز يتكوّن من ثلاث ذرات أكسجين ويرمز له كيميائيًا بالرمز O<sub>3</sub>.
-</p>
-
+طبقة الأوزون هي منطقة من الغلاف الجوي تحتوي على تركيز أعلى نسبيًا من غاز الأوزون، وهو غاز يتكوّن من ثلاث ذرات أكسجين ويرمز له كيميائيًا بالرمز O<sub>3</sub>.</p>
 <p>
-ولا تُعد طبقة الأوزون طبقة صلبة أو مرئية، بل هي نطاق غازي رقيق منتشر في طبقة الستراتوسفير، ويؤدي دورًا رئيسيًا في امتصاص الأشعة فوق البنفسجية.
-</p>
+ولا تُعد طبقة الأوزون طبقة صلبة أو مرئية، بل هي نطاق غازي رقيق منتشر في طبقة الستراتوسفير، ويؤدي دورًا رئيسيًا في امتصاص الأشعة فوق البنفسجية.</p>
 
 <div class="note">
 🌍 رغم أن الأوزون يوجد بنسبة قليلة جدًا، إلا أن تأثيره في حماية الحياة على الأرض كبير جدًا.
@@ -285,19 +144,15 @@ th{
 <section class="section" id="location">
 <h2>أين تقع طبقة الأوزون؟</h2>
 <p>
-تقع طبقة الأوزون أساسًا في طبقة الستراتوسفير، على ارتفاع يتراوح تقريبًا بين 15 و35 كيلومترًا فوق سطح الأرض، وتكون أكثر تركيزًا عادة حول ارتفاع 20 إلى 30 كيلومترًا.
-</p>
-
+تقع طبقة الأوزون أساسًا في طبقة الستراتوسفير، على ارتفاع يتراوح تقريبًا بين 15 و35 كيلومترًا فوق سطح الأرض، وتكون أكثر تركيزًا عادة حول ارتفاع 20 إلى 30 كيلومترًا.</p>
 <p>
-ويختلف تركيز الأوزون بحسب الموقع الجغرافي والفصول وحركة الرياح والظروف الكيميائية في الغلاف الجوي.
-</p>
+ويختلف تركيز الأوزون بحسب الموقع الجغرافي والفصول وحركة الرياح والظروف الكيميائية في الغلاف الجوي.</p>
 </section>
 
 <section class="section" id="formation">
 <h2>كيف تتكوّن طبقة الأوزون؟</h2>
 <p>
-يتكوّن الأوزون عندما تقوم الأشعة فوق البنفسجية بتفكيك جزيئات الأكسجين O<sub>2</sub> إلى ذرات أكسجين منفردة، ثم تتحد هذه الذرات مع جزيئات أكسجين أخرى لتكوين الأوزون O<sub>3</sub>.
-</p>
+يتكوّن الأوزون عندما تقوم الأشعة فوق البنفسجية بتفكيك جزيئات الأكسجين O<sub>2</sub> إلى ذرات أكسجين منفردة، ثم تتحد هذه الذرات مع جزيئات أكسجين أخرى لتكوين الأوزون O<sub>3</sub>.</p>
 
 <div class="note">
 ☀️ تتكوّن طبقة الأوزون نتيجة تفاعل طبيعي بين أشعة الشمس وجزيئات الأكسجين في طبقة الستراتوسفير.
@@ -363,34 +218,27 @@ th{
 <section class="section" id="hole">
 <h2>ثقب الأوزون</h2>
 <p>
-ثقب الأوزون لا يعني وجود فتحة حقيقية في الغلاف الجوي، بل يشير إلى انخفاض كبير في تركيز الأوزون في منطقة معينة، خاصة فوق القارة القطبية الجنوبية خلال فترات محددة من السنة.
-</p>
+ثقب الأوزون لا يعني وجود فتحة حقيقية في الغلاف الجوي، بل يشير إلى انخفاض كبير في تركيز الأوزون في منطقة معينة، خاصة فوق القارة القطبية الجنوبية خلال فترات محددة من السنة.</p>
 <p>
-ويظهر ثقب الأوزون بشكل أكبر فوق القارة القطبية الجنوبية بسبب الظروف الجوية الباردة جدًا والتفاعلات الكيميائية التي تنشط خلال فصل الربيع القطبي.</p>
-
-  
+ويظهر ثقب الأوزون بشكل أكبر فوق القارة القطبية الجنوبية بسبب الظروف الجوية الباردة جدًا والتفاعلات الكيميائية التي تنشط خلال فصل الربيع القطبي.</p> 
 <p>
-وقد أصبح هذا المصطلح معروفًا عالميًا بعد رصد انخفاض كبير في الأوزون خلال النصف الثاني من القرن العشرين.
-</p>
+وقد أصبح هذا المصطلح معروفًا عالميًا بعد رصد انخفاض كبير في الأوزون خلال النصف الثاني من القرن العشرين.</p>
 </section>
+  
 <section class="section" id="antarctica">
 <h2>لماذا يزداد ثقب الأوزون فوق القطب الجنوبي؟</h2>
-
 <p>
-يظهر انخفاض الأوزون بشكل أوضح فوق القارة القطبية الجنوبية بسبب الظروف الجوية الخاصة في تلك المنطقة، حيث تؤدي درجات الحرارة شديدة الانخفاض إلى تكوّن سحب ستراتوسفيرية قطبية تساعد على تنشيط التفاعلات الكيميائية التي تُضعف جزيئات الأوزون.
-</p>
-
+يظهر انخفاض الأوزون بشكل أوضح فوق القارة القطبية الجنوبية بسبب الظروف الجوية الخاصة في تلك المنطقة، حيث تؤدي درجات الحرارة شديدة الانخفاض إلى تكوّن سحب ستراتوسفيرية قطبية تساعد على تنشيط التفاعلات الكيميائية التي تُضعف جزيئات الأوزون.</p>
 <p>
-ومع عودة ضوء الشمس في فصل الربيع القطبي، تبدأ هذه التفاعلات بالنشاط بشكل أكبر، فتؤدي إلى انخفاض واضح في تركيز الأوزون فوق المنطقة.
-</p>
+ومع عودة ضوء الشمس في فصل الربيع القطبي، تبدأ هذه التفاعلات بالنشاط بشكل أكبر، فتؤدي إلى انخفاض واضح في تركيز الأوزون فوق المنطقة.</p>
 
 <div class="note">
 ❄️ لا يعني ثقب الأوزون وجود فتحة حقيقية في السماء، بل يعني انخفاضًا كبيرًا في تركيز الأوزون ضمن منطقة محددة من الغلاف الجوي.
 </div>
 </section>
+  
 <section class="section" id="causes">
 <h2>أسباب تآكل طبقة الأوزون</h2>
-
 <div class="grid">
 <div class="card">
 <strong>مركبات الكلوروفلوروكربون CFCs</strong>
@@ -420,62 +268,50 @@ th{
 <li>تسريع تلف بعض المواد مثل البلاستيك والمطاط والدهانات.</li>
 </ul>
 </section>
+  
 <section class="section" id="health">
 <h2>الأوزون وصحة الإنسان</h2>
-
 <p>
-تلعب طبقة الأوزون دورًا مهمًا في حماية صحة الإنسان، لأنها تقلل وصول الأشعة فوق البنفسجية الضارة إلى سطح الأرض. وعند ضعف هذه الطبقة، تزداد احتمالية التعرض لهذه الأشعة، خاصة في المناطق المكشوفة وذات السطوع الشمسي المرتفع.
-</p>
+تلعب طبقة الأوزون دورًا مهمًا في حماية صحة الإنسان، لأنها تقلل وصول الأشعة فوق البنفسجية الضارة إلى سطح الأرض. وعند ضعف هذه الطبقة، تزداد احتمالية التعرض لهذه الأشعة، خاصة في المناطق المكشوفة وذات السطوع الشمسي المرتفع.</p>
 
 <div class="grid">
-
 <div class="card">
 <strong>صحة الجلد</strong>
 <p>
-زيادة التعرض للأشعة فوق البنفسجية قد ترفع احتمالية حدوث أضرار جلدية، لذلك يُنصح باستخدام وسائل الوقاية من الشمس.
-</p>
+زيادة التعرض للأشعة فوق البنفسجية قد ترفع احتمالية حدوث أضرار جلدية، لذلك يُنصح باستخدام وسائل الوقاية من الشمس.</p>
 </div>
 
 <div class="card">
 <strong>صحة العين</strong>
 <p>
-قد تؤثر الأشعة فوق البنفسجية في العينين مع التعرض الطويل، خاصة دون استخدام نظارات واقية مناسبة.
-</p>
+قد تؤثر الأشعة فوق البنفسجية في العينين مع التعرض الطويل، خاصة دون استخدام نظارات واقية مناسبة.</p>
 </div>
 
 <div class="card">
 <strong>جهاز المناعة</strong>
 <p>
-تشير بعض الدراسات إلى أن التعرض الزائد للأشعة فوق البنفسجية قد يؤثر في بعض وظائف المناعة لدى الإنسان.
-</p>
+تشير بعض الدراسات إلى أن التعرض الزائد للأشعة فوق البنفسجية قد يؤثر في بعض وظائف المناعة لدى الإنسان.</p>
 </div>
-
 </div>
 
 <div class="note">
 ☀️ حماية طبقة الأوزون تعني حماية الإنسان والحياة البرية والزراعة والأنظمة البيئية من زيادة الأشعة الضارة.
 </div>
 </section>
+  
 <section class="section" id="montreal">
 <h2>بروتوكول مونتريال وحماية الأوزون</h2>
 <p>
-يُعد بروتوكول مونتريال من أبرز الاتفاقيات البيئية الدولية، وقد وُضع للحد من إنتاج واستخدام المواد المستنفدة لطبقة الأوزون، مثل مركبات CFCs والهالونات.
-</p>
-
+يُعد بروتوكول مونتريال من أبرز الاتفاقيات البيئية الدولية، وقد وُضع للحد من إنتاج واستخدام المواد المستنفدة لطبقة الأوزون، مثل مركبات CFCs والهالونات.</p>
 <p>
-وقد ساعد هذا البروتوكول في تقليل انبعاثات المواد الضارة بطبقة الأوزون، ويُعد مثالًا مهمًا على قدرة التعاون الدولي في معالجة المشكلات البيئية العالمية.
-</p>
+وقد ساعد هذا البروتوكول في تقليل انبعاثات المواد الضارة بطبقة الأوزون، ويُعد مثالًا مهمًا على قدرة التعاون الدولي في معالجة المشكلات البيئية العالمية.</p>
 </section>
 <section class="section" id="recovery">
 <h2>هل تعافت طبقة الأوزون؟</h2>
-
 <p>
-تشير المتابعات العلمية إلى أن طبقة الأوزون بدأت تُظهر علامات تحسن تدريجي بعد خفض استخدام المواد المستنفدة للأوزون عالميًا، خصوصًا بعد تطبيق بروتوكول مونتريال.
-</p>
-
+تشير المتابعات العلمية إلى أن طبقة الأوزون بدأت تُظهر علامات تحسن تدريجي بعد خفض استخدام المواد المستنفدة للأوزون عالميًا، خصوصًا بعد تطبيق بروتوكول مونتريال.</p>
 <p>
-ومع ذلك، فإن تعافي طبقة الأوزون يحتاج إلى عقود طويلة، لأن بعض المواد الكيميائية الضارة تبقى في الغلاف الجوي لفترات طويلة قبل أن تتحلل بالكامل.
-</p>
+ومع ذلك، فإن تعافي طبقة الأوزون يحتاج إلى عقود طويلة، لأن بعض المواد الكيميائية الضارة تبقى في الغلاف الجوي لفترات طويلة قبل أن تتحلل بالكامل.</p>
 
 <div class="note">
 🌍 يُعد تحسن طبقة الأوزون من أبرز الأمثلة العالمية على نجاح التعاون الدولي في حماية البيئة عندما تلتزم الدول بإجراءات علمية مشتركة.
@@ -508,8 +344,7 @@ th{
 <section class="section" id="climate">
 <h2>طبقة الأوزون والتغير المناخي</h2>
 <p>
-ترتبط طبقة الأوزون والتغير المناخي بالغلاف الجوي، لكنهما لا يمثلان الظاهرة نفسها. فتآكل الأوزون يرتبط غالبًا بمواد كيميائية تستنفد الأوزون، بينما يرتبط التغير المناخي بزيادة الغازات الدفيئة مثل ثاني أكسيد الكربون والميثان.
-</p>
+ترتبط طبقة الأوزون والتغير المناخي بالغلاف الجوي، لكنهما لا يمثلان الظاهرة نفسها. فتآكل الأوزون يرتبط غالبًا بمواد كيميائية تستنفد الأوزون، بينما يرتبط التغير المناخي بزيادة الغازات الدفيئة مثل ثاني أكسيد الكربون والميثان.</p>
 
 <div class="note">
 📘 لفهم العلاقة الأوسع يمكن الرجوع إلى صفحة الغلاف الجوي وصفحة التغير المناخي داخل الموقع.
@@ -519,56 +354,45 @@ th{
 <section class="section" id="satellites">
 <h2>مراقبة الأوزون بالأقمار الصناعية</h2>
 <p>
-تُستخدم الأقمار الصناعية وأجهزة الرصد الأرضية لمراقبة تركيز الأوزون في الغلاف الجوي، وتتبع التغيرات الموسمية والسنوية في طبقة الأوزون، خاصة فوق المناطق القطبية.
-</p>
+تُستخدم الأقمار الصناعية وأجهزة الرصد الأرضية لمراقبة تركيز الأوزون في الغلاف الجوي، وتتبع التغيرات الموسمية والسنوية في طبقة الأوزون، خاصة فوق المناطق القطبية.</p>
   <p>
-وتساعد بيانات الأقمار الصناعية العلماء على دراسة تطور طبقة الأوزون عالميًا، ومراقبة حجم ثقب الأوزون والتغيرات المناخية المرتبطة بالغلاف الجوي.
-</p>
+وتساعد بيانات الأقمار الصناعية العلماء على دراسة تطور طبقة الأوزون عالميًا، ومراقبة حجم ثقب الأوزون والتغيرات المناخية المرتبطة بالغلاف الجوي.</p>
 </section>
 <section class="section" id="measurement">
 <h2>كيف يُقاس الأوزون؟</h2>
-
 <p>
-يقاس الأوزون في الغلاف الجوي باستخدام محطات رصد أرضية وأجهزة علمية محمولة على الأقمار الصناعية، إضافة إلى بالونات أرصاد خاصة تحمل أجهزة تقيس تركيز الأوزون على ارتفاعات مختلفة.
-</p>
-
+يقاس الأوزون في الغلاف الجوي باستخدام محطات رصد أرضية وأجهزة علمية محمولة على الأقمار الصناعية، إضافة إلى بالونات أرصاد خاصة تحمل أجهزة تقيس تركيز الأوزون على ارتفاعات مختلفة.</p>
 <p>
-ويُستخدم مصطلح "وحدة دوبسون" لقياس كمية الأوزون في عمود رأسي من الغلاف الجوي، وهي من أشهر الوحدات المستخدمة عالميًا في رصد طبقة الأوزون.
-</p>
+ويُستخدم مصطلح "وحدة دوبسون" لقياس كمية الأوزون في عمود رأسي من الغلاف الجوي، وهي من أشهر الوحدات المستخدمة عالميًا في رصد طبقة الأوزون.</p>
 
 <div class="grid">
 
 <div class="card">
 <strong>الأقمار الصناعية</strong>
 <p>
-تراقب توزيع الأوزون عالميًا وتساعد في رسم خرائط ثقب الأوزون والتغيرات الموسمية.
-</p>
+تراقب توزيع الأوزون عالميًا وتساعد في رسم خرائط ثقب الأوزون والتغيرات الموسمية.</p>
 </div>
 
 <div class="card">
 <strong>محطات الرصد الأرضية</strong>
 <p>
-تقيس تركيز الأوزون من سطح الأرض باستخدام أجهزة متخصصة في مراقبة الإشعاع الشمسي.
-</p>
+تقيس تركيز الأوزون من سطح الأرض باستخدام أجهزة متخصصة في مراقبة الإشعاع الشمسي.</p>
 </div>
 
 <div class="card">
 <strong>بالونات الأوزون</strong>
 <p>
-تحمل أجهزة قياس إلى طبقات الجو العليا لرصد تغير الأوزون مع الارتفاع.
-</p>
+تحمل أجهزة قياس إلى طبقات الجو العليا لرصد تغير الأوزون مع الارتفاع.</p>
 </div>
-
 </div>
 
 <div class="note">
 📡 يساعد قياس الأوزون بدقة العلماء على متابعة صحة طبقة الأوزون واتخاذ قرارات بيئية مبنية على بيانات علمية.
 </div>
 </section>
-<section class="section" id="facts">
   
+<section class="section" id="facts">
 <h2>حقائق علمية عن طبقة الأوزون</h2>
-
 <div class="note">☀️ طبقة الأوزون تمتص معظم الأشعة فوق البنفسجية الضارة من نوع UVB وUVC.</div>
 <div class="note">🌍 يقع معظم الأوزون النافع في طبقة الستراتوسفير.</div>
 <div class="note">🧪 الأوزون قرب سطح الأرض قد يكون ملوثًا ضارًا، رغم أن الأوزون في الستراتوسفير مفيد للحياة.</div>
