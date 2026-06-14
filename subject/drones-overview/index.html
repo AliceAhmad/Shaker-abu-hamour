@@ -30,9 +30,413 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+
+
+
+<style>
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#64748b;
+  --primary:#003366;
+  --primary-dark:#002244;
+  --accent:#2563eb;
+  --soft:#eef7ff;
+  --border:#e5e7eb;
+  --shadow:0 12px 35px rgba(15,23,42,.08);
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:'Cairo',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.9;
+  direction:rtl;
+  text-align:right;
+}
+
+a{
+  color:var(--primary);
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* ===== Hero ===== */
+.hero{
+  background:
+    linear-gradient(135deg,rgba(0,51,102,.93),rgba(37,99,235,.86)),
+    url('cover.webp') center/cover no-repeat;
+  color:#fff;
+  padding:80px 0 70px;
+  border-bottom-left-radius:34px;
+  border-bottom-right-radius:34px;
+}
+
+.hero .badge{
+  display:inline-block;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.35);
+  padding:7px 16px;
+  border-radius:999px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(30px,5vw,54px);
+  line-height:1.35;
+  margin:0 0 18px;
+  font-weight:800;
+}
+
+.hero p{
+  max-width:850px;
+  font-size:1.14rem;
+  margin:0;
+  color:#eefefe;
+}
+
+.meta{
+  margin-top:22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.meta span{
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  padding:6px 12px;
+  border-radius:12px;
+  font-size:.95rem;
+}
+
+/* ===== Sections ===== */
+.section{
+  background:var(--card);
+  margin:26px 0;
+  padding:30px;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+
+.section h2{
+  margin-top:0;
+  color:var(--primary-dark);
+  font-size:1.8rem;
+  border-right:5px solid var(--primary);
+  padding-right:14px;
+}
+
+.section h3{
+  color:#1e40af;
+}
+
+.section p{
+  text-align:justify;
+}
+
+.lead{
+  font-size:1.08rem;
+  color:#334155;
+}
+
+/* ===== Table of Contents ===== */
+.toc{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:12px;
+}
+
+.toc a{
+  background:#f8fafc;
+  border:1px solid var(--border);
+  padding:12px 14px;
+  border-radius:14px;
+  font-weight:700;
+}
+
+/* ===== Grids & Cards ===== */
+.grid-2,
+.grid-3{
+  display:grid;
+  gap:18px;
+}
+
+.grid-2{
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.card{
+  background:#f8fafc;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:20px;
+}
+
+.card h3{
+  margin-top:0;
+  color:var(--primary-dark);
+}
+
+/* ===== Notes ===== */
+.note{
+  background:var(--soft);
+  border-right:5px solid var(--primary);
+  padding:18px;
+  border-radius:16px;
+  color:#0f3b63;
+  font-weight:600;
+}
+
+.warning{
+  background:#fff7ed;
+  border-right:5px solid #f97316;
+  padding:18px;
+  border-radius:16px;
+  color:#7c2d12;
+}
+
+.quote{
+  background:#f8fafc;
+  border-right:5px solid var(--accent);
+  padding:20px;
+  border-radius:16px;
+  font-style:italic;
+  color:#334155;
+}
+
+/* ===== Images ===== */
+.article-image{
+  width:100%;
+  border-radius:18px;
+  margin:20px 0;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+figure{
+  margin:28px 0;
+  text-align:center;
+}
+
+figure img{
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+figcaption{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+/* ===== Timeline ===== */
+.timeline{
+  position:relative;
+  padding-right:20px;
+}
+
+.timeline div{
+  margin-bottom:16px;
+  padding:16px;
+  background:#f8fafc;
+  border-radius:16px;
+  border:1px solid var(--border);
+}
+
+/* ===== Tables ===== */
+.table-wrap{
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:13px;
+  text-align:right;
+}
+
+th{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* ===== Sources ===== */
+.sources li{
+  margin-bottom:8px;
+}
+
+/* ===== Read More ===== */
+.read-more{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:14px;
+}
+
+.read-more a{
+  display:block;
+  background:#f8fafc;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  font-weight:700;
+}
+
+/* ===== Share Buttons ===== */
+.share-wrap,
+.action-box,
+.mini-signature,
+.back-top{
+  text-align:center;
+}
+
+.share-wrap{
+  margin-top:30px;
+}
+
+.share-btn{
+  display:inline-block;
+  color:#fff;
+  padding:10px 15px;
+  margin:5px;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.btn-wa{background:#25D366;}
+.btn-fb{background:#4267B2;}
+.btn-ms{background:#0084ff;}
+
+.action-box{
+  margin-top:15px;
+}
+
+.action-btn{
+  background:#f0f0f0;
+  border:none;
+  color:#333;
+  padding:10px 20px;
+  margin:5px;
+  font-size:14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.action-btn:hover{
+  background:#e0e0e0;
+}
+
+/* ===== Signature ===== */
+.signature-box{
+  margin-top:30px;
+  background-color:#f4f4f4;
+  padding:15px;
+  border-right:4px solid var(--primary);
+  border-radius:8px;
+}
+
+/* ===== Back Top ===== */
+.back-top{
+  background:#f2f2f2;
+  margin-top:15px;
+  padding:10px;
+  border-radius:8px;
+}
+
+/* ===== Footer ===== */
+footer{
+  text-align:center;
+  padding:20px 10px;
+  font-size:14px;
+  color:#666;
+  background:#f2f2f2;
+  margin-top:30px;
+  border-top:1px solid #ddd;
+  border-radius:8px;
+}
+
+/* ===== Mobile ===== */
+@media(max-width:700px){
+
+  .hero{
+    padding:55px 0;
+    border-radius:0 0 24px 24px;
+  }
+
+  .section{
+    padding:22px;
+  }
+
+  .section h2{
+    font-size:1.45rem;
+  }
+
+  table,
+  thead,
+  tbody,
+  tr,
+  td,
+  th{
+    display:block;
+  }
+
+  thead{
+    display:none;
+  }
+
+  tr{
+    margin-bottom:14px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+  }
+
+  td{
+    border:none;
+    border-bottom:1px solid var(--border);
+  }
+
+  td::before{
+    content:attr(data-label);
+    display:block;
+    font-weight:800;
+    color:var(--primary-dark);
+    margin-bottom:4px;
+  }
+}
+</style>
 </head>
 
-
+<body id="top">
 
 
 <section class="section" id="drones">
