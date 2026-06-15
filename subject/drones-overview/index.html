@@ -33,9 +33,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-
-
-
 <style>
 :root{
   --bg:#f5f7fb;
@@ -47,8 +44,7 @@
   --accent:#2563eb;
   --soft:#eef7ff;
   --border:#e5e7eb;
-  --shadow:0 12px 35px rgba(15,23,42,.08);
-}
+  --shadow:0 12px 35px rgba(15,23,42,.08);}
 
 *{box-sizing:border-box}
 
@@ -61,22 +57,18 @@ body{
   color:var(--text);
   line-height:1.9;
   direction:rtl;
-  text-align:right;
-}
+  text-align:right;}
 
 a{
   color:var(--primary);
-  text-decoration:none;
-}
+  text-decoration:none;}
 
 a:hover{
-  text-decoration:underline;
-}
+  text-decoration:underline;}
 
 .container{
   width:min(1120px,92%);
-  margin:auto;
-}
+  margin:auto;}
 
 /* ===== Hero ===== */
 .hero{
@@ -86,8 +78,7 @@ a:hover{
   color:#fff;
   padding:80px 0 70px;
   border-bottom-left-radius:34px;
-  border-bottom-right-radius:34px;
-}
+  border-bottom-right-radius:34px;}
 
 .hero .badge{
   display:inline-block;
@@ -96,37 +87,32 @@ a:hover{
   padding:7px 16px;
   border-radius:999px;
   font-weight:700;
-  margin-bottom:18px;
-}
+  margin-bottom:18px;}
 
 .hero h1{
   font-size:clamp(30px,5vw,54px);
   line-height:1.35;
   margin:0 0 18px;
-  font-weight:800;
-}
+  font-weight:800;}
 
 .hero p{
   max-width:850px;
   font-size:1.14rem;
   margin:0;
-  color:#eefefe;
-}
+  color:#eefefe;}
 
 .meta{
   margin-top:22px;
   display:flex;
   flex-wrap:wrap;
-  gap:10px;
-}
+  gap:10px;}
 
 .meta span{
   background:rgba(255,255,255,.14);
   border:1px solid rgba(255,255,255,.28);
   padding:6px 12px;
   border-radius:12px;
-  font-size:.95rem;
-}
+  font-size:.95rem;}
 
 /* ===== Sections ===== */
 .section{
@@ -135,137 +121,116 @@ a:hover{
   padding:30px;
   border-radius:24px;
   box-shadow:var(--shadow);
-  border:1px solid var(--border);
-}
+  border:1px solid var(--border);}
 
 .section h2{
   margin-top:0;
   color:var(--primary-dark);
   font-size:1.8rem;
   border-right:5px solid var(--primary);
-  padding-right:14px;
-}
+  padding-right:14px;}
 
 .section h3{
-  color:#1e40af;
-}
+  color:#1e40af;}
 
 .section p{
-  text-align:justify;
-}
+  text-align:justify;}
 
 .lead{
   font-size:1.08rem;
-  color:#334155;
-}
+  color:#334155;}
 
 /* ===== Table of Contents ===== */
 .toc{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:12px;
-}
+  gap:12px;}
 
 .toc a{
   background:#f8fafc;
   border:1px solid var(--border);
   padding:12px 14px;
   border-radius:14px;
-  font-weight:700;
-}
+  font-weight:700;}
 
 /* ===== Grids & Cards ===== */
 .grid-2,
 .grid-3{
   display:grid;
-  gap:18px;
-}
+  gap:18px;}
 
 .grid-2{
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-}
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
 
 .grid-3{
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-}
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
 
 .card{
   background:#f8fafc;
   border:1px solid var(--border);
   border-radius:18px;
-  padding:20px;
-}
+  padding:16px;}
 
 .card h3{
   margin-top:0;
-  color:var(--primary-dark);
-}
+  color:var(--primary-dark);}
 
 /* ===== Notes ===== */
 .note{
   background:var(--soft);
   border-right:5px solid var(--primary);
-  padding:18px;
+  padding:16px;
   border-radius:16px;
   color:#0f3b63;
-  font-weight:600;
-}
+  font-weight:600;}
 
 .warning{
   background:#fff7ed;
   border-right:5px solid #f97316;
-  padding:18px;
+  padding:16px;
   border-radius:16px;
-  color:#7c2d12;
-}
+  color:#7c2d12;}
 
 .quote{
   background:#f8fafc;
   border-right:5px solid var(--accent);
-  padding:20px;
+  padding:17px;
   border-radius:16px;
   font-style:italic;
-  color:#334155;
-}
+  color:#334155;}
 
 /* ===== Images ===== */
 .article-image{
   width:100%;
   border-radius:18px;
   margin:20px 0;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
-}
+  box-shadow:0 8px 20px rgba(0,0,0,.12);}
 
 figure{
   margin:28px 0;
-  text-align:center;
-}
+  text-align:center;}
 
 figure img{
   width:100%;
   border-radius:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
-}
+  box-shadow:0 8px 20px rgba(0,0,0,.12);}
 
 figcaption{
   margin-top:8px;
   color:var(--muted);
-  font-size:.95rem;
-}
+  font-size:.95rem;}
 
 /* ===== Timeline ===== */
 .timeline{
   position:relative;
-  padding-right:20px;
-}
+  padding-right:20px;}
 
 .timeline div{
   margin-bottom:16px;
   padding:16px;
   background:#f8fafc;
   border-radius:16px;
-  border:1px solid var(--border);
-}
+  border:1px solid var(--border);}
 
 /* ===== Tables ===== */
 .table-wrap{
@@ -277,36 +242,30 @@ table{
   border-collapse:collapse;
   background:#fff;
   border-radius:16px;
-  overflow:hidden;
-}
+  overflow:hidden;}
 
 th,td{
   border:1px solid var(--border);
   padding:13px;
-  text-align:right;
-}
+  text-align:right;}
 
 th{
   background:var(--primary);
-  color:#fff;
-}
+  color:#fff;}
 
 /* ===== Sources ===== */
 .sources li{
-  margin-bottom:8px;
-}
+  margin-bottom:8px;}
 
 .sources a{
-  font-weight:600;
-}
+  font-weight:600;}
   
 
 /* ===== Read More ===== */
 .read-more{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:14px;
-}
+  gap:14px;}
 
 .read-more a{
   display:block;
@@ -314,20 +273,17 @@ th{
   padding:14px;
   border-radius:14px;
   border:1px solid var(--border);
-  font-weight:700;
-}
+  font-weight:700;}
 
 /* ===== Share Buttons ===== */
 .share-wrap,
 .action-box,
 .mini-signature,
 .back-top{
-  text-align:center;
-}
+  text-align:center;}
 
 .share-wrap{
-  margin-top:30px;
-}
+  margin-top:30px;}
 
 .share-btn{
   display:inline-block;
@@ -336,16 +292,14 @@ th{
   margin:5px;
   border-radius:6px;
   text-decoration:none;
-  font-size:14px;
-}
+  font-size:14px;}
 
 .btn-wa{background:#25D366;}
 .btn-fb{background:#4267B2;}
 .btn-ms{background:#0084ff;}
 
 .action-box{
-  margin-top:15px;
-}
+  margin-top:15px;}
 
 .action-btn{
   background:#f0f0f0;
@@ -355,12 +309,10 @@ th{
   margin:5px;
   font-size:14px;
   border-radius:8px;
-  cursor:pointer;
-}
+  cursor:pointer;}
 
 .action-btn:hover{
-  background:#e0e0e0;
-}
+  background:#e0e0e0;}
 
 /* ===== Signature ===== */
 .signature-box{
@@ -368,16 +320,14 @@ th{
   background-color:#f4f4f4;
   padding:15px;
   border-right:4px solid var(--primary);
-  border-radius:8px;
-}
+  border-radius:8px;}
 
 /* ===== Back Top ===== */
 .back-top{
   background:#f2f2f2;
   margin-top:15px;
   padding:10px;
-  border-radius:8px;
-}
+  border-radius:8px;}
 
 /* ===== Footer ===== */
 footer{
@@ -388,24 +338,20 @@ footer{
   background:#f2f2f2;
   margin-top:30px;
   border-top:1px solid #ddd;
-  border-radius:8px;
-}
+  border-radius:8px;}
 
 /* ===== Mobile ===== */
 @media(max-width:700px){
 
   .hero{
     padding:55px 0;
-    border-radius:0 0 24px 24px;
-  }
+    border-radius:0 0 24px 24px; }
 
   .section{
-    padding:22px;
-  }
+    padding:22px;  }
 
   .section h2{
-    font-size:1.45rem;
-  }
+    font-size:1.45rem;  }
 
   table,
   thead,
@@ -413,24 +359,20 @@ footer{
   tr,
   td,
   th{
-    display:block;
-  }
+    display:block; }
 
   thead{
-    display:none;
-  }
+    display:none; }
 
   tr{
     margin-bottom:14px;
     border:1px solid var(--border);
     border-radius:14px;
-    overflow:hidden;
-  }
+    overflow:hidden; }
 
   td{
     border:none;
-    border-bottom:1px solid var(--border);
-  }
+    border-bottom:1px solid var(--border);}
 
   td::before{
     content:attr(data-label);
@@ -450,9 +392,7 @@ footer{
     <span class="badge">تكنولوجيا الطيران والأنظمة غير المأهولة</span>
     <h1>الطائرات المسيّرة (الدرون) من الألف إلى الياء</h1>
 
-<p>
-  دليل شامل يستعرض عالم الطائرات المسيّرة (Drone) وأنظمة الطيران غير المأهول، بدءًا من المفهوم والتاريخ والتطور التقني، مرورًا بالمكونات الأساسية وأنواع الطائرات المختلفة، وصولًا إلى الاستخدامات المدنية والعسكرية، والتحديات القانونية والأمنية، ومستقبل هذه التقنية في عصر الذكاء الاصطناعي والمدن الذكية.
-</p>
+<p> دليل شامل يستعرض عالم الطائرات المسيّرة (Drone) وأنظمة الطيران غير المأهول، بدءًا من المفهوم والتاريخ والتطور التقني، مرورًا بالمكونات الأساسية وأنواع الطائرات المختلفة، وصولًا إلى الاستخدامات المدنية والعسكرية، والتحديات القانونية والأمنية، ومستقبل هذه التقنية في عصر الذكاء الاصطناعي والمدن الذكية.</p>
 
 <div class="meta">
   <span>إعداد: shakerabuhamour.com</span>
@@ -467,37 +407,28 @@ footer{
 
   <h2>🚁 الطائرات المسيّرة من الألف إلى الياء</h2>
 
-  <p>
-    تُعد الطائرات المسيّرة، أو ما يُعرف اختصارًا بـ <strong>UAV</strong> وضمن النظام الأوسع
+  <p>  تُعد الطائرات المسيّرة، أو ما يُعرف اختصارًا بـ <strong>UAV</strong> وضمن النظام الأوسع
     <strong>UAS</strong>، من أبرز التقنيات الحديثة التي غيّرت مفهوم الطيران والمراقبة
     والخدمات المدنية والعسكرية. وهي طائرات تعمل دون وجود طيار على متنها، ويتم التحكم بها
-    عن بُعد أو عبر أنظمة ملاحية وبرمجية متقدمة.
-  </p>
+    عن بُعد أو عبر أنظمة ملاحية وبرمجية متقدمة.  </p>
 
-  <p>
-    لم تعد الطائرات المسيّرة مجرد أدوات تصوير جوي أو هواية تقنية، بل أصبحت عنصرًا مؤثرًا
+  <p> لم تعد الطائرات المسيّرة مجرد أدوات تصوير جوي أو هواية تقنية، بل أصبحت عنصرًا مؤثرًا
     في الزراعة، الأمن، الإنقاذ، الإعلام، مراقبة البنية التحتية، إدارة الكوارث، والخدمات
-    اللوجستية، إضافة إلى حضورها المتزايد في المجال العسكري والاستراتيجي.
-  </p>
+    اللوجستية، إضافة إلى حضورها المتزايد في المجال العسكري والاستراتيجي. </p>
 
   <h3>أولًا: ما المقصود بالطائرات المسيّرة؟</h3>
 
-  <p>
-    الطائرة المسيّرة هي طائرة لا تحمل طيارًا بشريًا داخلها، وتعمل من خلال منظومة متكاملة
+  <p>   الطائرة المسيّرة هي طائرة لا تحمل طيارًا بشريًا داخلها، وتعمل من خلال منظومة متكاملة
     تشمل الطائرة نفسها، محطة التحكم، أنظمة الاتصال، الملاحة، الحساسات، الكاميرات،
-    والبرمجيات التي تدير مسار الطيران والمهام.
-  </p>
+    والبرمجيات التي تدير مسار الطيران والمهام.  </p>
 
-  <p>
-    لذلك يُعد مصطلح <strong>UAS – Unmanned Aircraft System</strong> أكثر دقة من مصطلح
-    الطائرة وحدها، لأنه يشير إلى النظام الكامل وليس إلى جسم الطائرة فقط.
-  </p>
+  <p>  لذلك يُعد مصطلح <strong>UAS – Unmanned Aircraft System</strong> أكثر دقة من مصطلح
+    الطائرة وحدها، لأنه يشير إلى النظام الكامل وليس إلى جسم الطائرة فقط. </p>
 
 <h3>ثانيًا: الفرق بين Drone وUAV وUAS</h3>
 
 <p>
-تُستخدم هذه المصطلحات كثيرًا عند الحديث عن الطائرات المسيّرة، ورغم أنها متشابهة في المعنى، إلا أن لكل منها دلالة مختلفة:
-</p>
+تُستخدم هذه المصطلحات كثيرًا عند الحديث عن الطائرات المسيّرة، ورغم أنها متشابهة في المعنى، إلا أن لكل منها دلالة مختلفة:</p>
 
 <ul>
   <li>
@@ -640,7 +571,6 @@ Drone هو الاسم الشائع، وUAV هي الطائرة نفسها، أم
 <strong>معلومة:</strong>
 ليست السرعة العامل الأهم في الطائرات المسيّرة، إذ تعتمد كفاءة الطائرة أيضًا على مدى الطيران، ومدة التحليق، والحمولة، وأنظمة الملاحة والاستشعار المستخدمة فيها.
 </div>
-
   
 <h3>سابعًا: الاستخدامات المدنية للطائرات المسيّرة</h3>
   <figure style="text-align:center; margin:30px 0;">
